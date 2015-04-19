@@ -208,7 +208,7 @@
 						<div class="left">D</div>
 						<div class="extra-wrap">
 							<div class="title-1"><a href="#">Kích hoạt sản phẩm và luyện thi</a></div>
-							<div class="text">nếu bạn đã có mã khuyến mãi hoặc flashcard giấy, hảy kích hoạt sản phẩm và học luôn</div>
+							<div class="text">nếu bạn đã có mã khuyến mãi hoặc flashcard giấy, hãy kích hoạt sản phẩm và học luôn</div>
 						</div>
 					</div>
 				</div>
