@@ -138,7 +138,7 @@
     <div class="container-fluid">
 		<div class="row text-center katchup-study">
 			<div class="col-xs-12 col-sm-4">
-				<img src="resources/images/thinking-ideas.png" alt="" />
+				<img src="resources/images/thinking-ideas.png" alt="Bạn nghĩ gì về Katchup"  class="img-responsive" />
             </div>
 			<div class="col-xs-12 col-sm-8 text-center katchup-active">
                 <h2>Nếu bạn đã mua flashcard giấy, hãy kích hoạt sản phẩm và bắt đầu học thôi!
