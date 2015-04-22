@@ -63,7 +63,7 @@
 				</div> -->
             </div>
 			<div class="container">
-				<div class="row"  style="float: right;">
+				<div class="row"  style="float: right; margin-bottom: -30px; margin-top: 15px;">
 					<ul class="katchup-nav katchup-menu pull-left">
 						<li class="active"><a href="#">Trang chủ</a></li>
 						<li><a href="#">Luyện Thi</a></li>
@@ -109,7 +109,7 @@
 			  </div>
 			
 			  <div class="item">
-				<img src="resources/images/bootstrap-carousel/slides/banner3.jpg" alt="katchupflashcards">
+				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchupflashcards">
 				<!-- <div class="carousel-caption">
 				 <h3>Flowers</h3>
 				  <p>Beatiful flowers in Kolymbari, Crete.</p>
