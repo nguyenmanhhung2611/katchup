@@ -903,6 +903,9 @@ opacity: 0.6;
     color: #85d3fe;
 }
 .dropcap.v1 .dropcap_item:first-child + div + div + div {
+    color: #bbbd17;
+}
+.dropcap.v1 .dropcap_item:first-child + div + div + div + div{
     color: #6e6e6e;
 }
 .dropcap .dropcap_item .left {

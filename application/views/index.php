@@ -94,26 +94,26 @@
 
 			  <div class="item active">
 				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchupflashcards" >
-				<div class="carousel-caption">
+			<!--	<div class="carousel-caption">
 				  <h3>Chania</h3>
 				  <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-				</div>
+				</div>-->
 			  </div>
 
 			  <div class="item">
 				<img src="resources/images/bootstrap-carousel/slides/banner2.jpg" alt="katchupflashcards">
-				<div class="carousel-caption">
+			<!--	<div class="carousel-caption">
 				  <h3>Chania</h3>
 				  <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-				</div>
+				</div>-->
 			  </div>
 			
 			  <div class="item">
 				<img src="resources/images/bootstrap-carousel/slides/banner3.jpg" alt="katchupflashcards">
-				<div class="carousel-caption">
-				  <h3>Flowers</h3>
+				<!-- <div class="carousel-caption">
+				 <h3>Flowers</h3>
 				  <p>Beatiful flowers in Kolymbari, Crete.</p>
-				</div>
+				</div>-->
 			  </div>		 
 	  
 			</div>
@@ -208,7 +208,14 @@
 						<div class="left">D</div>
 						<div class="extra-wrap">
 							<div class="title-1"><a href="#">Kích hoạt sản phẩm và luyện thi</a></div>
-							<div class="text">nếu bạn đã có mã khuyến mãi hoặc flashcard giấy, hãy kích hoạt sản phẩm và học luôn</div>
+							<div class="text">Nếu bạn đã có mã khuyến mãi hoặc flashcard giấy, hãy kích hoạt sản phẩm và học luôn</div>
+						</div>
+					</div>
+					<div class="dropcap_item clearfix">
+						<div class="left">E</div>
+						<div class="extra-wrap">
+							<div class="title-1"><a href="#">Katchup theo dõi tiến độ học tập</a></div>
+							<div class="text">Nếu bạn đã có mã kích hoạt - Katchup sẽ theo dõi tiến độ học tập và cùng bạn vượt qua những kỳ thi khó khăn</div>
 						</div>
 					</div>
 				</div>
@@ -216,19 +223,19 @@
         </div>    		
         <div class="row text-center katchup-total">
             <div class="col-sm-3 col-xs-12" style="border-right-style: dashed; border-color: #F0F0F0;">
-                <span class="number">77</span>
+                <span class="number">7277</span>
                 <span class="name">Flashcard giấy đã bán</span>
-                <span class="item-text">Bộ flashcard giấy được bán. Bộ flashcard giấy được bán. Bộ flashcard giấy được bán. Bộ flashcard giấy được bán. Bộ flashcard giấy được bán</span>
+ <!--               <span class="item-text">Bộ flashcard giấy được bán.</span> -->
             </div>
             <div class="col-sm-3 col-xs-12" style="border-right-style: dashed; border-color: #F0F0F0;">
-                <span class="number">44</span>
+                <span class="number">1134</span>
                 <span class="name">E - Flashcard đã sử dụng</span>
-                <span class="item-text">Bộ e-flashcard được sử dụng. Bộ e-flashcard được sử dụng. Bộ e-flashcard được sử dụng. Bộ e-flashcard được sử dụng. Bộ e-flashcard được sử dụng</span>
+            <!--     <span class="item-text">Bộ e-flashcard được sử dụng.</span>-->
             </div>
 			<div class="col-sm-3 col-xs-12">
-                <span class="number">44</span>
+                <span class="number">578</span>
                 <span class="name">Tài liệu đã được chia sẻ</span>
-                <span class="item-text">Bộ e-flashcard được sử dụng. Bộ e-flashcard được sử dụng. Bộ e-flashcard được sử dụng. Bộ e-flashcard được sử dụng. Bộ e-flashcard được sử dụng</span>
+             <!--    <span class="item-text">Minna no nihongo, Soumatome, JLPT ...</span>-->
             </div>
              <div class="col-sm-3 col-xs-12 ico-contact">
                 <span class="text-title">Hãy chọn ngay sản phẩm mà bạn muốn</span>
@@ -237,47 +244,47 @@
         </div>
         <div class="row text-center katchup-good">
             <div class="col-sm-12">
-                <h2>Sử dụng flashcard để học hiệu quả hơn</h2>
+                <h2>Flashcard Katchup – học tập tiến bộ hơn</h2>
             </div>
 			
 			<div class="col-xs-12 text-left">
                 <div class="row">
                     <div class="col-sm-4 good-text">
                         <div class="good-item item-1">
-                            <h3>Đơn giản và dễ dàng</h3>
-                            Flashcard là tờ giấy 2 mặt với các ghi chú và hình ảnh minh họa. Học bằng flashcard để ghi nhớ những nội dung quan trọng dễ dàng, nhanh chóng.
+                            <h3>Tiện lợi, nhỏ gọn dễ dàng mang theo</h3>
+                            Lợi thế lớn nhất của những tấm flashcard đó là nhỏ gọn và dễ mang theo. Vậy nên, dù bạn đang ở trên lớp, đang ngồi chờ xe bus, đang đợi bạn ở công viên…bạn vẫn có thể mang flashcard trong túi để học bất cứ lúc nào, bất cứ nơi đâu khi bạn có thời gian.
                         </div>
                     </div>
                     <div class="col-sm-4 good-text">
                         <div class="good-item item-2">
-                            <h3>Học nhanh – Nhớ lâu</h3>
-                            katchup mang lại hiệu quả vượt trội, giúp bạn thuộc hơn 300 từ vựng/tháng và ghi nhớ mãi về sau. Giải quyết vấn đề từ vựng nhức nhối.
+                            <h3>Đơn giản, học nhanh và nhớ lâu</h3>
+                            Gồm tờ giấy 2 mặt, có hình ảnh và những đoạn cấu trúc ngữ pháp từ vựng ngắn gọn xúc tích, giúp bạn tiếp thu tất cả trong 1 tấm thẻ. Khi học với Katchup Flashcard sẽ kích thích não bộ hoạt động cùng lúc 3 trong 4 vùng ghi nhỡ não bộ (sensory stores, short-term stores, long-sterm stores) và kết quả giúp bạn học nhanh và nhớ lâu dài.
                         </div>
                     </div>					
                     <div class="col-sm-4 good-text">
                         <div class="good-item item-3">
-                            <h3>Khả năng ghi nhớ được tối ưu hóa</h3>
-                            Flashcard đã được khoa học chứng minh là phương pháp tối ưu để ghi nhớ thông tin nhờ áp dụng các nguyên tắc khoa học về trí nhớ: 1 question-1 answer, spaced repetition, liên kết hình ảnh… Giúp học tốt hơn 200% so với những cách thông thường.
+                            <h3>Tiết kiệm thời gian</h3>
+                            Không cần ngồi lì ở một căn phòng tĩnh mịch, trong thư viện, hoặc nơi nào đó không ai làm phiền. Vì chắc rằng bạn sẽ không ưu tiên nhiều thời gian như vậy trong khi bạn còn khối công việc phải hoàn thành! Vẫn có cách cho bạn học một cách “đơn giản, tự nhiên, hiệu quả” là học bằng cách tận dụng những khe hở thời gian của bạn, và Katchup Flashcard là phương pháp lý tưởng cho những bạn không có nhiều thời gian.
                         </div>
                     </div>					
                 </div>
                 <div class="row">
                     <div class="col-sm-4 good-text">
                         <div class="good-item item-4">
-                            <h3>Nội dung chất lượng cao</h3>
-                            Nội dung biên soạn từ những nguồn tài liệu uy tín: Barron, Cambridge, Prince-ton..., đảm bảo sự hoàn chỉnh, được chăm chút kỹ lưỡng đến từng chi tiết. Nội dung được kiểm duyệt hơn 7 vòng trước khi xuất bản và cập nhật liên tục nhằm mang đến chất lượng cao nhất.
+                            <h3>Công cụ ôn tập hiệu quả</h3>
+                            Khoa học nghiên cứu, những gì bạn học sau một ngày sẽ chỉ còn nhớ 35.7% lượng kiến thức và sau 1 tuần chỉ còn 21% trong não. Vậy với thẻ học tiếng Nhật nhỏ gọn, dễ dàng mang đi sẽ giúp bạn ôn luyện tuyệt vời.
                         </div>
                     </div>
 					<div class="col-sm-4 good-text">
                         <div class="good-item item-5">
-                            <h3>Học và kiểm tra thông minh</h3>
-                            Hệ thống e-flashcard thông minh được tùy chỉnh cho từng cá nhân. Dựa vào kế hoạch học tập bạn đặt ra, hệ thống sẽ tự động theo dõi và nhắc nhở giúp bạn hoàn thành kế hoạch. Bạn còn được cung cấp các bài kiểm tra nhằm tối ưu hóa khả năng ghi nhớ.
+                            <h3>Nội dung chất lượng</h3>
+                            Biên soạn theo chương trình phổ biến nhất hiện nay là Mina no Nihongo và So matome. Mang đến cho bạn kiến thức phổ thông và dễ dàng thực hành nhất.
                         </div>
                     </div>
 					<div class="col-sm-4 good-text">
                         <div class="good-item item-7">
                             <h3>Dễ dàng vượt qua các kỳ thi hóc búa</h3>
-                            Những kỳ thi quốc tế khó khăn vì lượng từ vựng khổng lồ mà bạn phải học thuộc. Flashcard giúp bạn sẽ nắm vững từ vựng và vượt qua các kì thi TOEIC, IELTS, TOEFL, SAT... dễ dàng hơn.
+                            Những kỳ thi quốc tế khó khăn vì lượng từ vựng khổng lồ mà bạn phải học thuộc. Flashcard giúp bạn sẽ nắm vững từ vựng và vượt qua các kì thi dễ dàng hơn.
                         </div>
                     </div>
                 </div>
@@ -290,62 +297,72 @@
 			
             <div class="text-item">
                 <div class="text">
-                    Mình cực thích hệ thống online của katchup! Hệ thống duy nhất ở Việt Nam mình thấy hiệu quả và giúp mình học rất nhanh!
+                    Mình luôn ôn với thẻ học tiếng Nhật trước các bài thi và luôn đạt được kết quả tốt. 
                 </div>
                 <div class="author">
                     <img src="resources/images/p1.png" alt="">
-                    <span class="name">Trương Lương Thảo Uyên</span><br/>
-                    SAT 1320, TOEFL 102, IELTS 7.0
+                    <span class="name">Nguyễn Thị Thu</span><br/>
+                   JLPT N3<!-- SAT 1320, TOEFL 102, IELTS 7.0 -->
                 </div>
             </div>
             <div class="text-item">
                 <div class="text">
-                    Bộ từ của katchup rất phù hợp với mình. Hình minh họa vui giúp mình ngốn 1200 từ mới trong 3 tháng để thi TOEFL.
+                    Hình thức thì không có gì đặc biệt, nhưng tiện lợi và dễ học thật.
                 </div>
                 <div class="author">
                     <img src="resources/images/p6.png" alt="">
-                    <span class="name">Trần Lương Minh Khôi</span><br/>
-                    TOEFL iBT 108
+                    <span class="name">Trần San San</span><br/>
+                   JLPT N2<!-- TOEFL iBT 108-->
                 </div>
             </div>
             <div class="text-item">
                 <div class="text">
-                    Flashcard là phương pháp học mới, thú vị, hiệu quả. katchup đang sản xuất ra những bộ flashcard chất lượng cao và giàu tâm huyết.
+                    Cái thẻ này làm mình học không bị chán, lại dễ học ở nhiều chỗ. Ôn bài cũng tiện nè.
                 </div>
                 <div class="author">
                     <img src="resources/images/p3.png" alt="">
-                    <span class="name">Viện Giáo Dục và Trí Tuệ Việt Nam</span><br/>
-                    IEDV
+                    <span class="name">Nguyễn Bá Phong</span><br/>
+                   JLPT N4<!--  IEDV-->
                 </div>
             </div>
             <div class="text-item">
                 <div class="text">
-                    Mỗi lần nghĩ đến Flashcard katchup, anh liên tưởng đến sản phẩm của Apple, đơn giản nhưng hiệu quả.
+                    Ôm quyển tập toàn là chữ thì ngán quá - không muốn học, giờ có thẻ học tiếng Nhật rùi học hành tốt hơn nhiều!Keke
                 </div>
                 <div class="author">
                     <img src="resources/images/p4.png" alt="">
-                    <span class="name">Nguyễn Hữu Trí</span><br/>
-                    Master Trainer học viện Breakthrough Power
+                    <span class="name">Nguyễn Minh Nhật</span><br/>
+                   JLPT N3<!-- Master Trainer học viện Breakthrough Power-->
                 </div>
             </div>
             <div class="text-item">
                 <div class="text">
-                    Từ vựng là nền tảng của ngoại ngữ. Học từ vựng bằng katchup dễ dàng, hiệu quả hơn những cách học truyền thống rất nhiều.
+                    Thời gian có hạn, học với Katchup flashcard tiết kiệm thời gian của mình rất nhiều. 
                 </div>
                 <div class="author">
                     <img src="resources/images/p5.png" alt="">
-                    <span class="name">Hoàng Tú Quỳnh</span><br/>
-                    Chủ tịch Hội IELTS Việt Nam
+                    <span class="name">Hoàng Thu Trang</span><br/>
+                     JTPL N3
                 </div>
             </div>
 			<div class="text-item last">
                 <div class="text">
-                    Flashcard là phương pháp học mới, thú vị, hiệu quả. katchup đang sản xuất ra những bộ flashcard chất lượng cao và giàu tâm huyết.
+                    Kanji được miêu tả bằng hình ảnh và có chỉ cách nhớ đầy đủ nên thật là dễ nhớ
                 </div>
                 <div class="author">
                     <img src="resources/images/p3.png" alt="">
-                    <span class="name">Viện Giáo Dục và Trí Tuệ Việt Nam</span><br/>
-                    IEDV
+                    <span class="name">Phan Thị Hồng Thắm</span><br/>
+                    JPLT N4
+                </div>
+            </div>
+			<div class="text-item last">
+                <div class="text">
+                    Thẻ học Tiếng Nhật ép bằng plastic nên bền chắc, chống thấm, chống nước nên mình rất thích.
+                </div>
+                <div class="author">
+                    <img src="resources/images/p7.png" alt="">
+                    <span class="name">Nguyễn Văn Hoàn</span><br/>
+                    JPLT N4
                 </div>
             </div>
         </div>
