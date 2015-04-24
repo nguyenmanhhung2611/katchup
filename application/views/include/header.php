@@ -1,5 +1,5 @@
 <div id="header" >
-    <div class="container" id="toppage">        
+    <div class="container noselect" id="toppage">        
       <!-- Static navbar -->
       <nav class="navbar navbar-default">
           <div class="navbar-header">
@@ -29,7 +29,7 @@
           <ul class="katchup-nav katchup-menu pull-left">
             <li class="active"><a href="#">Trang chủ</a></li>
             <li><a href="#">Luyện Thi</a></li>
-            <li><a href="#">Tài liệu</a></li>
+            <li><a href="<?php echo ITQ_BASE_URL;?>home/tailieu">Tài liệu</a></li>
             <li><a href="#">Sản phẩm</a></li>
             <li><a href="#">Hỏi đáp</a></li>
           </ul>

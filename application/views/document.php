@@ -17,10 +17,12 @@
 
     <!-- css -->
     <link href="resources/css/style.css" rel="stylesheet">
+    <link href="resources/css/document.css" rel="stylesheet">
 
     <!-- script -->
     <script src="resources/js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="resources/js/script.js" type="text/javascript"></script>
+    <script src="resources/js/document.js" type="text/javascript"></script>
     <!--<script>-->
 
     <!-- Start lightbox -->
