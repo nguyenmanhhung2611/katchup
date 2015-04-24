@@ -8,7 +8,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://katchup.vn"><img src="resources/images/logo.png" alt="" /></a>
+            <a class="navbar-brand" href="http://katchup.vn"><img src="resources/images/logo.png" alt="katchup.vn" /></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
       <div class="container katchup-header-title">
@@ -27,9 +27,9 @@
       <div class="container">
         <div class="row"  style="float: right; margin-bottom: -30px; margin-top: 15px;">
           <ul class="katchup-nav katchup-menu pull-left">
-            <li class="active"><a href="#">Trang chủ</a></li>
+            <li class="active"><a href="">Trang chủ</a></li>
             <li><a href="#">Luyện Thi</a></li>
-            <li><a href="<?php echo ITQ_BASE_URL;?>home/tailieu">Tài liệu</a></li>
+            <li><a href="<?php echo ITQ_BASE_URL;?>home/document">Tài liệu</a></li>
             <li><a href="#">Sản phẩm</a></li>
             <li><a href="#">Hỏi đáp</a></li>
           </ul>

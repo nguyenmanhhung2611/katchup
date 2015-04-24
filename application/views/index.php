@@ -53,7 +53,7 @@
 			<div class="carousel-inner" role="listbox">
 
 			  <div class="item active">
-				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchupflashcards" >
+				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchup.vn" >
 			<!--	<div class="carousel-caption">
 				  <h3>Chania</h3>
 				  <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -61,7 +61,7 @@
 			  </div>
 
 			  <div class="item">
-				<img src="resources/images/bootstrap-carousel/slides/banner2.jpg" alt="katchupflashcards">
+				<img src="resources/images/bootstrap-carousel/slides/banner2.jpg" alt="katchup.vn">
 			<!--	<div class="carousel-caption">
 				  <h3>Chania</h3>
 				  <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -69,7 +69,7 @@
 			  </div>
 			
 			  <div class="item">
-				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchupflashcards">
+				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchup.vn">
 				<!-- <div class="carousel-caption">
 				 <h3>Flowers</h3>
 				  <p>Beatiful flowers in Kolymbari, Crete.</p>
@@ -126,16 +126,16 @@
                 <h2>Thiết kế tinh tế, tiện lợi và tập trung vào hiệu quả</h2>
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/9.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/9.jpg" alt="work 1" class="img-responsive img-rounded"></a>
+						<a href="resources/images/9.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/9.jpg" alt="katchup.vn" class="img-responsive img-rounded"></a>
 					</div>           
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/5.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/5.jpg" alt="" class="img-responsive img-rounded"/></a>
+						<a href="resources/images/5.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/5.jpg" alt="katchup.vn" class="img-responsive img-rounded"/></a>
 					</div>
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/7.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/7.jpg" alt="" class="img-responsive img-rounded"/></a>
+						<a href="resources/images/7.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/7.jpg" alt="katchup.vn" class="img-responsive img-rounded"/></a>
 					</div>
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/6.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/6.jpg" alt="" class="img-responsive img-rounded"/></a>
+						<a href="resources/images/6.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/6.jpg" alt="katchup.vn" class="img-responsive img-rounded"/></a>
 					</div>
 				</div>
             </div>			            

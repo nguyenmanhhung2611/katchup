@@ -1,0 +1,54 @@
+/* ======================== CAROUAEL ========================= */
+#myCarousel .carousel-caption {
+    left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: left;
+	padding: 10px;
+	background: rgba(0,0,0,0.6);
+	text-shadow: none;
+}
+
+#myCarousel .list-group {
+	padding-right: 0;
+	position:absolute;
+	top: 0;
+	right: 0;
+}
+#myCarousel .list-group-item {
+	border-radius: 0px;
+	cursor:pointer;
+}
+#myCarousel .list-group .active {
+	background-color: #F9C356;
+	border-color: #F9C356;
+}
+
+@media (min-width: 992px) { 
+	#myCarousel { padding-right: 33.3333%; }
+	#myCarousel .carousel-controls { display: none; } 	
+}
+@media (max-width: 991px) { 
+	.carousel-caption p,
+	#myCarousel .list-group {display:none;} 
+}
+
+/* ======================== normal ========================= */
+#content.document h2::after, h3::after {
+    background: none repeat scroll 0 0 #31a4da;
+    bottom: 20px;
+    content: "";
+    height: 4px;
+    left: 15px;
+    position: absolute;
+    width: 95%;
+}
+#content.document h3 {
+	font-family: "times new roman";
+    font-weight: bold;
+}
+#content.document hr {
+	border-color: #31a4da;
+    border-style: double;
+    border-width: medium;
+}

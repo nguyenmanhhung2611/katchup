@@ -8,7 +8,7 @@ class Home extends CI_Controller {
 		$this->load->view('index');
 	}
 	
-	public function tailieu() {
+	public function document() {
 		$this->load->view('document');
 	}
 }

@@ -34,7 +34,7 @@ blue 	31a4d9
 	opacity: 0.8
 }
 .navbar-brand {
-    padding: 7px 30px 7px 15px;
+    padding: 8px 15px !important;
 }
 .katchup-nav {
     padding: 0;
@@ -63,6 +63,10 @@ blue 	31a4d9
     text-decoration: none;
 }
 .katchup-menu li.active a {
+    color: #FFFFFF;
+    background-color: #1596d2;
+}
+.katchup-menu li a:hover {
     color: #FFFFFF;
     background-color: #1596d2;
 }
