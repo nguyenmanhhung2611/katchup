@@ -1,7 +1,11 @@
 /* ========================== font face ======================== */
 @font-face {
     font-family: font-UVNBayBuom;
-    src: url(../fonts/UVNBayBuom.TTF);
+    src: url(../fonts/others/UVNBayBuom.TTF);
+}
+@font-face {
+    font-family: font-KozGoPr6N;
+    src: url(../fonts/others/KozGoPr6N-Light.otf);
 }
 
 * {

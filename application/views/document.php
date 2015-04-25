@@ -77,7 +77,7 @@
               <img src="resources/images/bootstrap-carousel/document/document5.png" alt="katchup.vn" >
                <div class="carousel-caption">
                 <h4><a href="#">Tiêu đề tài liệu 5</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 5 <a class="label label-primary" href="#" target="_blank">Free Bootstrap Carousel Collection</a></p>
+                <p>Giới thiệu tóm tắt tài liệu 5 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
               </div>
             </div><!-- End Item -->
                     
@@ -95,13 +95,13 @@
           <!-- Controls -->
           <div class="carousel-controls">
               <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <!-- <span class="glyphicon glyphicon-chevron-left"></span> -->
-                <span u="arrowleft" class="arrowleft" style="top: 123px; left: 8px;"></span>
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <!-- <span u="arrowleft" class="arrowleft" style="top: 123px; left: 8px;"></span> -->
                 <span class="sr-only">Previous</span>
               </a>
               <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <!-- <span class="glyphicon glyphicon-chevron-right"></span> -->
-                <span u="arrowright" class="arrowright" style="top: 123px; left: 8px;"></span>
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <!-- <span u="arrowright" class="arrowright" style="top: 123px; left: 8px;"></span> -->
                 <span class="sr-only">Next</span>
               </a>
           </div>
@@ -113,33 +113,69 @@
 
 <div id="content" class="document">
     <div class="container-fluid">
-		<div class="col-xs-2 col-sm-2">
-            <h3>&nbsp;</h3>
+		<div class="col-xs-6 col-sm-2">
+            <h3>&nbsp;</h3>            
             <div class="row">
-                <a href="#" class="thumbnail"><img src="resources/images/adver/adver1.jpg" alt="katchup.vn" class="img-responsive"></a>                
+                <a href="#" class="adver"><img src="resources/images/adver/adver1.jpg" alt="katchup.vn" class="img-responsive"></a>
             </div>
             <div class="row">
-                <a href="#" class="thumbnail"><img src="resources/images/adver/adver2.jpg" alt="katchup.vn" class="img-responsive"/></a>
+                <a href="#" class="adver"><img src="resources/images/adver/adver2.jpg" alt="katchup.vn" class="img-responsive"/></a>
             </div>
             <div class="row">
-                <h3>Tài liệu phổ biến</h3>
-                <div class="row">
-                    content
+                <h3>Tài liệu phổ biến</h3><hr>
+                <div class="popular-document">
+                    <div class="item">
+                        <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                        <p class="text">みんなの日本語</p>
+                    </div>
+                    <div class="item">
+                        <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                        <p class="text">みんなの日本語</p>
+                    </div>
+                    <div class="item">
+                        <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                        <p class="text">みんなの日本語</p>
+                    </div>
+                   <div class="item">
+                        <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                        <p class="text">みんなの日本語</p>
+                    </div>
+                    <div class="item">
+                        <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                        <p class="text">みんなの日本語</p>
+                    </div>
+                    <div class="item">
+                        <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                        <p class="text">みんなの日本語</p>
+                    </div>
+                    <div class="item">
+                        <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                        <p class="text">みんなの日本語</p>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="col-xs-7 col-sm-7">
-            <h3>Bài đăng mới nhất</h3>            
-            <div class="row">
-                content
+        <div class="col-xs-6 col-sm-7">
+            <h3>Bài đăng mới nhất</h3><hr>
+            <div class="new-articles">
+                <div class="item">
+                    <div class="col-sm-3 img">
+                        <a href="#"><img src="resources/images/new-articles/new-articles1.jpg" alt="katchup.vn" class="img-responsive"/></a>
+                    </div>
+                    <div class="col-sm-9">
+                        asd
+                    </div>                    
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-3 col-sm-3">
+        <div class="col-xs-6 col-sm-3">
             <h3>Danh mục</h3>
             <div class="row">
-                content
+                <div class="container">
+                    <a href="">Giáo trình 1</a>       
+                </div>
             </div>
         </div>
 

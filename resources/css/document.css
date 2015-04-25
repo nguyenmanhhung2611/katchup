@@ -33,22 +33,64 @@
 	#myCarousel .list-group {display:none;} 
 }
 
-/* ======================== normal ========================= */
-#content.document h2::after, h3::after {
-    background: none repeat scroll 0 0 #31a4da;
-    bottom: 20px;
-    content: "";
-    height: 4px;
-    left: 15px;
-    position: absolute;
-    width: 95%;
+/* ======================== POPULAR DOCUMENT ========================= */
+#content.document .popular-document {
+	padding: 0;
 }
+#content.document .adver {
+	outline: none;
+}
+#content.document .adver img {
+	padding-bottom: 10px;
+}
+#content.document .new-articles .item .img a img {
+	width: 164px;
+	height: 121px;
+}
+#content.document .new-articles .item .img a img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s linear 0s;
+
+}
+#content.document .popular-document .item {
+	border-bottom: 2px solid #e1e1e1;
+    /*margin-bottom: 20px;*/
+    padding-bottom: 14px;
+    position: relative;
+}
+#content.document .popular-document .item:after {	
+	border-bottom: 2px solid #31a4da;
+    bottom: -2px;
+    max-width: 60px;
+    position: absolute;
+    width: 100%;
+    content: "";
+}
+#content.document .popular-document .link {
+	font-family: "times new roman";	
+	color: #333;
+}
+#content.document .popular-document .link h4 {
+	font-weight: bold;
+	font-size: 17px;
+}
+#content.document .popular-document .link:hover {
+	text-decoration: none;
+	color: #31A4DA;
+}
+#content.document .popular-document .text {
+	font-family: font-KozGoPr6N;
+}
+
+/* ======================== NORMAL ========================= */
 #content.document h3 {
-	font-family: "times new roman";
+	font-family: times new roman;
     font-weight: bold;
 }
 #content.document hr {
 	border-color: #31a4da;
-    border-style: double;
-    border-width: medium;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 5px;
 }
+
