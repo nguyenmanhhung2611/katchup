@@ -1,7 +1,11 @@
 /* ========================== font face ======================== */
 @font-face {
     font-family: font-UVNBayBuom;
-    src: url(../fonts/UVNBayBuom.TTF);
+    src: url(../fonts/others/UVNBayBuom.TTF);
+}
+@font-face {
+    font-family: font-KozGoPr6N;
+    src: url(../fonts/others/KozGoPr6N-Light.otf);
 }
 
 * {
@@ -34,7 +38,7 @@ blue 	31a4d9
 	opacity: 0.8
 }
 .navbar-brand {
-    padding: 7px 30px 7px 15px;
+    padding: 8px 15px !important;
 }
 .katchup-nav {
     padding: 0;
@@ -43,6 +47,11 @@ blue 	31a4d9
 .katchup-nav li {
     list-style: none outside none;
     display: inline-block;
+}
+.katchup-menu-container {
+    float: right; 
+    margin-bottom: -30px; 
+    margin-top: 15px;
 }
 .katchup-nav li a {
     color: #ffffff !important;
@@ -56,12 +65,17 @@ blue 	31a4d9
     padding: 5px 12px;
 	border-right-style: solid;
     border-right-width: 1px;
+    outline: 0 none;
 }
 .katchup-nav li a:hover, .katchup-nav li > a:focus {
     color: #FFFFFF;
     text-decoration: none;
 }
 .katchup-menu li.active a {
+    color: #FFFFFF;
+    background-color: #1596d2;
+}
+.katchup-menu li a:hover {
     color: #FFFFFF;
     background-color: #1596d2;
 }
@@ -77,6 +91,7 @@ blue 	31a4d9
     border-radius: 0;
     font-size: 14px;
     padding: 6px;
+    outline: 0 none !important;
 }
 .katchup-login li a.btn-login {
     background-color: #8bd554;
@@ -768,6 +783,10 @@ opacity: 0.6;
 	#navbar {
         margin-top: 40px;
     }
+    .katchup-menu-container {
+        margin-bottom: 0px; 
+        margin-top: 0px;
+    }
 }
 /* 615px hoac nho hon */
 @media screen and (max-width: 615px) {
@@ -1012,3 +1031,12 @@ opacity: 0.6;
     padding-top: 23px;
 }
 
+.noselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
