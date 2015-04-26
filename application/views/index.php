@@ -36,48 +36,8 @@
 
 </head>
 <body>
-<div id="header" >
-    <div class="container" id="toppage">        
-      <!-- Static navbar -->
-      <nav class="navbar navbar-default">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://katchup.vn"><img src="resources/images/logo.png" alt="" /></a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-			<div class="container katchup-header-title">
-                Luyện mãi thành tài, miệt mài tất giỏi
-				<!-- style 1 -->
-				<ul class="nav navbar-nav navbar-right katchup-nav katchup-login pull-right">
-					<li><a id="login" class="btn btn-login" href="#">Đăng nhập</a></li>
-					<li><a id="register" href="#">Đăng ký</a></li>
-				</ul>
-				<!-- style 2 -->
-				<!-- <div class="btn-group" style="float: right; padding-top: 10px;">
-					<button type="button" class="btn btn-primary">Đăng nhập</button>
-					<button type="button" class="btn btn-primary">Đăng ký</button>
-				</div> -->
-            </div>
-			<div class="container">
-				<div class="row"  style="float: right; margin-bottom: -30px; margin-top: 15px;">
-					<ul class="katchup-nav katchup-menu pull-left">
-						<li class="active"><a href="#">Trang chủ</a></li>
-						<li><a href="#">Luyện Thi</a></li>
-						<li><a href="#">Tài liệu</a></li>
-						<li><a href="#">Sản phẩm</a></li>
-						<li><a href="#">Hỏi đáp</a></li>
-					</ul>
-				</div>
-            </div>
-            
-          </div><!--/.nav-collapse -->
-      </nav>
-    </div>
-</div>
+
+<?php include_once('include/header.php') ?>
 
 <div id="banner">
     <div class="container-fluid" style="padding: 0px;">
@@ -93,7 +53,7 @@
 			<div class="carousel-inner" role="listbox">
 
 			  <div class="item active">
-				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchupflashcards" >
+				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchup.vn" >
 			<!--	<div class="carousel-caption">
 				  <h3>Chania</h3>
 				  <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -101,7 +61,7 @@
 			  </div>
 
 			  <div class="item">
-				<img src="resources/images/bootstrap-carousel/slides/banner2.jpg" alt="katchupflashcards">
+				<img src="resources/images/bootstrap-carousel/slides/banner2.jpg" alt="katchup.vn">
 			<!--	<div class="carousel-caption">
 				  <h3>Chania</h3>
 				  <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -109,7 +69,7 @@
 			  </div>
 			
 			  <div class="item">
-				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchupflashcards">
+				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchup.vn">
 				<!-- <div class="carousel-caption">
 				 <h3>Flowers</h3>
 				  <p>Beatiful flowers in Kolymbari, Crete.</p>
@@ -120,13 +80,13 @@
 
 			<!-- Left and right controls -->
 			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-			  <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->						  
-				<span u="arrowleft" class="arrowleft" style="top: 123px; left: 8px;"></span>
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<!-- <span u="arrowleft" class="arrowleft" style="top: 123px; left: 8px;"></span> -->
 				<span class="sr-only">Previous</span>
 			</a>
 			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-			  <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-			  <span u="arrowright" class="arrowright" style="top: 123px; left: 8px;"></span>
+			  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			  <!-- <span u="arrowright" class="arrowright" style="top: 123px; left: 8px;"></span> -->
 			  <span class="sr-only">Next</span>
 			</a>
 		</div>
@@ -166,16 +126,16 @@
                 <h2>Thiết kế tinh tế, tiện lợi và tập trung vào hiệu quả</h2>
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/9.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/9.jpg" alt="work 1" class="img-responsive img-rounded"></a>
+						<a href="resources/images/9.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/9.jpg" alt="katchup.vn" class="img-responsive img-rounded"></a>
 					</div>           
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/5.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/5.jpg" alt="" class="img-responsive img-rounded"/></a>
+						<a href="resources/images/5.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/5.jpg" alt="katchup.vn" class="img-responsive img-rounded"/></a>
 					</div>
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/7.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/7.jpg" alt="" class="img-responsive img-rounded"/></a>
+						<a href="resources/images/7.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/7.jpg" alt="katchup.vn" class="img-responsive img-rounded"/></a>
 					</div>
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/6.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/6.jpg" alt="" class="img-responsive img-rounded"/></a>
+						<a href="resources/images/6.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/6.jpg" alt="katchup.vn" class="img-responsive img-rounded"/></a>
 					</div>
 				</div>
             </div>			            
@@ -370,135 +330,9 @@
     </div>
 </div>
 
+<?php include_once('include/footer.php') ?>
 
-
-<div id="footer">
-    <div class="container-fluid">
-        <div class="row">
-			<div class="col-sm-4 ">			
-				<div class="row facebook-box-like">
-					<div id="fb-root"></div>
-					<script>(function(d, s, id) {
-					  var js, fjs = d.getElementsByTagName(s)[0];
-					  if (d.getElementById(id)) return;
-					  js = d.createElement(s); js.id = id;
-					  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.3";
-					  fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));</script>				
-					<div class="fb-page" data-href="https://www.facebook.com/katchup.vn" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/katchup.vn"><a href="https://www.facebook.com/katchup.vn">Katchup FlashCard - Thẻ Học Tiếng Nhật</a></blockquote></div></div>
-				</div>
-			</div>
-            <div class="col-sm-4 ">
-                <div class="footer-top row">
-                    <div class="col-xs-3 footer-sitemap">
-                        <h3>Flashcard giấy</h3>
-                        <ul>
-                            <li><a href="#">Thẻ học Kanji</a></li>
-                            <li><a href="#">Thẻ học ngữ pháp</a></li>
-                            <li><a href="#">Thẻ học từ vựng</a></li>
-							<li><a href="#">Thẻ học mẫu câu thông dụng</a></li>
-							<li><a href="#">Thẻ học bảng chữ cái</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-3 footer-sitemap">
-                        <h3>E-flashcard</h3>
-                        <ul>
-                            <li><a href="#">E - Kanji</a></li>
-                            <li><a href="#">E - ngữ pháp</a></li>
-							<li><a href="#">E - từ vựng</a></li>
-							<li><a href="#">E - mẫu câu thông dụng</a></li>
-							<li><a href="#">E - bảng chữ cái</a></li>
-                        </ul>
-                    </div>
-                    
-                </div>
-				
-				<div class="footer-customer">                    
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-6 footer-quote text-center katchup-text">
-                            <div class="text-item1">
-								<div class="text">
-									HÃY LÀ MỘT CON TEM. <br/>GẮN CHẶT VÀO MỤC TIÊU CHO TỚI KHI ĐẾN ĐÍCH
-								</div>
-							</div>
-                        </div>
-                    </div>
-                </div>
-				
-            </div>
-            <div class="col-sm-4">
-                <div class="row" style="padding-top: 20px;">
-                    <div class="col-sm-12">
-                        <div class="row">
-                            <div class="col-xs-2 col-sm-3">
-                                <a href="#">
-                                    <img src="resources/images/360k.png" alt="" class="img-responsive"/>
-                                </a>
-                            </div>            
-                            <div class="col-xs-10 col-sm-9">
-                                <a href="#">
-                                    <img src="resources/images/logo.png" alt="" class="img-responsive"/>
-                                </a>                        
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12" style="margin-top: 10px;">                        
-                        <div class="row">
-                            <p>Bản quyền &copy; 2015 thuộc TRUONG HUNG PHAT</p>
-                            <p>TRADING & SERVICES CO., LTD</p>
-                            <p>Địa chỉ: 237/84/8, Đường Pham Van Chieu, P14, Quận Gò Vấp, TP.HCM</p>
-                            <p>Điện thoại: 0939 543 548</p>
-                            <p>Email: admin@katchup.vn</p>
-                            <p>Website: www.katchup.vn</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    Element 7 &copy; All Rights Reserved &nbsp;&nbsp; | &nbsp;&nbsp; Privacy Policy
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<a class="scrollup" href="#toppage" title="Về đầu trang" style="display: inline;"></a>
-
-<div id="box-letter">
-    <div class="box-letter-container">
-        <div id="box-letter-header">
-            <div class="icon-email"></div>
-            <div class="box-letter-title">Hộp thư góp ý</div>
-            <div class="icon-close"></div>
-        </div>
-        <div class="clear-both"></div>
-        <div id="box-letter-content" class="hide">
-            <form action="" role="form">
-                <div class="content">
-                    <!-- <div><span>Tên</span><br/><input class="form-control" type="text" name="txtName" id="txtName"  placeholder="Họ tên"/></div>
-                    <div><span>Tin nhắn</span><br/><textarea class="form-control" rows="2" cols="18" id="txtarea" placeholder="Tin nhắn"></textarea></div> -->
-                    <span class="help-block">Cảm ơn bạn, xin để lại lời góp ý tại đây.</span>
-                    <div class="form-group">
-                      <label for="comment">Tên:</label>
-                      <input class="form-control" type="text" name="txtName" id="txtName"  placeholder="Họ tên"/>
-                    </div>
-                    <div class="form-group">
-                      <label for="comment">Tin nhắn:</label>
-                      <textarea class="form-control" rows="2" cols="18" id="txtarea" placeholder="Tin nhắn"></textarea>
-                    </div>
-                </div>
-                <input class="btn btn-info btn-xs" id="sendmail" type="submit" value="Gửi" name="btnSend" id="btnSend" />
-            </form>
-        </div>        
-    </div>
-</div>
+<?php include_once('include/box-letter.php') ?>
 
 </body>
 </html>
