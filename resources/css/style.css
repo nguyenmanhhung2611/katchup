@@ -48,6 +48,11 @@ blue 	31a4d9
     list-style: none outside none;
     display: inline-block;
 }
+.katchup-menu-container {
+    float: right; 
+    margin-bottom: -30px; 
+    margin-top: 15px;
+}
 .katchup-nav li a {
     color: #ffffff !important;
     background: none;
@@ -777,6 +782,10 @@ opacity: 0.6;
     }
 	#navbar {
         margin-top: 40px;
+    }
+    .katchup-menu-container {
+        margin-bottom: 0px; 
+        margin-top: 0px;
     }
 }
 /* 615px hoac nho hon */

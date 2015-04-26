@@ -25,7 +25,7 @@
         </div> -->
             </div>
       <div class="container">
-        <div class="row"  style="float: right; margin-bottom: -30px; margin-top: 15px;">
+        <div class="row katchup-menu-container">
           <ul class="katchup-nav katchup-menu pull-left">
             <li class="active"><a href="">Trang chủ</a></li>
             <li><a href="#">Luyện Thi</a></li>

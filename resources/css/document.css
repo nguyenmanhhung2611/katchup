@@ -37,20 +37,11 @@
 #content.document .popular-document {
 	padding: 0;
 }
-#content.document .adver {
+#content.document .advertisement {
 	outline: none;
 }
-#content.document .adver img {
+#content.document .advertisement img {
 	padding-bottom: 10px;
-}
-#content.document .new-articles .item .img a img {
-	width: 164px;
-	height: 121px;
-}
-#content.document .new-articles .item .img a img:hover {
-    transform: scale(1.1);
-    transition: all 0.5s linear 0s;
-
 }
 #content.document .popular-document .item {
 	border-bottom: 2px solid #e1e1e1;
@@ -58,7 +49,7 @@
     padding-bottom: 14px;
     position: relative;
 }
-#content.document .popular-document .item:after {	
+#content.document .popular-document .item:after {
 	border-bottom: 2px solid #31a4da;
     bottom: -2px;
     max-width: 60px;
@@ -67,7 +58,7 @@
     content: "";
 }
 #content.document .popular-document .link {
-	font-family: "times new roman";	
+	font-family: times new roman;	
 	color: #333;
 }
 #content.document .popular-document .link h4 {
@@ -82,7 +73,104 @@
 	font-family: font-KozGoPr6N;
 }
 
-/* ======================== NORMAL ========================= */
+
+/* ======================== NEW ARTICLES ========================= */
+/*#content.document .new-articles:before {
+	border-bottom: 2px solid #e1e1e1;
+    bottom: 0px;
+    content: "";
+    left: 15px;
+    max-width: 95%;
+    position: absolute;
+    width: 100%;
+}
+#content.document .new-articles:after {
+	border-bottom: 2px solid #31a4da;
+    bottom: 0px;
+    content: "";
+    left: 15px;
+    max-width: 100px;
+    position: absolute;
+    width: 100%;
+}*/
+#content.document .new-articles hr {
+	border-color: #e1e1e1;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 5px;
+}
+#content.document .new-articles .item .img hr {
+	border-color: #31a4da;
+    bottom: -84px;
+    max-width: 110px;
+    position: absolute;
+    width: 100%;
+}
+#content.document .new-articles .item .img a img {
+	width: 164px;
+	height: 121px;
+}
+#content.document .new-articles .item .title h3 {
+	font-family: times new roman;
+	color: #333;
+}
+#content.document .new-articles .item .title:hover {
+	text-decoration: none;
+}
+#content.document .new-articles .item .title h3:hover {
+	color: #31A4DA;
+}
+#content.document .new-articles .item .title-japan {
+	font-family: font-KozGoPr6N;
+}
+
+@font-face {
+    font-family: FontAwesome;
+    src: url(../fonts/others/fontawesome-webfont.woff);
+}
+#content.document .new-articles .item dd, #content.document .new-articles .item dd a {
+	color: #777777;
+}
+#content.document .new-articles .item dd .item_published::before {
+    content: "";
+}
+#content.document .new-articles .item dd .item_published::before, #content.document .new-articles .item dd .kmt-comment::before {
+    color: #1c1c1c;
+    font-family: "FontAwesome";
+    margin-right: 4px;
+}
+#content.document .new-articles .item dd .kmt-comment::before {
+    content: "";
+    padding-left: 10px;
+}
+#content.document .new-articles .item a.label-primary {
+	font-family: font-UVNBayBuom;
+    font-size: 15px;
+    margin-top: -10px;
+    padding: 3px;
+    position: absolute;
+}
+#content.document .see-all {
+	text-decoration: underline;
+	color: #333;
+}
+#content.document .see-all:hover {
+	text-decoration: none;
+	color: #31A4DA;
+}
+
+/*#content.document .new-articles .item .img a img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s linear 0s;
+
+}*/
+
+/* ======================== CATEGORY ========================= */
+#content.document .category .link h4 {
+	font-size: 18px;
+}
+
+/* ======================== PUBLIC ========================= */
 #content.document h3 {
 	font-family: times new roman;
     font-weight: bold;
