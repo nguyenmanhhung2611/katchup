@@ -75,6 +75,29 @@
 
 
 /* ======================== NEW ARTICLES ========================= */
+#content.document .new-articles .bottom-new-article hr {
+	border-color: #e1e1e1;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 5px;
+}
+#content.document .new-articles .bottom-new-article hr:after{
+	border-bottom: 2px solid #31a4da;
+    bottom: 20px;
+    content: "";
+    left: 15px;
+    max-width: 110px;
+    position: absolute;
+    width: 100%;
+}
+/*#content.document .new-articles .item:after {
+	border-bottom: 2px solid #31a4da;
+    bottom: -2px;
+    max-width: 60px;
+    position: absolute;
+    width: 100%;
+    content: "";
+}*/
 /*#content.document .new-articles:before {
 	border-bottom: 2px solid #e1e1e1;
     bottom: 0px;
@@ -93,7 +116,7 @@
     position: absolute;
     width: 100%;
 }*/
-#content.document .new-articles hr {
+/*#content.document .new-articles hr {
 	border-color: #e1e1e1;
     border-style: solid;
     border-width: 1px;
@@ -105,7 +128,7 @@
     max-width: 110px;
     position: absolute;
     width: 100%;
-}
+}*/
 #content.document .new-articles .item .img a img {
 	width: 164px;
 	height: 121px;
