@@ -53,7 +53,7 @@
 			<div class="carousel-inner" role="listbox">
 
 			  <div class="item active">
-				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchup.vn" >
+				<img src="resources/images/bootstrap-carousel/slides/banner-1.jpg" alt="katchup.vn" >
 			<!--	<div class="carousel-caption">
 				  <h3>Chania</h3>
 				  <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -61,7 +61,7 @@
 			  </div>
 
 			  <div class="item">
-				<img src="resources/images/bootstrap-carousel/slides/banner2.jpg" alt="katchup.vn">
+				<img src="resources/images/bootstrap-carousel/slides/banner-2.jpg" alt="katchup.vn">
 			<!--	<div class="carousel-caption">
 				  <h3>Chania</h3>
 				  <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
@@ -69,7 +69,7 @@
 			  </div>
 			
 			  <div class="item">
-				<img src="resources/images/bootstrap-carousel/slides/banner3.jpg" alt="katchup.vn">
+				<img src="resources/images/bootstrap-carousel/slides/banner-3.jpg" alt="katchup.vn">
 				<!-- <div class="carousel-caption">
 				 <h3>Flowers</h3>
 				  <p>Beatiful flowers in Kolymbari, Crete.</p>

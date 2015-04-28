@@ -42,7 +42,7 @@
           <div class="carousel-inner">
           
             <div class="item active">
-              <img src="resources/images/bootstrap-carousel/document/document1.png" alt="katchup.vn" >
+              <img src="resources/images/bootstrap-carousel/document/document-1.png" alt="katchup.vn" >
                <div class="carousel-caption">
                 <h4><a href="#">Tiêu đề tài liệu 1</a></h4>
                 <p>Giới thiệu tóm tắt tài liệu 1 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
@@ -50,7 +50,7 @@
             </div><!-- End Item -->
      
              <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document2.png" alt="katchup.vn" >
+              <img src="resources/images/bootstrap-carousel/document/document-2.png" alt="katchup.vn" >
                <div class="carousel-caption">
                 <h4><a href="#">Tiêu đề tài liệu 2</a></h4>
                 <p>Giới thiệu tóm tắt tài liệu 2 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
@@ -58,7 +58,7 @@
             </div><!-- End Item -->
             
             <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document3.png" alt="katchup.vn" >
+              <img src="resources/images/bootstrap-carousel/document/document-3.png" alt="katchup.vn" >
                <div class="carousel-caption">
                 <h4><a href="#">Tiêu đề tài liệu 3</a></h4>
                 <p>Giới thiệu tóm tắt tài liệu 3 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
@@ -66,7 +66,7 @@
             </div><!-- End Item -->
             
             <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document4.png" alt="katchup.vn" >
+              <img src="resources/images/bootstrap-carousel/document/document-4.png" alt="katchup.vn" >
                <div class="carousel-caption">
                 <h4><a href="#">Tiêu đề tài liệu 4</a></h4>
                 <p>Giới thiệu tóm tắt tài liệu 4 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
@@ -74,7 +74,7 @@
             </div><!-- End Item -->
 
             <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document5.png" alt="katchup.vn" >
+              <img src="resources/images/bootstrap-carousel/document/document-5.png" alt="katchup.vn" >
                <div class="carousel-caption">
                 <h4><a href="#">Tiêu đề tài liệu 5</a></h4>
                 <p>Giới thiệu tóm tắt tài liệu 5 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
@@ -113,7 +113,7 @@
 
 <div id="content" class="document">
     <div class="container-fluid">
-		  <div class="col-xs-6 col-sm-2">
+		  <div class="col-xs-12 col-sm-2">
         <h3>&nbsp;</h3>            
         <div class="row">
             <a href="#" class="advertisement"><img src="resources/images/adver/adver-1.jpg" alt="katchup.vn" class="img-responsive"></a>
@@ -156,14 +156,14 @@
         </div>
       </div>
         
-      <div class="col-xs-6 col-sm-6">
+      <div class="col-xs-12 col-sm-6">
         <h3>Bài đăng mới nhất</h3><hr>
         <div class="new-articles">
             <div class="row item">
-                <div class="col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a><hr>                        
+                <div class="col-xs-12 col-sm-3 img">
+                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
-                <div class="col-sm-9">
+                <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
                   <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
@@ -179,13 +179,13 @@
                     </dd>
                   </dl>
                 </div>
+                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
-            <hr>
             <div class="row item">
-                <div class="col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a><hr>
+                <div class="col-xs-12 col-sm-3 img">
+                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
-                <div class="col-sm-9">
+                <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
                   <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
@@ -201,13 +201,13 @@
                     </dd>
                   </dl>
                 </div>
+                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
-            <hr>
             <div class="row item">
-                <div class="col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a><hr>
+                <div class="col-xs-12 col-sm-3 img">
+                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
-                <div class="col-sm-9">
+                <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
                   <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
@@ -223,13 +223,13 @@
                     </dd>
                   </dl>
                 </div>
+                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
-            <hr>
             <div class="row item">
-                <div class="col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a><hr>
+                <div class="col-xs-12 col-sm-3 img">
+                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
-                <div class="col-sm-9">
+                <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
                   <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
@@ -245,13 +245,13 @@
                     </dd>
                   </dl>
                 </div>
+                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
-            <hr>
             <div class="row item">
-                <div class="col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a><hr>
+                <div class="col-xs-12 col-sm-3 img">
+                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
-                <div class="col-sm-9">
+                <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
                   <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
@@ -267,13 +267,13 @@
                     </dd>
                   </dl>
                 </div>
+                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
-            <hr>
             <div class="row item">
-                <div class="col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a><hr>
+                <div class="col-xs-12 col-sm-3 img">
+                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
-                <div class="col-sm-9">
+                <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
                   <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
@@ -289,13 +289,13 @@
                     </dd>
                   </dl>
                 </div>
+                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
-            <hr>
             <div class="row item">
-                <div class="col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a><hr>
+                <div class="col-xs-12 col-sm-3 img">
+                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
-                <div class="col-sm-9">
+                <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
                   <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
@@ -311,14 +311,14 @@
                     </dd>
                   </dl>
                 </div>
+                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
-            <hr>
 
         </div>
         <a href="#" class="see-all">See all</a>
     </div>
 
-    <div class="col-xs-6 col-sm-4">
+    <div class="col-xs-12 col-sm-4">
       <h3>&nbsp;</h3>
       <div class="row">
           <a href="#" class="advertisement"><img src="resources/images/adver/adver-3.jpg" alt="katchup.vn" class="img-responsive"></a>
