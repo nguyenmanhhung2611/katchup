@@ -69,7 +69,7 @@
 			  </div>
 			
 			  <div class="item">
-				<img src="resources/images/bootstrap-carousel/slides/banner1.jpg" alt="katchup.vn">
+				<img src="resources/images/bootstrap-carousel/slides/banner3.jpg" alt="katchup.vn">
 				<!-- <div class="carousel-caption">
 				 <h3>Flowers</h3>
 				  <p>Beatiful flowers in Kolymbari, Crete.</p>
