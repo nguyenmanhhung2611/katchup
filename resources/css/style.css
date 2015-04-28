@@ -605,22 +605,6 @@ opacity: 0.6;
     text-align: justify;
     margin-bottom: 30px;
 }
-.footer-customer .item-1 {
-     background: url(../images/customer1.jpg) no-repeat scroll left top transparent;
-     background-size: 53px 53px;
- }
-.footer-customer .item-2 {
-    background: url(../images/customer2.jpg) no-repeat scroll left top transparent;
-    background-size: 53px 53px;
-}
-.footer-customer .item-3 {
-    background: url(../images/customer3.jpg) no-repeat scroll left top transparent;
-    background-size: 53px 53px;
-}
-.footer-customer .item-4 {
-    background: url(../images/customer4.jpg) no-repeat scroll left top transparent;
-    background-size: 53px 53px;
-}
 .footer-customer .text-item .item-name {
     color: #31a4d9;
     font-size: 14px;
@@ -786,6 +770,12 @@ opacity: 0.6;
     .katchup-menu-container {
         margin-bottom: 0px; 
         margin-top: 0px;
+    }
+}
+/* 622px hoac nho hon */
+@media screen and (max-width: 622px) {
+    .katchup-menu li a {
+        border-right-width: 0;
     }
 }
 /* 615px hoac nho hon */
