@@ -43,7 +43,7 @@
                     <div class="row">
                         <div class="col-sm-6 col-xs-6 footer-quote text-center katchup-text">
                             <div class="text-item1">
-                                <div class="text">
+                                <div class="text noselect">
                                     HÃY LÀ MỘT CON TEM. <br/>GẮN CHẶT VÀO MỤC TIÊU CHO TỚI KHI ĐẾN ĐÍCH
                                 </div>
                             </div>

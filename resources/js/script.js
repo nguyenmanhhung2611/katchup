@@ -6,6 +6,7 @@ $(function() {
 });
 
 function menuActive() {	
+	$(".katchup-menu li a").last().css("border-right-width", "0px");
 	/*$(".katchup-menu li").each(function( index ) {
 		//console.log( index + ": " + $( this ).text() );
 	});*/
