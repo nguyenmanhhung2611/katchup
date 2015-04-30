@@ -22,10 +22,11 @@
 #myCarousel .list-group .active {
 	background-color: #F9C356;
 	border-color: #F9C356;
+    z-index: 0;
 }
 
 @media (min-width: 992px) { 
-	#myCarousel { padding-right: 33.3333%; }
+	#myCarousel { padding-right: 33.3333%; background-color: #ffffff; }
 	#myCarousel .carousel-controls { display: none; } 	
 }
 @media (max-width: 991px) { 
