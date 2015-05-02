@@ -141,7 +141,7 @@
             </div>			            
 			
 			<div class="col-sm-5">
-                <h2>&nbsp;</h2>
+                <h3>&nbsp;</h3>
 				<div class="extra-wrap dropcap v1 clearfix">
 					<div class="dropcap_item clearfix">
 						<div class="left">A</div>
