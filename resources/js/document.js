@@ -1,15 +1,18 @@
 /* Load script in every page */
 // Document is ready
 $(function() {	
+	menuActiveDocument();
+	loadDocument();
+});
+
+function menuActiveDocument() {
 	$(".katchup-menu li").each(function(index) {
 		if($(this).hasClass("active")) {
 			$(this).removeClass("active");
 		}
 	});
-	$(".katchup-menu li:nth-child(3)").addClass("active");
-
-	loadDocument();
-});
+	$(".katchup-menu li:nth-child(3)").addClass("active");	
+}
 
 function loadDocument() {    
 	var clickEvent = false;

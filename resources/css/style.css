@@ -296,8 +296,7 @@ blue 	31a4d9
     font-size: 24px;
 }
 .katchup-total {
-    /*background-color: #f79263;
-    color: #FFFFFF;*/
+    margin-top: 15px;
 }
 .katchup-total .link-icon {
     width: 45px;
