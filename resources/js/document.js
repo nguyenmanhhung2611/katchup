@@ -1,4 +1,3 @@
-/* Load script in every page */
 // Document is ready
 $(function() {	
 	menuActiveDocument();

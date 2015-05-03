@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">   
     <meta name="description" content=""/>
     <title>Flashcard katchup</title>
-	<base href="<?php echo ITQ_BASE_URL;?>" />
+    <base href="<?php echo ITQ_BASE_URL;?>" />
 	<!-- <li><a href="<?php /*echo ITQ_BASE_URL;*/?>backend/auth/forgot" title="Quen mat khau">Quen mat khau</a></li> -->
 	
     <!-- meta tags for FB sharing-->
@@ -125,31 +125,31 @@
             <h3>Tài liệu phổ biến</h3><hr>
             <div class="popular-document">
                 <div class="item">
-                    <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h4>Giáo trình Minna no nihongo</h4></a>
                     <p class="text">みんなの日本語</p>
                 </div>
                 <div class="item">
-                    <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/2"><h4>Giáo trình Minna no nihongo</h4></a>
                     <p class="text">みんなの日本語</p>
                 </div>
                 <div class="item">
-                    <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/3"><h4>Giáo trình Minna no nihongo</h4></a>
                     <p class="text">みんなの日本語</p>
                 </div>
                <div class="item">
-                    <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h4>Giáo trình Minna no nihongo</h4></a>
                     <p class="text">みんなの日本語</p>
                 </div>
                 <div class="item">
-                    <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h4>Giáo trình Minna no nihongo</h4></a>
                     <p class="text">みんなの日本語</p>
                 </div>
                 <div class="item">
-                    <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h4>Giáo trình Minna no nihongo</h4></a>
                     <p class="text">みんなの日本語</p>
                 </div>
                 <div class="item">
-                    <a class="link" href=""><h4>Giáo trình Minna no nihongo</h4></a>
+                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/2"><h4>Giáo trình Minna no nihongo</h4></a>
                     <p class="text">みんなの日本語</p>
                 </div>
           </div>
@@ -165,7 +165,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
+                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
                   <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
                                         uy tín và thông dụng nhất trong các trường dạy 
@@ -187,7 +187,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
+                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/2"><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
                   <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
                                         uy tín và thông dụng nhất trong các trường dạy 
@@ -209,7 +209,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
+                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/3"><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
                   <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
                                         uy tín và thông dụng nhất trong các trường dạy 
@@ -231,7 +231,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
+                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
                   <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
                                         uy tín và thông dụng nhất trong các trường dạy 
@@ -253,7 +253,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
+                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
                   <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
                                         uy tín và thông dụng nhất trong các trường dạy 
@@ -275,7 +275,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
+                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
                   <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
                                         uy tín và thông dụng nhất trong các trường dạy 
@@ -297,7 +297,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href=""><h3>Giáo trình Minna no nihongo</h3></a>
+                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
                   <p class="title-japan">みんなの日本語</p>
                   <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
                                         uy tín và thông dụng nhất trong các trường dạy 
