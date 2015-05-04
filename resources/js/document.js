@@ -2,7 +2,19 @@
 $(function() {	
 	menuActiveDocument();
 	loadDocument();
+	RemoveLastItem();
 });
+
+function RemoveLastItem() {
+	// Remove last hr in popular document
+	$(".bottom-new-article").last().remove();
+
+	// Remove last menu
+	$(".category .item").last().addClass("removeItemAfter");
+
+	// Remove last in popular document
+	$("#popular-document .item").last().addClass("removeItemAfter");	
+}
 
 function menuActiveDocument() {
 	$(".katchup-menu li").each(function(index) {

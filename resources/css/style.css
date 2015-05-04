@@ -1029,3 +1029,9 @@ opacity: 0.6;
     user-select: none;
     cursor: default;
 }
+.removeItemAfter:after {
+    border-bottom: none !important;
+}
+.removeItemAfter {
+    border-bottom: none !important;
+}

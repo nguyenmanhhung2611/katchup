@@ -123,7 +123,7 @@
         </div>
         <div class="row">
             <h3>Tài liệu phổ biến</h3><hr>
-            <div class="popular-document">
+            <div id="popular-document" class="popular-document">
                 <div class="item">
                     <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h4>Giáo trình Minna no nihongo</h4></a>
                     <p class="text">みんなの日本語</p>
