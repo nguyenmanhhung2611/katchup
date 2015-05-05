@@ -2,10 +2,16 @@
 $(function() {
 	menuActiveDetailDocument();
 	getSourceFacebookComment();
+	RemoveLastItem();
+});
 
+function RemoveLastItem() {
 	// Remove last hr in popular document
 	$(".bottom-new-article").last().remove();
-});
+
+	// Remove last menu
+	$(".category .item").last().addClass("removeItemAfter");
+}
 
 function menuActiveDetailDocument() {
 	$(".katchup-menu li").each(function(index) {
