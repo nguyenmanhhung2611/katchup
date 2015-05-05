@@ -3,7 +3,7 @@
 $(function() {
 	menuActive();
 	initBoxLetter();
-	supportBootstrap();	
+	supportBootstrap();
 });
 
 function supportBootstrap() {

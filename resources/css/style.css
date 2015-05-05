@@ -713,15 +713,14 @@ opacity: 0.6;
   border-color: #31A4DA !important;
 }
 
-.navbar-default .navbar-nav > li > a {
+/*.navbar-default .navbar-nav > li > a {
   color: none !important;
-}
+}*/
 
 .navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  /*color: #333;*/
+.navbar-default .navbar-nav > li > a:focus:not(#register) {
   background-color: #8bd554 !important;
-  font-weight: bold !important;
+  font-weight: bold !important; 
 }
 
 .navbar-default .navbar-toggle {
@@ -1038,6 +1037,20 @@ opacity: 0.6;
     border-bottom: none !important;
 }
 
+/*========================= MODAL =========================*/
+.modal-header {
+    background-color: #31a4da;
+    border-radius: 4px 4px 0 0;
+    color: #fff;
+}
+.question-account span {
+    color: #949490;
+    font-size: 14px;    
+}
+.question-account {
+    margin-top: -20px;
+}
+
 /*========================= LOGIN =========================*/
 #modalLogin #passwd {
     float: left;
@@ -1051,13 +1064,6 @@ opacity: 0.6;
     color: #8c8c89;
     font-size: 14px;
 }
-#modalLogin .question-account span {
-    color: #949490;
-    font-size: 14px;    
-}
-#modalLogin .question-account {
-    margin-top: -20px;
-}
 #modalLogin .openid-login a img {
     padding: 2px 0;
 }
@@ -1066,11 +1072,20 @@ opacity: 0.6;
     padding-left: 6px;
     vertical-align: text-top;
 }
-#modalLogin .modal-header {
-    background-color: #31a4da;
-    border-radius: 4px 4px 0 0;
-    color: #fff;
+/*vertically center modal*/
+#modalLogin {
+   height: @modalHeight;
+   top: 15%;
+   margin-top: -1 * (@modalHieght / 2);
 }
-/*#modalLogin .modal-header button span {
-    color: #fff;
-}*/
+
+/*========================= FORGOT PASSWORD =========================*/
+/*vertically center modal*/
+#modalForgotPassword .modal-header {
+    background-color: #f0ad4e;
+}
+#modalForgotPassword {
+   height: @modalHeight;
+   top: 20%;
+   margin-top: -1 * (@modalHieght / 2);
+}
