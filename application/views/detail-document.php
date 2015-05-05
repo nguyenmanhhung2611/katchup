@@ -36,9 +36,7 @@
 <?php include_once('include/header.php') ?>
 
 <div id="banner">
-    <div class="container-fluid" style="padding: 0px;">
-      <div id="idDocument" style="display:none;"><?php echo $idDocument ?></div>
-    </div>
+    <div class="container-fluid" style="padding: 0px;"></div>
 </div>
 
 <div id="content" class="detail-document">

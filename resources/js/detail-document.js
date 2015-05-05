@@ -23,7 +23,5 @@ function menuActiveDetailDocument() {
 }
 
 function getSourceFacebookComment() {
-	var idDocument = $("#idDocument");
-	$(".fb-comments").attr("data-href","http://localhost/katchup/home/detailDocument/" + idDocument.text());
-	idDocument.remove();
+	$(".fb-comments").attr("data-href", location.href);
 }
