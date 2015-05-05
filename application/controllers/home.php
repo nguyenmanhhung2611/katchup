@@ -15,7 +15,7 @@ class Home extends CI_Controller {
 	public function detailDocument($id) {
 		$data['idDocument'] = $id;
 		$this->load->view('detail-document', $data);
-		//<?php echo $idDocument; 
 	}
+	
 }
 ?>

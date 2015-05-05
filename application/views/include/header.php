@@ -15,7 +15,48 @@
                 Luyện mãi thành tài, miệt mài tất giỏi
         <!-- style 1 -->
         <ul class="nav navbar-nav navbar-right katchup-nav katchup-login pull-right">
-          <li><a id="login" class="btn btn-login" href="#">Đăng nhập</a></li>
+          <li><a id="login" class="btn btn-login" data-toggle="modal" href="#modalLogin">Đăng nhập</a></li>
+          <!-- Button trigger modal -->
+          <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalLogin">
+            Launch demo modal
+          </button> -->
+          <!-- Modal -->
+          <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-user"></span> Đăng Nhập</h4>
+                </div>
+                <div class="row modal-body">
+                  <div class="col-xs-12 col-sm-7">
+                      <form class="form-signin" method="post" action='' name="login_form">
+                          <p><input type="text" class="form-control" name="eid" id="email" placeholder="Email" autofocus></p>
+                          <p><input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password"><a id="forgot-password" href="#">Quên mật khẩu?</a></p>
+                          <div class="checkbox checkbox-login"><button type="submit" class="btn btn-primary">Đăng nhập</button>
+                            <label>
+                              <input type="checkbox" value="remember-me"> Ghi nhớ đăng nhập
+                            </label>
+                          </div>
+                      </form>
+                      <div class="question-account"><span>Bạn đã có tài khoản chưa? <span><a href="#">Đăng ký</a></div>
+                  </div>
+                  <div class="col-xs-12 col-sm-5">
+                      <div class="openid-login">
+                          <a href="#"><img src="resources/images/fb-login-button.png" alt="katchup.vn"></a>
+                          <a href="#"><img src="resources/images/google-login-button.png" alt="katchup.vn"></a>
+                      </div>
+                  </div>
+                  
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          
           <li><a id="register" href="#">Đăng ký</a></li>
         </ul>
         <!-- style 2 -->

@@ -10,7 +10,7 @@
                       js = d.createElement(s); js.id = id;
                       js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.3";
                       fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>              
+                    }(document, 'script', 'facebook-jssdk'));</script>
                     <div class="fb-page" data-href="https://www.facebook.com/katchup.vn" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/katchup.vn"><a href="https://www.facebook.com/katchup.vn">Katchup FlashCard - Thẻ Học Tiếng Nhật</a></blockquote></div></div>
                 </div>
             </div>
