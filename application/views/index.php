@@ -4,8 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">   
-    <meta name="description" content=""/>
-    <title>Flashcard katchup</title>
+    <meta name="description" content="Tự học tiếng Nhật với thẻ học tiếng Nhật sẽ giúp bạn học tiếng Nhật đơn giản, hiệu quả, học nhanh và nhớ lâu. Giúp bạn tiết kiệm thời gian, dễ dàng học Kanji, từ vựng, ngữ pháp. Ngoài ra bạn có thể chia sẻ tài liệu tiếng Nhật, ôn luyện online."/>
+    <title>Với thẻ học tiếng Nhật Katchup flashcard, học tiếng Nhật có còn khó khăn? học tiếng Nhật online và tự học với thẻ học tiếng Nhật để cảm nhận khác biệt.</title>
 	<base href="<?php echo ITQ_BASE_URL;?>" />
 	<!-- <li><a href="<?php /*echo ITQ_BASE_URL;*/?>backend/auth/forgot" title="Quen mat khau">Quen mat khau</a></li> -->
 	
