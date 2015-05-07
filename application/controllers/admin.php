@@ -20,7 +20,7 @@ class Admin extends CI_Controller {
 	/*** Document Manager */
 	public function documentManager($pageNum = 1, $recPerPage = DEFAULT_NUMBER_RECORDS_PER_PAGE) {
 		$this->load->Model('Mdocument');
-		$data['list_document'] = $this->Mdocument->selectPage($pageNum, $recPerPage);
+		//$data['list_document'] = $this->Mdocument->selectPage($pageNum, $recPerPage);
 		$data['count_all_document'] = $this->Mdocument->countDocument();
 		$this->load->view('admin/document-manager', $data);
 		

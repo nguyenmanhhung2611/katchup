@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">   
     <meta name="description" content=""/>
-    <title>DOCUMENT MANAGER</title>
-    <base href="<?php echo ITQ_BASE_URL;?>" />
+    <title>ADMIN PAGE</title>
+    <base href="<?php //echo ITQ_BASE_URL;?>" />
 	<!-- <li><a href="<?php /*echo ITQ_BASE_URL;*/?>backend/auth/forgot" title="Quen mat khau">Quen mat khau</a></li> -->
 	
     <!-- meta tags for FB sharing-->
@@ -29,70 +29,40 @@
     <link href="resources/css/bootstrap.css" rel="stylesheet">    
     <link href="resources/css/responsive.css" rel="stylesheet">
     <script src="resources/js/bootstrap.js"></script>
-	
-	<?php 
-		
-		//session_start();
-		$record_per_page = 5;
-		$url_show_list_document = "admin/showDocument";
-	?>
 
-	<!-- ajax load document list with pagination -->
-	<script type="text/javascript" language="javascript">
-		
-
-		$(document).ready(function() {
-			
-			//alert($("a.page_number").attr("id"));
-			$("a.page_number").click(function(event){
-				loadPage($(this).attr("id"));
-				
-			});
-
-			$("a.page_number:first").click();
-		});
-
-		function loadPage(pageNumber) {
-			var url = "<?PHP echo $url_show_list_document; ?>/" + pageNumber + "/<?PHP echo $record_per_page; ?>";
-			
-			$("div.document_list").load(url);
-		}
-	</script>
 </head>
 <body>
 
-
-
+<?php 
+	//include_once($_SERVER['DOCUMENT_ROOT'] ."/katchup/views/include/header.php") 
+	session_start();
+?>
 <div >
 <?PHP
-
-
-echo '<h1 >Quản Lý Tài Liệu</h1>';
-
+echo $_SESSION['admin_username'];
+if (!isset($_SESSION['admin_username']))
+{
+	echo '
+	<form id="formlogin" name="formlogin" action="/katchup/admin/login" method="post" >
+	<input id="username" name="username" type="text" placeholder="Tên đăng nhập" />
+	<input id="password" name="password" type="text" placeholder="Mật khẩu" />
+	<input id="btnlogin" name="btnlogin" type="submit" value="Log In" />
+	</form>
+	';
+	//$_SESSION['admin_username']=$_POST['username'];
+} else {
+	echo '<h1 >Hello ADMIN.</h1>';
+}
 ?>
 
-	<a href="admin" >Trang Admin</a><BR>
-	
 </div>
 
 
 
 <div >
-	<a href="admin/addDocument" >Thêm</a><BR>
 
-	<div class="document_list" >Danh sach tai lieu
 
-	</div>
-	
-	<!-- page number list -->
-	<div align="center" id="pagination">
-	<?PHP
-		$page_count = $count_all_document/$record_per_page + 1;	// round up
-		for ($i = 1; $i <= $page_count; $i++) {
-			echo '<a id="'.$i.'" class="page_number" align="center" >'.$i.'</a>';
-		}
-	?>
-	</div>
+
 
 </div>
 
