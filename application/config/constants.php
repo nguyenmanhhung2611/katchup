@@ -114,6 +114,7 @@ define ("TAI_LIEU_COL_NGAY_DANG", "ngay_dang");
 //COL in TB_DANH_MUC_TAI_LIEU
 define("DANH_MUC_COL_MA_DANH_MUC", "ma_danh_muc");
 define("DANH_MUC_COL_TEN_DANH_MUC", "ten_danh_muc");
+define("DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT", "ten_danh_muc_tieng_nhat");
 define("DANH_MUC_COL_MO_TA", "mo_ta");
 define("DANH_MUC_COL_GHI_CHU", "ghi_chu");
 //

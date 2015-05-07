@@ -30,6 +30,39 @@
     <link href="resources/css/responsive.css" rel="stylesheet">
     <script src="resources/js/bootstrap.js"></script>
 
+    <?php 
+  
+      //session_start();
+      $record_per_page = 5;
+      $url_show_list_document = "home/documentList";
+    ?>
+
+    <!-- Ajax Load Document category -->
+    <script type="text/javascript" language="javascript">
+      $(document).ready(function() {
+        loadDocumentCategory();
+        loadDocumentListPage(3);
+        //alert($("a.page_number").attr("id"));
+       /* $("a.page_number").click(function(event){
+          loadPage($(this).attr("id"));
+          
+        });*/
+
+        //$("a.page_number:first").click();
+      });
+
+      function loadDocumentListPage(pageNumber) {
+        var url = "<?PHP echo $url_show_list_document; ?>/" + pageNumber + "/<?PHP echo $record_per_page; ?>";
+        $("div#new-articles").load(url);
+      }
+
+      function loadDocumentCategory() {
+        var url = "home/documentCategory";
+        $("div#documentCategory").load(url);
+      }
+
+    </script>
+
 </head>
 <body>
 
@@ -158,7 +191,7 @@
         
       <div class="col-xs-12 col-sm-6">
         <h3>Bài đăng mới nhất</h3><hr>
-        <div class="new-articles">
+        <div class="new-articles" id="new-articles">
             <div class="row item">
                 <div class="col-xs-12 col-sm-3 img">
                     <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
@@ -325,7 +358,7 @@
       </div>
       <div class="row">
           <h3>Danh mục</h3><hr>
-          <div class="popular-document category">
+          <div class="popular-document category" id="documentCategory">
               <div class="item">
                   <a class="link" href=""><h4>MINNA NO NIHONGO | </h4></a>
                   <p class="text"><h4>みんなの日本語</h4></p>

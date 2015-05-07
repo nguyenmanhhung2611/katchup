@@ -78,7 +78,9 @@ echo '<h1 >Quản Lý Tài Liệu</h1>';
 
 
 <div >
-	<a href="admin/addDocument" >Thêm</a><BR>
+	<a id="admin/addDocument" >Thêm</a><BR>
+	<div id="formAddDocument" ></div>
+	<a id="admin/addDocument" style="display: none; ">Đóng</a><BR>
 
 	<div class="document_list" >Danh sach tai lieu
 
