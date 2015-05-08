@@ -41,14 +41,14 @@
     <script type="text/javascript" language="javascript">
       $(document).ready(function() {
         loadDocumentCategory();
-        loadDocumentListPage(3);
+        //loadDocumentListPage(3);
         //alert($("a.page_number").attr("id"));
-       /* $("a.page_number").click(function(event){
-          loadPage($(this).attr("id"));
+        $("a.page_number").click(function(event){
+          loadDocumentListPage($(this).attr("id"));
           
-        });*/
+        });
 
-        //$("a.page_number:first").click();
+        $("a.page_number:first").click();
       });
 
       function loadDocumentListPage(pageNumber) {
@@ -348,7 +348,17 @@
             </div>
 
         </div>
-        <a href="#" class="see-all">See all</a>
+        <!-- page number list -->
+        <div align="center" id="pagination">
+        <?PHP
+          $page_count = $count_all_document/$record_per_page + 1; // round up
+          for ($i = 1; $i <= $page_count; $i++) {
+            echo '<a id="'.$i.'" class="page_number" align="center" > '.$i.' </a>';
+          }
+        ?>
+        </div>
+        
+        
     </div>
 
     <div class="col-xs-12 col-sm-4">

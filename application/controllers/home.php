@@ -9,7 +9,10 @@ class Home extends CI_Controller {
 	}
 	
 	public function document() {
-		$this->load->view('document');
+		$this->load->Model('Mdocument');
+		
+		$data['count_all_document'] = $this->Mdocument->countDocument();
+		$this->load->view('document', $data);
 	}
 
 	public function documentList($pageNum = 1, $recPerPage = DEFAULT_NUMBER_RECORDS_PER_PAGE) {
