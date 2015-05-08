@@ -145,9 +145,9 @@
 #content.detail-document .sum-document .facebook-comment {
     padding-top: 20px;
 }
-.fb_iframe_widget,
-.fb_iframe_widget span,
-.fb_iframe_widget span iframe[style] {
+#content.detail-document .fb_iframe_widget,
+#content.detail-document .fb_iframe_widget span,
+#content.detail-document .fb_iframe_widget span iframe[style] {
   min-width: 100% !important;
   width: 100% !important;
 }

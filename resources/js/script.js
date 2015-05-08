@@ -4,7 +4,18 @@ $(function() {
 	menuActive();
 	initBoxLetter();
 	supportBootstrap();
+	processModalHeader();
 });
+
+function processModalHeader() {
+	$('#modalForgotPassword').on('shown.bs.modal', function () {
+	  $('#modalLogin').modal('hide');
+	});
+
+	$('#modalForgotPassword').on('hidden.bs.modal', function (e) {
+	  $('#modalLogin').modal('show');
+	});	
+}
 
 function supportBootstrap() {
 	// Every time a modal is shown, if it has an autofocus element, focus on it.
