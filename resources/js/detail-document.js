@@ -1,8 +1,9 @@
 // Document is ready
 $(function() {
 	menuActiveDetailDocument();
-	getSourceFacebookComment();
 	RemoveLastItem();
+	getSourceFacebookComment();
+	getSourceLikeAndShareFacebook();
 });
 
 function RemoveLastItem() {
@@ -24,4 +25,8 @@ function menuActiveDetailDocument() {
 
 function getSourceFacebookComment() {
 	$(".fb-comments").attr("data-href", location.href);
+}
+
+function getSourceLikeAndShareFacebook() {
+	$(".fb-like").attr("data-href", location.href);
 }

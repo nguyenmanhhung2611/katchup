@@ -3,14 +3,6 @@
         <div class="row">
             <div class="col-sm-4 ">         
                 <div class="row facebook-box-like">
-                    <div id="fb-root"></div>
-                    <script>(function(d, s, id) {
-                      var js, fjs = d.getElementsByTagName(s)[0];
-                      if (d.getElementById(id)) return;
-                      js = d.createElement(s); js.id = id;
-                      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.3";
-                      fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>
                     <div class="fb-page" data-href="https://www.facebook.com/katchup.vn" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/katchup.vn"><a href="https://www.facebook.com/katchup.vn">Katchup FlashCard - Thẻ Học Tiếng Nhật</a></blockquote></div></div>
                 </div>
             </div>
@@ -68,15 +60,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12" style="margin-top: 10px;">                        
-                        <div class="row">
-                            <p>Bản quyền &copy; 2015 thuộc TRUONG HUNG PHAT</p>
-                            <p>TRADING & SERVICES CO., LTD</p>
-                            <p>Địa chỉ: 237/84/8, Đường Pham Van Chieu, P14, Quận Gò Vấp, TP.HCM</p>
-                            <p>Điện thoại: 0939 543 548</p>
-                            <p>Email: admin@katchup.vn</p>
-                            <p>Website: www.katchup.vn</p>
-                        </div>
+                    <div class="col-sm-12" style="margin-top: 10px;">
+                        <p>Bản quyền &copy; 2015 thuộc TRUONG HUNG PHAT</p>
+                        <p>TRADING & SERVICES CO., LTD</p>
+                        <p>Địa chỉ: 237/84/8, Đường Pham Van Chieu, P14, Quận Gò Vấp, TP.HCM</p>
+                        <p>Điện thoại: 0939 543 548</p>
+                        <p>Email: admin@katchup.vn</p>
+                        <p>Website: www.katchup.vn</p>
                     </div>
                     
                 </div>

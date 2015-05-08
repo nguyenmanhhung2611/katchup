@@ -14,6 +14,7 @@
     <meta property="og:description" content="" />
     <meta property="og:image" content="resources/images/2.jpg" />
     <meta property="og:url" content="" />
+    <meta property="fb:admins" content="1519007155006218" />
 
     <!-- css -->
     <link href="resources/css/style.css" rel="stylesheet">
@@ -167,13 +168,16 @@
       <div class="col-xs-12 col-sm-6">
           <h3>Tổng hợp tài liệu luyện thi JLPT N1 [updated]</h3><hr>
           <div class="sum-document">
-            <div class="row">            
+            <div class="row">
               <div class="detail">
                 <div class="col-xs-4 col-sm-3">
                   <a href="#" class="advertisement"><img src="resources/images/detail-document/detail-document-id1.jpg" alt="katchup.vn" class="img-responsive"></a>
                 </div>
                 <div class="col-xs-8 col-sm-9">
                   Giáo trình Minna no Nihongo là bộ sách giáo trình uy tín và thông dụng nhất trong các trường dạy tiếng Nhật ở Việt Nam cũng như trên thế giới. 
+                </div>
+                <div class="col-xs-12 col-sm-12">
+                  <div class="fb-like" data-href="http://katchup.vn" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                 </div>
               </div>              
             </div>
@@ -240,14 +244,6 @@
 
             <div class="row facebook-comment">
               <div class="col-xs-12 col-sm-12">
-                <div id="fb-root"></div>
-                <script>(function(d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) return;
-                  js = d.createElement(s); js.id = id;
-                  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.3";
-                  fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
                 <div class="fb-comments" data-href="http://localhost/katchup/home/detailDocument/1" data-numposts="10" data-colorscheme="light"></div>
               </div>
             </div>
