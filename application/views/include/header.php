@@ -1,3 +1,7 @@
+<!-- http://www.malot.fr/bootstrap-datetimepicker/demo.php -->
+<link href="resources/css/bootstrap-datetimepicker.css" rel="stylesheet">
+<script src="resources/js/bootstrap-datetimepicker.js"></script>
+
 <div id="header" >  
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -30,9 +34,10 @@
             Launch demo modal
           </button> -->          
           <?php require 'modal/modal-login.php'; ?>
-          <?php require 'modal/modal-forgot-password.php'; ?>          
+          <?php require 'modal/modal-forgot-password.php'; ?>
+          <?php require 'modal/modal-register.php'; ?>
           
-          <li><a id="register" href="#">Đăng ký</a></li>
+          <li><a id="register" data-toggle="modal" href="#modalRegister">Đăng ký</a></li>
         </ul>
         <!-- style 2 -->
         <!-- <div class="btn-group" style="float: right; padding-top: 10px;">

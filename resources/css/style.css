@@ -877,8 +877,90 @@ opacity: 0.6;
     border-color: #0f99d8; 
 }
 
-/*========================= PUBLIC =========================*/
+/*========================= MODAL =========================*/
+.modal-header {
+    background-color: #31a4da;
+    border-radius: 4px 4px 0 0;
+    color: #fff;
+}
+.question-account span {
+    color: #949490;
+    font-size: 14px;    
+}
+.question-account {
+    margin-top: -20px;
+}
 
+/*========================= MODAL LOGIN =========================*/
+#modalLogin #passwd {
+    float: left;
+    /*width: 65%;*/
+}
+#modalLogin .checkbox-login {
+    /*margin-top: -15px;*/
+    margin-top: 0px;
+}
+#modalLogin .checkbox-login label {
+    margin-left: 10px;
+    color: #8c8c89;
+    font-size: 14px;
+}
+#modalLogin .openid-login a img {
+    padding: 2px 0;
+}
+#modalLogin #forgot-password {
+    font-size: 14px;
+    padding-left: 6px;
+    vertical-align: text-top;
+}
+/*vertically center modal*/
+#modalLogin {
+   height: @modalHeight;
+   top: 15%;
+   margin-top: -1 * (@modalHieght / 2);
+}
+
+/*========================= MODAL FORGOT PASSWORD =========================*/
+/*vertically center modal*/
+#modalForgotPassword .modal-header {
+    background-color: #f0ad4e;
+}
+#modalForgotPassword {
+   height: @modalHeight;
+   top: 20%;
+   margin-top: -1 * (@modalHieght / 2);
+}
+
+/*========================= MODAL REGISTER =========================*/
+/*vertically center modal*/
+#modalRegister .modal-header {
+    background-color: #5cb85c;
+}
+/*#modalRegister {
+   height: @modalHeight;
+   top: 10%;
+   margin-top: -1 * (@modalHieght / 2);
+}*/
+#modalRegister .required-infor {
+    color: #333;
+    font-size: 14px;
+}
+#modalRegister #date-register {
+    cursor: pointer !important  ;
+}
+#modalRegister .realperson-challenge {
+    float: left;
+}
+#modalRegister .captcha-register{
+    margin-top: 15px;
+    width: 100%;
+}
+#modalRegister #defaultReal {
+    margin-left: 7px;
+    width: 399px;
+}
+
+/*========================= PUBLIC =========================*/
 /* 980px hoac nho hon */
 @media screen and (max-width: 980px) {  
    .katchup-total .text-title {
@@ -914,6 +996,11 @@ opacity: 0.6;
 @media screen and (max-width: 622px) {
     .katchup-menu li a {
         border-right-width: 0;
+    }
+
+    #modalRegister #defaultReal {
+        margin: 5px 0px 0px 0px;
+        width: 100%;
     }
 }
 /* 615px hoac nho hon */
@@ -1036,56 +1123,8 @@ opacity: 0.6;
 .removeItemAfter {
     border-bottom: none !important;
 }
-
-/*========================= MODAL =========================*/
-.modal-header {
-    background-color: #31a4da;
-    border-radius: 4px 4px 0 0;
-    color: #fff;
-}
-.question-account span {
-    color: #949490;
-    font-size: 14px;    
-}
-.question-account {
-    margin-top: -20px;
-}
-
-/*========================= LOGIN =========================*/
-#modalLogin #passwd {
-    float: left;
-    width: 65%;
-}
-#modalLogin .checkbox-login {
-    margin-top: -15px;
-}
-#modalLogin .checkbox-login label {
-    margin-left: 10px;
-    color: #8c8c89;
-    font-size: 14px;
-}
-#modalLogin .openid-login a img {
-    padding: 2px 0;
-}
-#modalLogin #forgot-password {
-    font-size: 14px;
-    padding-left: 6px;
-    vertical-align: text-top;
-}
-/*vertically center modal*/
-#modalLogin {
-   height: @modalHeight;
-   top: 15%;
-   margin-top: -1 * (@modalHieght / 2);
-}
-
-/*========================= FORGOT PASSWORD =========================*/
-/*vertically center modal*/
-#modalForgotPassword .modal-header {
-    background-color: #f0ad4e;
-}
-#modalForgotPassword {
-   height: @modalHeight;
-   top: 20%;
-   margin-top: -1 * (@modalHieght / 2);
+.error {
+    background: none repeat scroll 0 0 #ffe !important;
+    border-color: #900 !important;
+    color: #900 !important;
 }

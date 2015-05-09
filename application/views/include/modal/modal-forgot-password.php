@@ -7,8 +7,13 @@
         <h4 class="modal-title" id="modalLabelForgotPassword"><span class="glyphicon glyphicon-envelope"></span> Nhập địa chỉ email của bạn để thay đổi mật khẩu</h4>
       </div>
       <div class="modal-body">
-        <p><input type="password" class="form-control" name="forgotPassword" id="txtforgotPassword" placeholder="Password" autofocus></p>
-        <button id="btnforgotPassword" type="button" class="btn btn-warning">Gửi email</button>
+        <form class="form-signin" method="post" action='' name="forgot_password_form" id="forgot_password_form">
+          <p class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input type="text" class="form-control" name="emailForgotPassword" id="emailForgotPassword" placeholder="Email" autofocus>
+          </p>
+          <button id="btnforgotPassword" type="submit" class="btn btn-warning">Gửi email</button>
+        </form>
     <!-- <div class="question-account"><span>Bạn đã có tài khoản chưa? <span><a href="#">Đăng ký</a></div> -->                  
       </div>
       <!-- <div class="modal-footer">
