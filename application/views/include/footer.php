@@ -64,9 +64,9 @@
                         <p>Bản quyền &copy; 2015 thuộc TRUONG HUNG PHAT</p>
                         <p>TRADING & SERVICES CO., LTD</p>
                         <p>Địa chỉ: 237/84/8, Đường Pham Van Chieu, P14, Quận Gò Vấp, TP.HCM</p>
-                        <p>Điện thoại: 0939 543 548</p>
-                        <p>Email: admin@katchup.vn</p>
-                        <p>Website: www.katchup.vn</p>
+                        <p><span class="glyphicon glyphicon-phone"></span> Điện thoại: 0939 543 548</p>
+                        <p><span class="glyphicon glyphicon-envelope"></span> Email: admin@katchup.vn</p>
+                        <p><span class="glyphicon glyphicon-globe"></span> Website: www.katchup.vn</p>
                     </div>
                     
                 </div>
