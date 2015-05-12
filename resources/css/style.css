@@ -942,8 +942,8 @@ opacity: 0.6;
    margin-top: -1 * (@modalHieght / 2);
 }*/
 #modalRegister .required-infor {
-    color: #333;
-    font-size: 14px;
+    color: #555555;
+    font-size: 12px;
 }
 #modalRegister #date-register {
     cursor: pointer !important  ;
@@ -958,6 +958,26 @@ opacity: 0.6;
 #modalRegister #defaultReal {
     margin-left: 7px;
     width: 399px;
+}
+#modalRegister .modal-footer {
+    background-color: #5cb85c; 
+    border-radius: 0px 0px 4px 4px; 
+    height: 40px;
+}
+#modalRegister .modal-footer span {
+    float: left; 
+    font-size: 18px; 
+    margin-top: -10px; 
+    font-family: tahoma,arial,sans-serif;
+    padding-left: 137px;
+}
+#modalRegister .modal-footer a {
+    float: left; 
+    margin-left: 30px; 
+    margin-top: -23px;
+}
+#modalRegister .modal-footer .google-plus {
+    margin-left: 20px; 
 }
 
 /*========================= PUBLIC =========================*/
@@ -1011,6 +1031,12 @@ opacity: 0.6;
    }*/
     #banner .text-container {
         margin: -10px 0 0 0px;
+    }
+}
+/* 480px hoac nho hon */
+@media screen and (max-width: 480px) {  
+    #modalRegister .modal-footer span {
+        padding-left: 0px;
     }
 }
 /* 456px hoac nho hon */
