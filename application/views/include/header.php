@@ -12,7 +12,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     
-    <div class="container noselect" id="toppage">        
+    <div class="container noselect" id="toppage">
       <!-- Static navbar -->
       <nav class="navbar navbar-default">
           <div class="navbar-header">
