@@ -45,6 +45,17 @@
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div> -->
+      <div class="modal-footer">
+        <span>Hoặc đăng nhập bằng: </span>
+        <a href="javascript:void(0);" onclick="FacebookLogin();" title="Đăng nhập bằng Facebook">
+          <img src="resources/images/facebook-register.png" alt="Đăng nhập bằng Facebook">
+        </a>
+        <a class="google-plus" href="javascript:void(0);" onclick="googleLogin();" title="Đăng nhập bằng google+">
+          <img src="resources/images/google-plus-register.png" alt="Đăng nhập bằng google+">
+        </a>
+        
+      </div>
+
     </div>
   </div>
 </div>
