@@ -11,8 +11,5 @@ class Home extends CI_Controller {
 	public function document() {
 		$this->load->view('document');
 	}
-	public function contact() {
-		$this->load->view('contact');
-	}
 }
 ?>

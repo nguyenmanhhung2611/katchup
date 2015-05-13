@@ -1,5 +1,5 @@
 <?php
-class contactform extends CI_Controller
+class contact extends CI_Controller
 {
     public function __construct()
     {
