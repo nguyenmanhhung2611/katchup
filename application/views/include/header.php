@@ -32,7 +32,7 @@
             <li><a href="<?php echo ITQ_BASE_URL;?>home/document">Tài liệu</a></li>
             <li><a href="#">Sản phẩm</a></li>
             <li><a href="#">Hỏi đáp</a></li>
-			<li><a href="<?php echo ITQ_BASE_URL;?>home/contact">Liên hệ
+			<li><a href="<?php echo ITQ_BASE_URL;?>contactform">Liên hệ
 </a></li>
           </ul>
         </div>
