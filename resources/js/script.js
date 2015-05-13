@@ -111,11 +111,16 @@ function validateFormRegister() {
 			return false;
 		}
 
-		/*$.post('home/register', function(html) {
-	       // do what you need in your success callback
-	       alert(html);
-	    });
-		return false;	*/    
+		$.post("home/register", { defaultReal : $("#defaultReal").val(), defaultRealHash: $("#defaultReal").realperson('getHash')} ,function(data) {			
+		    if ($.trim(data) == "Error") {
+		        cssCheckErrorClass($("#defaultReal"), true);
+		    } else {
+		    	// call ajax save account
+		    	// ....
+		    	location.reload();
+		    }
+		});
+		return false;
 	});
 }
 

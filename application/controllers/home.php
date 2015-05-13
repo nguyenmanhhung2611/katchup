@@ -17,13 +17,10 @@ class Home extends CI_Controller {
 		$this->load->view('detail-document', $data);
 	}
 	
-	public function register() {				
+	public function register() {
         $this->load->model('Captcha');
-        
-		if ($this->Captcha->rpHash($_POST['defaultReal']) == $_POST['defaultRealHash']) {
-			echo "Đăng ký thành công";
-		} else {
-			echo "Đăng ký thất bại";
+		if ($this->Captcha->rpHash($_POST['defaultReal']) != $_POST['defaultRealHash']) {
+			print "Error";
 		}
 	}
 	

@@ -12,7 +12,7 @@
       </div>
       <div class="row modal-body">
         <div class="col-xs-12 col-sm-12">
-            <form class="form-signin" method="post" action='home/register' name="register_form" id="register_form">
+            <form class="form-signin" method="post" action='' name="register_form" id="register_form">
                 <div class="well well-sm required-infor"><strong><span class="glyphicon glyphicon-asterisk"></span> Thông tin bắt buộc</strong></div>
                 <p class="input-group">
                     <input type="text" class="form-control" name="email-register" id="email-register" placeholder="Email" autofocus>
