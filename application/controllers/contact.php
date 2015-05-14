@@ -62,13 +62,13 @@ class contact extends CI_Controller
             {
                 // mail sent
                 $this->session->set_flashdata('msg','<div class="alert alert-success text-center">Thư của bạn đã được gửi thành công!</div>');
-                redirect('contactform/index');
+                redirect('contact');
             }
             else
             {
                 //error
                 $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Có một lỗi khi gửi, vui lòng thử lại!</div>');
-                redirect('contactform/index');
+                redirect('contact');
             }
         }
     }

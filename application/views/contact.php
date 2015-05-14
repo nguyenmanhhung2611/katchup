@@ -54,8 +54,8 @@
                             </h4>       
         
 		
-            <?php $attributes = array("class" => "form-horizontal", "name" => "contactform");
-            echo form_open("contactform/index", $attributes);?>
+            <?php $attributes = array("class" => "form-horizontal", "name" => "contact");
+            echo form_open("contact", $attributes);?>
             <fieldset>
             <div class="form-group">
                 <div class="col-md-12">
