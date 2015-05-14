@@ -944,6 +944,7 @@ opacity: 0.6;
 #modalRegister .required-infor {
     color: #555555;
     font-size: 12px;
+    margin-bottom: 10px;
 }
 #modalRegister #date-register {
     cursor: pointer !important  ;
@@ -959,7 +960,12 @@ opacity: 0.6;
     margin-left: 7px;
     width: 399px;
 }
-#modalRegister .modal-footer {
+#modalRegister .openid-register {
+    text-align: center; 
+    margin-top: -10px; 
+    margin-bottom: 15px;
+}
+/*#modalRegister .modal-footer {
     background-color: #5cb85c; 
     border-radius: 0px 0px 4px 4px; 
     height: 40px;
@@ -978,7 +984,7 @@ opacity: 0.6;
 }
 #modalRegister .modal-footer .google-plus {
     margin-left: 20px; 
-}
+}*/
 
 /*========================= PUBLIC =========================*/
 /* 980px hoac nho hon */

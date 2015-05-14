@@ -13,6 +13,10 @@
       <div class="row modal-body">
         <div class="col-xs-12 col-sm-12">
             <form class="form-signin" method="post" action='' name="register_form" id="register_form">
+                <p class="openid-register">
+                  <a href="#"><img src="resources/images/fb-login-button.png" alt="katchup.vn"></a>
+                  <a href="#"><img src="resources/images/google-login-button.png" alt="katchup.vn"></a>
+                </p>
                 <div class="well well-sm required-infor"><strong><span class="glyphicon glyphicon-asterisk"></span> Thông tin bắt buộc</strong></div>
                 <p class="input-group">
                     <input type="text" class="form-control" name="email-register" id="email-register" placeholder="Email" autofocus>
@@ -45,16 +49,16 @@
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div> -->
-      <div class="modal-footer">
+
+      <!-- <div class="modal-footer">
         <span>Hoặc đăng nhập bằng: </span>
         <a href="javascript:void(0);" onclick="FacebookLogin();" title="Đăng nhập bằng Facebook">
           <img src="resources/images/facebook-register.png" alt="Đăng nhập bằng Facebook">
         </a>
         <a class="google-plus" href="javascript:void(0);" onclick="googleLogin();" title="Đăng nhập bằng google+">
           <img src="resources/images/google-plus-register.png" alt="Đăng nhập bằng google+">
-        </a>
-        
-      </div>
+        </a>        
+      </div> -->
 
     </div>
   </div>
