@@ -2,7 +2,7 @@
 // Document is ready
 $(function() {
 	menuActive();
-	initBoxLetter();
+	// initBoxLetter();	
 	supportBootstrap();
 	processModalHeader();
 	validateFormLogin();

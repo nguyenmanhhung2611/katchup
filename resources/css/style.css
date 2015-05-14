@@ -986,6 +986,20 @@ opacity: 0.6;
     margin-left: 20px; 
 }*/
 
+/*========================= CUSTOMIZE VCHAT =========================*/
+.template_vgchat {
+    border-radius: 5px 5px 0 0 !important;
+}
+.vgc_greeting_chat {
+    display: none !important;
+}
+.panel_footer_vgchat {
+    display: none !important;
+}
+#vgc_logo_msgoffline {
+    display: none !important;
+}
+
 /*========================= PUBLIC =========================*/
 /* 980px hoac nho hon */
 @media screen and (max-width: 980px) {  

@@ -407,7 +407,9 @@
 
 <?php include_once('include/footer.php') ?>
 
-<?php include_once('include/box-letter.php') ?>
+<?php /*include_once('include/box-letter.php')*/ ?>
+
+<?php include_once('include/live-vchat.php') ?>
 
 </body>
 </html>
