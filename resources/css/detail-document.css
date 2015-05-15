@@ -115,10 +115,13 @@
 #content.detail-document .sum-document {
     padding: 0;
 }
-#content.detail-document .sum-document .view-online .title {
+#content.detail-document .sum-document .view-online .title {    
+    padding: 10px 0px 5px 0px;
+}
+#content.detail-document .sum-document .view-online .title a {
+    outline: 0;
     color: #990000;
     font-weight: bold;
-    padding: 10px 0px 5px 0px;
     text-decoration: underline;
     text-transform: uppercase;
 }
@@ -132,9 +135,12 @@
     text-decoration: none;
 }
 #content.detail-document .sum-document .link-share .title {
-    color: #990000;
-    font-weight: bold;
     padding: 10px 0px 5px 0px;
+}
+#content.detail-document .sum-document .link-share .title a {
+    outline: 0;
+    color: #990000;
+    font-weight: bold;    
     text-decoration: underline;
 }
 #content.detail-document .sum-document .link-share ol li dl dt {
