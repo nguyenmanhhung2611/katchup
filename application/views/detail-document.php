@@ -184,61 +184,69 @@
 
             <div class="row view-online">
               <div class="col-xs-12 col-sm-12">
-                <div class="title">Xem online</div>
-                <ol>
-                  <li><a href="#">みんなの日本語</a></li>
-                  <li><a href="#">みんなの日本語</a></li>
-                  <li><a href="#">みんなの日本語</a></li>
-                  <li><a href="#">みんなの日本語</a></li>
-                  <li><a href="#">みんなの日本語</a></li>
-                  <li><a href="#">みんなの日本語</a></li>
-                  <li><a href="#">みんなの日本語</a></li>
-                  <li><a href="#">みんなの日本語</a></li>
-                  <li><a href="#">みんなの日本語</a></li>
-                  <li><a href="#">みんなの日本語</a></li>
-                </ol>
-              </div>              
+                <div class="title">
+                  <a data-toggle="collapse" href="#collapseViewOnline" aria-expanded="false" aria-controls="collapseViewOnline">Xem online</a>
+                </div>
+                <div class="collapse" id="collapseViewOnline">
+                  <ol>
+                    <li><a href="#">みんなの日本語</a></li>
+                    <li><a href="#">みんなの日本語</a></li>
+                    <li><a href="#">みんなの日本語</a></li>
+                    <li><a href="#">みんなの日本語</a></li>
+                    <li><a href="#">みんなの日本語</a></li>
+                    <li><a href="#">みんなの日本語</a></li>
+                    <li><a href="#">みんなの日本語</a></li>
+                    <li><a href="#">みんなの日本語</a></li>
+                    <li><a href="#">みんなの日本語</a></li>
+                    <li><a href="#">みんなの日本語</a></li>
+                  </ol>
+                </div>
+              </div>
             </div>
 
             <div class="row link-share">
               <div class="col-xs-12 col-sm-12">
-                <div class="title">Links đóng góp chia sẻ</div>
-                <ol>                  
-                  <li>
-                    <dl>
-                      <dt>Bạn dấu tên</dt>
-                      <dd>- Japan</dd>
-                    </dl>
-                  </li>
-                  <li>
-                    <dl>
-                      <dt>Bạn tiên trương</dt>
-                      <dd>- Tài liệu 2</dd>
-                    </dl>
-                  </li>
-                  <li>
-                    <dl>
-                      <dt>Bạn Trường Hùng</dt>
-                      <dd>- Noshare document</dd>
-                    </dl>
-                  </li>
-                  <li>
-                    <dl>
-                      <dt>Bạn Hải</dt>
-                      <dd>- Kanji Master</dd>
-                      <dd>- Master japan</dd>
-                    </dl>
-                  </li>
-                  <li>
-                    <dl>
-                      <dt>Bạn Hiếu</dt>
-                      <dd>- Tải liệu 1</dd>
-                    </dl>
-                  </li>
-                </ol>
+                <div class="title">
+                  <a data-toggle="collapse" href="#collapseLinkShare" aria-expanded="false" aria-controls="collapseLinkShare">Links đóng góp chia sẻ</a>
+                </div>
+                <div class="collapse" id="collapseLinkShare">
+                  <ol>                  
+                    <li>
+                      <dl>
+                        <dt>Bạn dấu tên</dt>
+                        <dd>- Japan</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt>Bạn tiên trương</dt>
+                        <dd>- Tài liệu 2</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt>Bạn Trường Hùng</dt>
+                        <dd>- Noshare document</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt>Bạn Hải</dt>
+                        <dd>- Kanji Master</dd>
+                        <dd>- Master japan</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt>Bạn Hiếu</dt>
+                        <dd>- Tải liệu 1</dd>
+                      </dl>
+                    </li>
+                  </ol>
+                </div>
               </div>
               <div class="col-xs-12 col-sm-12">
-                Chân thành cảm ơn các bạn đã đóng góp chia sẻ để dữ liệu trên website chúng ta ngày càng phong phú !
+                <span class="row">Chân thành cảm ơn các bạn đã đóng góp chia sẻ để dữ liệu trên website chúng ta ngày càng phong phú !</span>
               </div>
             </div>
 
