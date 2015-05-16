@@ -15,12 +15,16 @@
     <meta property="og:image" content="resources/images/2.jpg" />
     <meta property="og:url" content="" />
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="resources/images/favicon.png" type="image/x-icon" />
+
     <!-- css -->
     <link href="resources/css/style.css" rel="stylesheet">
     <link href="resources/css/document.css" rel="stylesheet">
 
     <!-- script -->
     <script src="resources/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="resources/js/angular.js" type="text/javascript"></script>
     <script src="resources/js/script.js" type="text/javascript"></script>
     <script src="resources/js/document.js" type="text/javascript"></script>
     <!--<script>-->
@@ -31,8 +35,8 @@
     <script src="resources/js/bootstrap.js"></script>
 
 </head>
-<body>
 
+<body ng-app="myDocument">
 <?php include_once('include/header.php') ?>
 
 <div id="banner">

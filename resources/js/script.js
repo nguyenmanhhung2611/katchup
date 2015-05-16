@@ -1,3 +1,20 @@
+// ================ Ajax settings ================== //
+// katchup.vn
+// var $PN = "";
+
+// localhost
+var $PN = "/katchup/";
+
+var $AJAX_TIMEOUT = "30000";
+var $ERR_BUSY = "Server is busy, please try again";
+// ================================================== //
+
+
+// Angularjs
+var myIndex = angular.module("myIndex", []);
+// var myApp = angular.module("myApp", ['ngAnimate']); // When use library
+
+
 /* Load script in every page */
 // Document is ready
 $(function() {

@@ -1,3 +1,6 @@
+// Angularjs
+var myDocument = angular.module("myDocument", []);
+
 // Document is ready
 $(function() {	
 	menuActiveDocument();
