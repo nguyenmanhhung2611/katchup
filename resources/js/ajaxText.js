@@ -1,13 +1,40 @@
-// Ajax settings
-var $AJAX_TIMEOUT = "30000";
-var $ERR_BUSY = "Server is busy, please try again";
-var $PN = "/" + location.pathname.split("/")[1] + "/";
 var test;
 
-// Document is ready
-$(function() {	
+// Angularjs
+var myAjax = angular.module("myAjax", []);
+var arrAngularjs = [
+        {name:'Jani',country:'Norway'},
+        {name:'Hege',country:'Sweden'},
+        {name:'Kai',country:'Denmark'}
+    ];
 
+var arrAngularjs1 = [
+        {name:'Jani1',country:'Norway1'},
+        {name:'Hege1',country:'Sweden1'},
+        {name:'Kai1',country:'Denmark1'}
+    ];
+
+myAjax.controller("FirstCtrl", function($scope){
+    $scope.names = null;
 });
+
+// Document is ready
+$(function() {
+	
+});
+
+function changeDataAngularjs() {
+	var scope = angular.element($("#idctrlFirstCtrl")).scope();
+	scope.$apply(function() {
+		scope.names = arrAngularjs;
+	});
+}
+function changeDataAngularjs1() {
+	var scope = angular.element($("#idctrlFirstCtrl")).scope();
+	scope.$apply(function() {
+		scope.names = arrAngularjs1;
+	});
+}
 
 // Ajax post no param response json
 function ajaxPostNoParam() {	

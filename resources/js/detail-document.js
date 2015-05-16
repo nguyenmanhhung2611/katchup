@@ -1,3 +1,6 @@
+// Angularjs
+var myDetailDocument = angular.module("myDetailDocument", []);
+
 // Document is ready
 $(function() {
 	menuActiveDetailDocument();
