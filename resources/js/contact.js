@@ -1,3 +1,6 @@
+// Angularjs
+var myContact = angular.module("myContact", []);
+
 $(function() {
 	menuActiveContact();
 });

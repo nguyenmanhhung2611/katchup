@@ -1,5 +1,3 @@
-<link rel="shortcut icon" href="resources/images/favicon.png">
-
 <!-- http://www.malot.fr/bootstrap-datetimepicker/demo.php -->
 <link href="resources/css/bootstrap-datetimepicker.css" rel="stylesheet">
 <script src="resources/js/bootstrap-datetimepicker.js"></script>

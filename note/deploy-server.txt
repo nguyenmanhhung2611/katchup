@@ -1,0 +1,21 @@
+// ============ Change on file config.php ============ //
+define('ITQ_BASE_URL', 'http://'.$_SERVER['SERVER_NAME'].PORT.'/');
+
+
+
+// ============ All name controller to uppercase first charracter ============ //
+Ex: Home.php, Contact.php, Ajax.php
+
+
+
+// ============ Change on file .htaccess ============ //
+RewriteBase /
+
+
+
+// ============ Change on file resources/js/script.js ============ //
+// katchup.vn
+var $PN = "";
+
+// localhost
+// var $PN = "/katchup/";

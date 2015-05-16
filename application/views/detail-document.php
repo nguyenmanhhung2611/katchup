@@ -16,12 +16,16 @@
     <meta property="og:url" content="" />
     <meta property="fb:admins" content="1519007155006218" />
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="resources/images/favicon.png" type="image/x-icon" />
+
     <!-- css -->
     <link href="resources/css/style.css" rel="stylesheet">
     <link href="resources/css/detail-document.css" rel="stylesheet">
 
     <!-- script -->
     <script src="resources/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="resources/js/angular.js" type="text/javascript"></script>
     <script src="resources/js/script.js" type="text/javascript"></script>
     <script src="resources/js/detail-document.js" type="text/javascript"></script>
     <!--<script>-->
@@ -32,8 +36,8 @@
     <script src="resources/js/bootstrap.js"></script>
 
 </head>
-<body>
 
+<body ng-app="myDetailDocument">
 <?php include_once('include/header.php') ?>
 
 <div id="banner">
