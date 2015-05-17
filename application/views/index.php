@@ -111,14 +111,16 @@
                 </h2>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-				<ul class="katchup-tab-study-japan">
-					<li><a href="#" class="btn" style="background-color: #8CD454;"><span class="text-medium" style="margin-top: 6px;">Thẻ học Kanji</span></a></li>
-					<li><a href="#" class="btn" style="background-color: #F9C356;"><span class="text-medium" style="margin: 6px 0px 0px -6px;">Thẻ học ngữ pháp</span></a></li>
-					<li><a href="#" class="btn" style="background-color: #567FFF;"><span class="text-medium" style="margin-top: 6px;">Thẻ học bảng chữ cái</span></a></li>
-					<li><a href="#" class="btn" style="background-color: #F30100;"><span class="text-medium" style="margin: 6px 0px 0px -6px;">Thẻ học từ vựng</span></a></li>
-					<li><a href="#" class="btn" style="background-color: #FF7F2B;"><span class="text-medium" style="margin-top: -3px;">Thẻ học mẫu câu thông dụng</span></a></li>
-					<li><a href="#" class="btn" style="background-color: #9F108C;"><span class="text-medium" style="margin-top: -3px;">Thẻ học từ vựng theo chủ đề</span></a></li>
-				</ul>				
+                <div class="row">
+    				<ul class="katchup-tab-study-japan">
+    					<li><a href="#" class="btn" style="background-color: #8CD454;"><span class="text-medium" style="margin-top: 6px;">Thẻ học Kanji</span></a></li>
+    					<li><a href="#" class="btn" style="background-color: #F9C356;"><span class="text-medium" style="margin: 6px 0px 0px -6px;">Thẻ học ngữ pháp</span></a></li>
+    					<li><a href="#" class="btn" style="background-color: #567FFF;"><span class="text-medium" style="margin-top: 6px;">Thẻ học bảng chữ cái</span></a></li>
+    					<li><a href="#" class="btn" style="background-color: #F30100;"><span class="text-medium" style="margin: 6px 0px 0px -6px;">Thẻ học từ vựng</span></a></li>
+    					<li><a href="#" class="btn" style="background-color: #FF7F2B;"><span class="text-medium" style="margin-top: -3px;">Thẻ học mẫu câu thông dụng</span></a></li>
+    					<li><a href="#" class="btn" style="background-color: #9F108C;"><span class="text-medium" style="margin-top: -3px;">Thẻ học từ vựng theo chủ đề</span></a></li>
+    				</ul>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-4">
                 <!-- <iframe class="text-video" width="100%" height="253" src="http://www.youtube.com/embed/XGSy3_Czz8k" frameborder="0" allowfullscreen></iframe> -->
