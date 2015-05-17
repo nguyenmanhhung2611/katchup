@@ -17,6 +17,10 @@ class Home extends CI_Controller {
 		$this->load->view('detail-document', $data);
 	}
 	
+	public function news() {
+		$this->load->view('news');
+	}
+
 	public function register() {
         $this->load->model('Captcha');
 		if ($this->Captcha->rpHash($_POST['defaultReal']) != $_POST['defaultRealHash']) {
