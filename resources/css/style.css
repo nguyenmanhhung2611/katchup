@@ -1012,17 +1012,22 @@ opacity: 0.6;
         margin-top: 0px;
     }
 }
-/* 622px hoac nho hon */
-@media screen and (max-width: 622px) {
+
+/* 717px hoac nho hon */
+@media screen and (max-width: 717px) {
     .katchup-menu li a {
         border-right-width: 0;
     }
+}
 
+/* 622px hoac nho hon */
+@media screen and (max-width: 622px) {
     #modalRegister #defaultReal {
         margin: 5px 0px 0px 0px;
         width: 100%;
     }
 }
+
 /* 615px hoac nho hon */
 @media screen and (max-width: 615px) {
    /*.navbar-brand img {
@@ -1033,12 +1038,14 @@ opacity: 0.6;
         margin: -10px 0 0 0px;
     }
 }
+
 /* 480px hoac nho hon */
 @media screen and (max-width: 480px) {  
     #modalRegister .modal-footer span {
         padding-left: 0px;
     }
 }
+
 /* 456px hoac nho hon */
 @media screen and (max-width: 456px) {  
     .katchup-total .text-title {
