@@ -48,13 +48,13 @@
       <div class="container">
         <div class="row katchup-menu-container">
           <ul class="katchup-nav katchup-menu pull-left">
-            <li class="active"><a href="">Trang chủ</a></li>
+            <li class="active"><a href="#">Trang chủ</a></li>
             <li><a href="#">Luyện Thi</a></li>
             <li><a href="<?php echo ITQ_BASE_URL;?>home/document">Tài liệu</a></li>
             <li><a href="#">Sản phẩm</a></li>
+            <li><a href="<?php echo ITQ_BASE_URL;?>home/news">Tin tức</a></li>
             <li><a href="#">Hỏi đáp</a></li>
-			<li><a href="<?php echo ITQ_BASE_URL;?>contact">Liên hệ
-</a></li>
+            <li><a href="<?php echo ITQ_BASE_URL;?>contact">Liên hệ</a></li>
           </ul>
         </div>
             </div>

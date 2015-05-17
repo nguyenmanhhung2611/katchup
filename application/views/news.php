@@ -20,13 +20,13 @@
 
     <!-- css -->
     <link href="resources/css/style.css" rel="stylesheet">
-    <link href="resources/css/document.css" rel="stylesheet">
+    <link href="resources/css/news.css" rel="stylesheet">
 
     <!-- script -->
     <script src="resources/js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="resources/js/angular.js" type="text/javascript"></script>
     <script src="resources/js/script.js" type="text/javascript"></script>
-    <script src="resources/js/document.js" type="text/javascript"></script>
+    <script src="resources/js/news.js" type="text/javascript"></script>
     <!--<script>-->
 
     <!-- Boostrap -->
@@ -121,9 +121,6 @@
         <h3>&nbsp;</h3>            
         <div class="row">
             <a href="#" class="advertisement"><img src="resources/images/adver/adver-1.jpg" alt="katchup.vn" class="img-responsive"></a>
-        </div>
-        <div class="row">
-            <a href="#" class="advertisement"><img src="resources/images/adver/adver-2.jpg" alt="katchup.vn" class="img-responsive"/></a>
         </div>
         <div class="row">
             <h3>Tài liệu phổ biến</h3><hr>
