@@ -165,7 +165,7 @@
         <div class="new-articles">
             <div class="row item">
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="#"><img src="resources/images/document-new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
@@ -187,7 +187,7 @@
             </div>
             <div class="row item">
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="#"><img src="resources/images/document-new-articles/new-articles-2.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
@@ -209,7 +209,7 @@
             </div>
             <div class="row item">
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="#"><img src="resources/images/document-new-articles/new-articles-3.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
@@ -231,7 +231,7 @@
             </div>
             <div class="row item">
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="#"><img src="resources/images/document-new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
@@ -253,7 +253,7 @@
             </div>
             <div class="row item">
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="#"><img src="resources/images/document-new-articles/new-articles-2.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
@@ -275,7 +275,7 @@
             </div>
             <div class="row item">
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="#"><img src="resources/images/document-new-articles/new-articles-3.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
@@ -297,7 +297,7 @@
             </div>
             <div class="row item">
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="#"><img src="resources/images/document-new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
