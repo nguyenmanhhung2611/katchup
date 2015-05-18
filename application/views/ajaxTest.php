@@ -32,9 +32,20 @@
   <input type="button" value="change data" onclick="changeDataAngularjs();"/>
   <input type="button" value="change data 1" onclick="changeDataAngularjs1();"/>
   <div id="idctrlFirstCtrl" ng-controller="FirstCtrl">
+    <!--
+    // Simple
     <ul>
       <li ng-repeat="x in names">
         {{ x.name + ', ' + x.country }}
+      </li>
+    </ul>
+     -->
+     
+    <!-- Add filter -->
+    <p>Search: <input type="text" ng-model="test"></p>
+    <ul>
+      <li ng-repeat="x in names | filter:test | orderBy:'country'">
+        {{ (x.name | uppercase) + ', ' + x.country }}
       </li>
     </ul>
   </div>
