@@ -84,3 +84,46 @@ define('EXIT_USER_INPUT', 7); // invalid user input
 define('EXIT_DATABASE', 8); // database error
 define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Constants for DATABASE
+|--------------------------------------------------------------------------
+*/
+define ("DATABSE_NAME", "project_katchupflashcards");
+//TABLE in DATABASE
+define ("TB_DANH_MUC_TAI_LIEU", "danh_muc");
+define ("TB_TAI_LIEU", "tai_lieu1");
+//
+
+//COL in TB_TAI_LIEU
+define ("TAI_LIEU_COL_MA_TAI_LIEU", "ma_tai_lieu");
+define ("TAI_LIEU_COL_TEN_TAI_LIEU", "ten_tai_lieu");
+define ("TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT", "ten_tai_lieu_tieng_nhat");
+define ("TAI_LIEU_COL_HINH_ANH", "hinh_anh_tai_lieu");
+define ("TAI_LIEU_COL_DUONG_DAN", "duong_dan_tai_lieu");
+define ("TAI_LIEU_COL_MO_TA", "mo_ta_tai_lieu");
+define ("TAI_LIEU_COL_MA_DANH_MUC", "ma_danh_muc_tai_lieu");
+define ("TAI_LIEU_COL_CHI_TIET_BAI_VIET", "chi_tiet_bai_viet");
+define ("TAI_LIEU_COL_GHI_CHU", "ghi_chu_tai_lieu");
+define ("TAI_LIEU_COL_LUOT_VIEW", "luot_view");
+define ("TAI_LIEU_COL_NGAY_DANG", "ngay_dang");
+//
+
+//COL in TB_DANH_MUC_TAI_LIEU
+define("DANH_MUC_COL_MA_DANH_MUC", "ma_danh_muc_tai_lieu");
+define("DANH_MUC_COL_TEN_DANH_MUC", "ten_danh_muc");
+define("DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT", "ten_danh_muc_tieng_nhat");
+define("DANH_MUC_COL_DUONG_DAN", "duong_dan_danh_muc");
+define("DANH_MUC_COL_MO_TA", "mo_ta_danh_muc");
+define("DANH_MUC_COL_GHI_CHU", "ghi_chu_danh_muc");
+//
+
+
+
+
+define("DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE", 20);
+define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_MOST_VIEW', 5);
+define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_LAST_UPDATE', 5);

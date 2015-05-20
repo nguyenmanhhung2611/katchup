@@ -24,6 +24,10 @@
     <link href="resources/css/detail-document.css" rel="stylesheet">
 
     <!-- script -->
+    <script type="text/javascript">
+      var documentID = <?php echo $documentID; ?>;
+
+    </script>
     <script src="resources/js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="resources/js/angular.js" type="text/javascript"></script>
     <script src="resources/js/script.js" type="text/javascript"></script>
@@ -62,123 +66,40 @@
         </div>
         <div class="row">
             <h3>Tài liệu phổ biến</h3><hr>
-             <div class="new-articles">
-                <div class="row item">
+             <div class="new-articles" ng-controller="ctrl-popular-document">
+                <div class="row item" ng-repeat="e in arr">
                     <div class="col-xs-12 col-sm-5 img">
-                        <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
+                        <a href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><img src="{{e.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" alt="katchup.vn" class="img-responsive"/></a>                       
                     </div>
                     <div class="col-xs-12 col-sm-7">
-                      <a class="label label-primary" href="#" target="_blank">Tài liệu</a>            
-                      <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                            uy tín và thông dụng nhất trong các trường dạy 
-                                            tiếng Nhật ở Việt Nam cũng như trên thế giới.
+                      <a class="label label-primary" href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}" target="_blank">{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</a>            
+                      <p class="description">{{e.<?php echo TAI_LIEU_COL_MO_TA; ?>}}
                       </p>
                       <dl>
-                        <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
+                        <dd><time class="item_published" datetime="2014-10-20 10:04">{{e.<?php echo TAI_LIEU_COL_NGAY_DANG; ?>}}</time>
                             <span class="kmt-comment">
-                              <a href="#">0</a>
+                              <a href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}">0</a>
                             </span>
                         </dd>
                       </dl>
                     </div>
                     <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
                 </div>
-                <div class="row item">
-                    <div class="col-xs-12 col-sm-5 img">
-                        <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                    </div>
-                    <div class="col-xs-12 col-sm-7">
-                      <a class="label label-primary" href="#" target="_blank">Tài liệu</a>            
-                      <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                            uy tín và thông dụng nhất trong các trường dạy 
-                                            tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                      </p>
-                      <dl>
-                        <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                            <span class="kmt-comment">
-                              <a href="#">0</a>
-                            </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-                </div>
-                <div class="row item">
-                    <div class="col-xs-12 col-sm-5 img">
-                        <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                    </div>
-                    <div class="col-xs-12 col-sm-7">
-                      <a class="label label-primary" href="#" target="_blank">Tài liệu</a>            
-                      <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                            uy tín và thông dụng nhất trong các trường dạy 
-                                            tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                      </p>
-                      <dl>
-                        <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                            <span class="kmt-comment">
-                              <a href="#">0</a>
-                            </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-                </div>
-                <div class="row item">
-                    <div class="col-xs-12 col-sm-5 img">
-                        <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                    </div>
-                    <div class="col-xs-12 col-sm-7">
-                      <a class="label label-primary" href="#" target="_blank">Tài liệu</a>            
-                      <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                            uy tín và thông dụng nhất trong các trường dạy 
-                                            tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                      </p>
-                      <dl>
-                        <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                            <span class="kmt-comment">
-                              <a href="#">0</a>
-                            </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-                </div>
-                <div class="row item">
-                    <div class="col-xs-12 col-sm-5 img">
-                        <a href="#"><img src="resources/images/new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                    </div>
-                    <div class="col-xs-12 col-sm-7">
-                      <a class="label label-primary" href="#" target="_blank">Tài liệu</a>            
-                      <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                            uy tín và thông dụng nhất trong các trường dạy 
-                                            tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                      </p>
-                      <dl>
-                        <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                            <span class="kmt-comment">
-                              <a href="#">0</a>
-                            </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-                </div>
-
             </div>
 
         </div>
       </div>
         
-      <div class="col-xs-12 col-sm-6">
-          <h3>Tổng hợp tài liệu luyện thi JLPT N1 [updated]</h3><hr>
+      <div class="col-xs-12 col-sm-6" ng-controller="ctrl-document-summary">
+          <h3>{{sumDoc.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</h3><hr>
           <div class="sum-document">
             <div class="row">
               <div class="detail">
                 <div class="col-xs-4 col-sm-3">
-                  <a href="#" class="advertisement"><img src="resources/images/detail-document/detail-document-id1.jpg" alt="katchup.vn" class="img-responsive"></a>
+                  <a target="_blank" href="{{sumDoc.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" class="advertisement"><img src="{{sumDoc.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" alt="katchup.vn" class="img-responsive"></a>
                 </div>
                 <div class="col-xs-8 col-sm-9">
-                  Giáo trình Minna no Nihongo là bộ sách giáo trình uy tín và thông dụng nhất trong các trường dạy tiếng Nhật ở Việt Nam cũng như trên thế giới. 
+                  {{sumDoc.<?php echo TAI_LIEU_COL_MO_TA; ?>}}
                 </div>
                 <div class="col-xs-12 col-sm-12">
                   <div class="fb-like" data-href="http://katchup.vn" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
@@ -277,79 +198,11 @@
         </div>
         <div class="row">
             <h3>Danh mục</h3><hr>
-            <div class="popular-document category">
-                <div class="item">
-                    <a class="link" href=""><h4>MINNA NO NIHONGO | </h4></a>
-                    <p class="text"><h4>みんなの日本語</h4></p>
+            <div class="popular-document category" ng-controller="ctrl-category">
+                <div class="item" ng-repeat="e in arr">
+                    <a class="link" href="home/document/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}"><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}} | </h4></a>
+                    <p class="text"><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT; ?>}}</h4></p>
                 </div>
-                <div class="item">
-                    <a class="link" href=""><h4>SHIN NIHONGO KISO | </h4></a>
-                    <p class="text"><h4>新日本語の基礎</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>NGHE ONLINE |</h4></a>
-                    <p class="text"><h4>オンライン聞く</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>NGỮ PHÁP |</h4></a>
-                    <p class="text"><h4>文法</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>ĐỌC HIỂU |</h4></a>
-                    <p class="text"><h4>読解</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>KANJI |</h4></a>
-                    <p class="text"><h4>漢字</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>TỪ VỰNG |</h4></a>
-                    <p class="text"><h4>語彙</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>TỰ HỌC |</h4></a>
-                    <p class="text"><h4>自学</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>JLPT |</h4></a>
-                    <p class="text"><h4>能力試験</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>GIÁO TRÌNH ĐIỆN TỬ |</h4></a>
-                    <p class="text"><h4>E-教材</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>GIÁO TRÌNH VIDEO |</h4></a>
-                    <p class="text"><h4>ビデオ</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>GIÁO TRÌNH NGHE |</h4></a>
-                    <p class="text"><h4>聴解</h4></p>
-                </div>
-                <!-- <div class="item">
-                    <a class="link" href=""><h4>PHẦN MỀM HỌC |</h4></a>
-                    <p class="text"><h4>学習ソフト</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>FILMS |</h4></a>
-                    <p class="text"><h4>映画</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>TỪ ĐIỂN |</h4></a>
-                    <p class="text"><h4>事典</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>THỦ THUẬT PC |</h4></a>
-                    <p class="text"><h4>ソフト</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4>VĂN HÓA |</h4></a>
-                    <p class="text"><h4>文化</h4></p>
-                </div>
-                <div class="item">
-                    <a class="link" href=""><h4> LỊCH SỬ |</h4></a>
-                    <p class="text"><h4>歴史</h4></p>
-                </div> -->
           </div>
         </div>
       </div>

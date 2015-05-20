@@ -1,10 +1,81 @@
 // Angularjs
 var myDocument = angular.module("myDocument", []);
 
+getPopularDocument();
+getLatestDocument(categoryID);
+getCategories();
+//getListPaging();
+
+function getLatestDocument(categoryID) {
+	var param = "";
+	if (categoryID > 0) {
+		param = "/" + categoryID;
+	}
+	myDocument.controller('ctrl-new-articles', function($scope, $http) {
+		$http.get("home/changeDocumentList" + param).success(function(response) {
+			$scope.arr = response.documentList;
+			$scope.categoryName = response.categoryName;
+			if (!response.categoryName) {
+				$scope.categoryName = "Bài đăng mới nhất";
+			}
+		});
+
+
+
+		// paging
+		$scope.filteredTodos = []
+		,$scope.currentPage = 1
+		,$scope.numPerPage = 10
+		,$scope.maxSize = 5;
+
+		
+
+		$scope.makeTodos = function() {
+			$scope.todos = [];
+			for (i=1;i<=1000;i++) {
+				$scope.todos.push({ text:'todo '+i, done:false});
+			}
+		};
+		$scope.makeTodos(); 
+
+		$scope.$watch('currentPage + numPerPage', function() {
+			var begin = (($scope.currentPage - 1) * $scope.numPerPage)
+			, end = begin + $scope.numPerPage;
+
+			$scope.filteredTodos = $scope.todos.slice(begin, end);
+		});
+	});
+}
+
+function getCategories() {
+	myDocument.controller('ctrl-category', function($scope, $http) {
+		$http.get("home/showListCategory").success(function(response) {
+			$scope.arr = response;
+			
+		});
+	});
+}
+
+function getPopularDocument() {
+	myDocument.controller('ctrl-popular-document', function($scope, $http) {
+		
+		$http.get("home/showPopularDocument").success(function(response) {
+			$scope.arr = response;
+			
+		});
+	});
+}
+
+function getListPaging() {
+	
+}
+
 // Document is ready
 $(function() {	
 	menuActiveDocument();
 	loadDocument();
+
+	
 	RemoveLastItem();
 });
 
@@ -19,6 +90,7 @@ function RemoveLastItem() {
 	$("#popular-document .item").last().addClass("removeItemAfter");	
 }
 
+	// header menu
 function menuActiveDocument() {
 	$(".katchup-menu li").each(function(index) {
 		if($(this).hasClass("active")) {
@@ -28,6 +100,7 @@ function menuActiveDocument() {
 	$(".katchup-menu li:nth-child(3)").addClass("active");	
 }
 
+	// slide
 function loadDocument() {    
 	var clickEvent = false;
 	$('#myCarousel').carousel({
@@ -55,5 +128,10 @@ function loadDocument() {
 	    var triggerheight = Math.round(boxheight/itemlength+1);
 		$('#myCarousel .list-group-item').outerHeight(triggerheight);
 	});
+}
+
+	// change "Bài đăng mới nhất" to CategoryName
+function changeTitleOfListArticles() {
+
 }
 
