@@ -1,0 +1,377 @@
+/* ======================== BANNER ========================= */
+.banner-tx-left {
+    background: #e68803 none repeat scroll 0 0;
+    padding: 20px;
+    margin: 20px 0 30px 0;
+    cursor: pointer;
+}
+.banner-tx-left:hover {
+    opacity: 0.85;
+}
+.banner-tx-left .block {
+    border: 1px solid #eeae54;
+    text-align: center;
+    padding: 20px;
+}
+.banner-tx-left .block span {
+    color: #fff;
+    text-transform: uppercase;
+}
+.banner-tx-left .block .title {
+    font-size: 30px;
+}
+.banner-tx-left .block .description {
+    font-size: 15px;
+}
+/* == BANNER 2 ==*/
+.banner-tx-center {
+    background: #96D446 none repeat scroll 0 0;
+    padding: 20px;
+    margin: 20px 0 30px 0;
+    cursor: pointer;
+}
+.banner-tx-center:hover {
+    opacity: 0.85;
+}
+.banner-tx-center .block {
+    border: 1px solid #bee48c;
+    text-align: center;
+    padding: 30px 20px 158px 20px;
+}
+.banner-tx-center .block span {
+    color: #fff;
+    text-transform: uppercase;
+}
+.banner-tx-center .block .title {
+    font-size: 47px;
+}
+.banner-tx-center .block .description {
+    font-size: 18px;
+}
+/* == BANNER 3 ==*/
+.banner-tx-right {
+    background: #1fb1d6 none repeat scroll 0 0;
+    padding: 20px;
+    cursor: pointer;
+}
+#banner-tx-right a {
+    margin: 20px 0 30px 0;
+}
+.banner-tx-right:hover {
+    opacity: 0.85;
+}
+.banner-tx-right .block {
+    border: 1px solid #64c9e3;
+    text-align: center;
+    padding: 20px;
+}
+.banner-tx-right .block span {
+    color: #fff;
+    text-transform: uppercase;
+}
+.banner-tx-right .block .title {
+    font-size: 30px;
+}
+.banner-tx-right .block .description {
+    font-size: 15px;
+}
+
+/* ======================== PRODUCT ========================= */
+#content .product-item .price {
+    color: #e8176a;
+    float: left;
+    font-family: "Patua One",cursive;
+    font-size: 20px;
+    line-height: 1.5;
+}
+#content .product-item .caption .btn-info {
+    font-weight: bold;
+}
+#content .product-item .caption h3 a {
+    color: #747474;
+}
+#content .product-item .caption h3 a:hover {
+    text-decoration: none;
+    color: #e8176a;
+}
+#content .product-item .sticker_top {
+    background-color: #28bfe5;
+    font-size: 14px;
+    height: 32px;
+    line-height: 16px;
+    padding: 7px 0;
+    width: 60px;
+    font-family: "Patua One",cursive;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    z-index: 1;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 15px;
+}
+#content .product-item .sticker_sale {
+    background-color: #f12b63;
+    font-size: 14px;
+    height: 32px;
+    line-height: 16px;
+    padding: 7px 0;
+    width: 60px;
+    font-family: "Patua One",cursive;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    z-index: 1;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 15px;
+}
+#content .product-item .sticker_new {
+    background-color: #96d446;
+    font-size: 14px;
+    height: 32px;
+    line-height: 16px;
+    padding: 7px 0;
+    width: 60px;
+    font-family: "Patua One",cursive;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    z-index: 1;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 15px;
+}
+#content .product a.more-views h4 {
+    margin: -20px;
+}
+#content .product a.more-views {
+    text-align: center;
+}
+#content .product a.more-views:hover {
+    text-decoration: none;
+}
+#content .product .infor .text {
+    text-align: center;
+    color: #fff;
+}
+#content .product .infor {
+    background-color: #31A4DA;
+    padding: 30px;
+    font-size: 25px;
+}
+
+/* ======================== BENEFIT ========================= */
+#content .benefit .introduce h2 {
+    color: #31a4d9;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+#content .benefit h2.title {
+    color: #0552a4;
+    float: left;
+    font-size: 16px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+#content .benefit .description {
+    text-align: justify;
+}
+#content .benefit .text {
+    padding-top: 50px;
+}
+#content .benefit hr.line {    
+    background: url(../images/icon_ldp_tn.png) no-repeat scroll center -10px transparent;
+    height:30px;
+}
+
+/* ======================== PUBLIC ========================= */
+#banner .container-fluid .row {
+    background-color: #fff;
+}
+#banner .container-fluid .row a {
+    text-decoration: none;
+}
+
+#content .container-fluid ul {
+    padding-left: 0;
+}
+/* 1313px hoac nho hon */
+@media screen and (max-width: 1313px) {  
+    #content .product .infor .text {
+        font-size: 23px;
+    }
+    #content .benefit .text {
+        padding-top: 0;
+    }
+}
+/* 1292px hoac nho hon */
+@media screen and (max-width: 1292px) {  
+    .banner-tx-center .block .title {
+        font-size: 44px;
+    }
+}
+/* 1230px hoac nho hon */
+@media screen and (max-width: 1230px) {  
+    .banner-tx-center .block .title {
+        font-size: 40px;
+    }
+}
+/* 1223px hoac nho hon */
+@media screen and (max-width: 1223px) {  
+    .banner-tx-left .block .title {
+        font-size: 29px;
+    }
+}
+/* 1216px hoac nho hon */
+@media screen and (max-width: 1216px) {  
+    #content .product .infor .text {
+        font-size: 20px;
+    }
+}
+/* 1211px hoac nho hon */
+@media screen and (max-width: 1211px) {  
+    .banner-tx-center .block .title {
+        font-size: 30px;
+    }
+}
+/* 1192px hoac nho hon */
+@media screen and (max-width: 1192px) {  
+    .banner-tx-left .block .title {
+        font-size: 28px;
+    }
+}
+/* 1177px hoac nho hon */
+@media screen and (max-width: 1177px) {  
+    .banner-tx-right .block .title {
+        font-size: 29px;
+    }
+}
+/* 1164px hoac nho hon */
+@media screen and (max-width: 1164px) {  
+    .banner-tx-left .block .title {
+        font-size: 27px;
+    }
+}
+/* 1149px hoac nho hon */
+@media screen and (max-width: 1149px) {  
+    .banner-tx-right .block .title {
+        font-size: 28px;
+    }
+}
+/* 1134px hoac nho hon */
+@media screen and (max-width: 1134px) {  
+    .banner-tx-left .block .title {
+        font-size: 23px;
+    }
+    .banner-tx-center .block .title {
+        font-size: 25px;
+    }
+}
+/* 1120px hoac nho hon */
+@media screen and (max-width: 1120px) {  
+    .banner-tx-right .block .title {
+        font-size: 23px;
+    }
+}
+/* 1069px hoac nho hon */
+@media screen and (max-width: 1069px) {  
+    #content .product .infor .text {
+        font-size: 17px;
+    }
+}
+/* 922px hoac nho hon */
+@media screen and (max-width: 922px) {  
+    #content .product .infor .text {
+        font-size: 14px;
+    }
+}
+/* 844px hoac nho hon */
+@media screen and (max-width: 844px) {
+    .banner-tx-center .block .title {
+        font-size: 23px;
+    }
+}
+/* 803px hoac nho hon */
+@media screen and (max-width: 803px) {
+    .banner-tx-center .block .title {
+        font-size: 20px;
+    }
+}
+/* 781px hoac nho hon */
+@media screen and (max-width: 781px) {
+    .banner-tx-center .block .title {
+        font-size: 12px;
+    }
+}
+/* 767px hoac nho hon */
+@media screen and (max-width: 767px) {
+    .banner-tx-left .block .title {
+        font-size: 32px;
+    }
+    .banner-tx-center .block .title {
+        font-size: 45px;
+    }
+    .banner-tx-right .block .title {
+        font-size: 32px;
+    }
+    #banner .container-fluid .row a.thumbnail img {
+        width: 100%;
+    }
+    #banner {
+        margin-bottom: 30px;
+    }
+}
+/* 771px hoac nho hon */
+@media screen and (max-width: 771px) {  
+    #content .product .infor .text {
+        font-size: 12px;
+    }
+}
+/* 697px hoac nho hon */
+@media screen and (max-width: 697px) {  
+    #content .product .infor .text {
+        font-size: 11px;
+    }
+}
+/* 697px hoac nho hon */
+@media screen and (max-width: 697px) {  
+    #content .product .infor .text {
+        font-size: 11px;
+    }
+}
+/* 609px hoac nho hon */
+@media screen and (max-width: 609px) {  
+    #content .product .infor .text {
+        font-size: 9px;
+    }
+}
+/* 541px hoac nho hon */
+@media screen and (max-width: 541px) {  
+    #content .product .infor .text {
+        font-size: 8px;
+    }
+    #content .product .infor {
+        padding: 10px;
+    }
+    #content .benefit .description {
+        font-size: 10px;
+    }
+}
+/* 435px hoac nho hon */
+@media screen and (max-width: 435px) {  
+    #content .product .infor .text {
+        font-size: 7px;
+    }
+}
