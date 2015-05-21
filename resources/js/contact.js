@@ -11,5 +11,5 @@ function menuActiveContact() {
 			$(this).removeClass("active");
 		}
 	});
-	$(".katchup-menu li:nth-child(6)").addClass("active");
+	$(".katchup-menu li:nth-child(7)").addClass("active");
 }
