@@ -133,16 +133,36 @@
                 <h2>Thiết kế tinh tế, tiện lợi và tập trung vào hiệu quả</h2>
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/9.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/9.jpg" alt="katchup.vn" class="img-responsive img-rounded"></a>
+                        <div class="panel-body">
+    						<a href="resources/images/9.jpg" data-rel="lightbox" class="thumbnail zoom">
+                                <img src="resources/images/9.jpg" alt="katchup.vn" class="img-responsive img-rounded">
+                                <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                            </a>
+                        </div>
 					</div>           
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/5.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/5.jpg" alt="katchup.vn" class="img-responsive img-rounded"/></a>
+                        <div class="panel-body">
+						  <a href="resources/images/5.jpg" data-rel="lightbox" class="thumbnail zoom">
+                            <img src="resources/images/5.jpg" alt="katchup.vn" class="img-responsive img-rounded"/>
+                            <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                          </a>
+                        </div>
 					</div>
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/7.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/7.jpg" alt="katchup.vn" class="img-responsive img-rounded"/></a>
+                        <div class="panel-body">
+						  <a href="resources/images/7.jpg" data-rel="lightbox" class="thumbnail zoom">
+                            <img src="resources/images/7.jpg" alt="katchup.vn" class="img-responsive img-rounded"/>
+                            <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                          </a>
+                        </div>
 					</div>
 					<div class="col-xs-6 col-sm-6 image-item">
-						<a href="resources/images/6.jpg" data-rel="lightbox" class="thumbnail"><img src="resources/images/6.jpg" alt="katchup.vn" class="img-responsive img-rounded"/></a>
+                        <div class="panel-body">
+						  <a href="resources/images/6.jpg" data-rel="lightbox" class="thumbnail zoom">
+                            <img src="resources/images/6.jpg" alt="katchup.vn" class="img-responsive img-rounded"/>
+                            <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                          </a>
+                        </div>
 					</div>
 				</div>
             </div>			            

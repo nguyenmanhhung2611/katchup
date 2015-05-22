@@ -57,9 +57,12 @@
               </div>
             </div>
           </a>
-          <a href="resources/images/product/hd/product-1-hd.jpg" data-rel="lightbox" class="thumbnail">
-            <img width="420" height="210" src="resources/images/product/product-1.jpg" alt="katchup.vn" class="img-responsive img-rounded">
-          </a>
+          <div class="panel-body">
+            <a href="resources/images/product/hd/product-1-hd.jpg" data-rel="lightbox" class="thumbnail zoom">
+              <img width="420" height="210" src="resources/images/product/product-1.jpg" alt="katchup.vn" class="img-responsive img-rounded">
+              <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+            </a>
+          </div>
          </div>
          <div class="col-xs-12 col-sm-4">
           <a href="#">
@@ -71,10 +74,13 @@
             </div>
           </a>
          </div>
-         <div id="banner-tx-right" class="col-xs-12 col-sm-4">          
-            <a href="resources/images/product/hd/product-2-hd.jpg" data-rel="lightbox" class="thumbnail">
-              <img width="420" height="210" src="resources/images/product/product-2.jpg" alt="katchup.vn" class="img-responsive img-rounded">
-            </a>
+         <div id="banner-tx-right" class="col-xs-12 col-sm-4">
+            <div class="panel-body">
+              <a href="resources/images/product/hd/product-2-hd.jpg" data-rel="lightbox" class="thumbnail zoom">
+                <img width="420" height="210" src="resources/images/product/product-2.jpg" alt="katchup.vn" class="img-responsive img-rounded">
+                <span class="overlay except1"><i class="glyphicon glyphicon-fullscreen"></i></span>
+              </a>
+            </div>
           </a>
           <a href="#">
             <div class="banner-tx-right">
@@ -99,9 +105,12 @@
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
                     <span class="sticker_top"> top</span>
-                    <a href="resources/images/product/items/hd/item-products-hd-1.jpg" data-rel="lightbox" class="thumbnail">
-                      <img width="320" height="200" src="resources/images/product/items/item-products-1.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
-                    </a>
+                    <div class="panel-body">
+                      <a href="resources/images/product/items/hd/item-products-hd-1.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-1.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                      </a>
+                    </div>
                     <div class="caption">
                         <h3><a href="#">Thẻ học Kanji</a></h3>
                         <p>Thẻ học kanji từ N5-N1 giúp bạn học hán tự nhanh bằng hình ảnh kèm theo cách nhớ ...</p>
@@ -115,9 +124,12 @@
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
                     <span class="sticker_sale"> sale</span>
-                    <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail">
-                      <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
-                    </a>
+                    <div class="panel-body">
+                      <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                      </a>
+                    </div>
                     <div class="caption">
                         <h3><a href="#">Thẻ học Kanji</a></h3>
                         <p>Thẻ học kanji từ N5-N1 giúp bạn học hán tự nhanh bằng hình ảnh kèm theo cách nhớ ...</p>
@@ -131,9 +143,12 @@
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
                     <span class="sticker_sale"> sale</span>
-                    <a href="resources/images/product/items/hd/item-products-hd-2.jpg" data-rel="lightbox" class="thumbnail">
-                      <img width="320" height="200" src="resources/images/product/items/item-products-2.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
-                    </a>
+                    <div class="panel-body">
+                      <a href="resources/images/product/items/hd/item-products-hd-2.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-2.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                      </a>
+                    </div>
                     <div class="caption">
                         <h3><a href="#">Thẻ học Kanji</a></h3>
                         <p>Thẻ học kanji từ N5-N1 giúp bạn học hán tự nhanh bằng hình ảnh kèm theo cách nhớ ...</p>
@@ -146,9 +161,12 @@
             </div>
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
-                    <a href="resources/images/product/items/hd/item-products-hd-1.jpg" data-rel="lightbox" class="thumbnail">
-                      <img width="320" height="200" src="resources/images/product/items/item-products-1.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
-                    </a>
+                    <div class="panel-body">
+                      <a href="resources/images/product/items/hd/item-products-hd-1.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-1.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                      </a>
+                    </div>
                     <div class="caption">
                         <h3><a href="#">Thẻ học Kanji</a></h3>
                         <p>Thẻ học kanji từ N5-N1 giúp bạn học hán tự nhanh bằng hình ảnh kèm theo cách nhớ ...</p>
@@ -161,9 +179,12 @@
             </div>
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
-                    <a href="resources/images/product/items/hd/item-products-hd-1.jpg" data-rel="lightbox" class="thumbnail">
-                      <img width="320" height="200" src="resources/images/product/items/item-products-1.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
-                    </a>
+                    <div class="panel-body">
+                      <a href="resources/images/product/items/hd/item-products-hd-1.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-1.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                      </a>
+                    </div>
                     <div class="caption">
                         <h3><a href="#">Thẻ học Kanji</a></h3>
                         <p>Thẻ học kanji từ N5-N1 giúp bạn học hán tự nhanh bằng hình ảnh kèm theo cách nhớ ...</p>
@@ -177,9 +198,12 @@
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
                     <span class="sticker_sale"> sale</span>
-                    <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail">
-                      <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
-                    </a>
+                    <div class="panel-body">
+                      <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                      </a>
+                    </div>
                     <div class="caption">
                         <h3><a href="#">Thẻ học Kanji</a></h3>
                         <p>Thẻ học kanji từ N5-N1 giúp bạn học hán tự nhanh bằng hình ảnh kèm theo cách nhớ ...</p>
@@ -192,9 +216,12 @@
             </div>
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
-                    <a href="resources/images/product/items/hd/item-products-hd-2.jpg" data-rel="lightbox" class="thumbnail">
-                      <img width="320" height="200" src="resources/images/product/items/item-products-2.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
-                    </a>
+                    <div class="panel-body">
+                      <a href="resources/images/product/items/hd/item-products-hd-2.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-2.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                      </a>
+                    </div>
                     <div class="caption">
                         <h3><a href="#">Thẻ học Kanji</a></h3>
                         <p>Thẻ học kanji từ N5-N1 giúp bạn học hán tự nhanh bằng hình ảnh kèm theo cách nhớ ...</p>
@@ -208,9 +235,12 @@
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
                     <span class="sticker_new"> new</span>
-                    <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail">
-                      <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
-                    </a>
+                    <div class="panel-body">
+                      <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                        <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                      </a>
+                    </div>
                     <div class="caption">
                         <h3><a href="#">Thẻ học Kanji</a></h3>
                         <p>Thẻ học kanji từ N5-N1 giúp bạn học hán tự nhanh bằng hình ảnh kèm theo cách nhớ ...</p>
@@ -238,9 +268,12 @@
             </p>
           </div>
           <div class="col-xs-6 col-sm-6">
-            <a href="resources/images/product/hd/product-3-hd.jpg" data-rel="lightbox" class="thumbnail">
-              <img width="630" height="285" src="resources/images/product/product-3.jpg" alt="katchup.vn" class="img-responsive img-rounded">
-            </a> 
+            <div class="panel-body">
+              <a href="resources/images/product/hd/product-3-hd.jpg" data-rel="lightbox" class="thumbnail zoom">
+                <img width="630" height="285" src="resources/images/product/product-3.jpg" alt="katchup.vn" class="img-responsive img-rounded">
+                <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+              </a> 
+            </div>
           </div>
         </div>
 
@@ -261,17 +294,23 @@
               </p>
             </div>
             <div class="col-xs-6 col-sm-6">
-              <a href="resources/images/product/hd/product-4-hd.jpg" data-rel="lightbox" class="thumbnail">
-                <img width="615" height="315" src="resources/images/product/product-4.jpg" alt="katchup.vn" class="img-responsive img-rounded">
-              </a>
+              <div class="panel-body">
+                <a href="resources/images/product/hd/product-4-hd.jpg" data-rel="lightbox" class="thumbnail zoom">
+                  <img width="615" height="315" src="resources/images/product/product-4.jpg" alt="katchup.vn" class="img-responsive img-rounded">
+                  <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                </a>
+              </div>
             </div>
           </div>
           <hr class="line">
           <div class="container-fluid">
             <div class="col-xs-6 col-sm-6">
-              <a href="resources/images/product/hd/product-5-hd.jpg" data-rel="lightbox" class="thumbnail">
-                <img width="615" height="315" src="resources/images/product/product-5.jpg" alt="katchup.vn" class="img-responsive img-rounded">
-              </a>
+              <div class="panel-body">
+                <a href="resources/images/product/hd/product-5-hd.jpg" data-rel="lightbox" class="thumbnail zoom">
+                  <img width="615" height="315" src="resources/images/product/product-5.jpg" alt="katchup.vn" class="img-responsive img-rounded">
+                  <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                </a>
+              </div>
             </div>
             <div class="col-xs-6 col-sm-6 text">
               <h2 class="title">2. HỌC BẰNG LIÊN KẾT HÌNH ẢNH</h2>
@@ -299,17 +338,23 @@
               </p>
             </div>
             <div class="col-xs-6 col-sm-6">
-              <a href="resources/images/product/hd/product-6-hd.jpg" data-rel="lightbox" class="thumbnail">
-                <img width="615" height="315" src="resources/images/product/product-6.jpg" alt="katchup.vn" class="img-responsive img-rounded">
-              </a>
+              <div class="panel-body">
+                <a href="resources/images/product/hd/product-6-hd.jpg" data-rel="lightbox" class="thumbnail zoom">
+                  <img width="615" height="315" src="resources/images/product/product-6.jpg" alt="katchup.vn" class="img-responsive img-rounded">
+                  <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                </a>
+              </div>
             </div>
           </div>
           <hr class="line">
           <div class="container-fluid">
             <div class="col-xs-6 col-sm-6">
-              <a href="resources/images/product/hd/product-7-hd.jpg" data-rel="lightbox" class="thumbnail">
-                <img width="615" height="315" src="resources/images/product/product-7.jpg" alt="katchup.vn" class="img-responsive img-rounded">
-              </a>
+              <div class="panel-body">
+                <a href="resources/images/product/hd/product-7-hd.jpg" data-rel="lightbox" class="thumbnail zoom">
+                  <img width="615" height="315" src="resources/images/product/product-7.jpg" alt="katchup.vn" class="img-responsive img-rounded">
+                  <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                </a>
+              </div>
             </div>
             <div class="col-xs-6 col-sm-6 text">
               <h2 class="title">4. HỌC ONLINE MIỄN PHÍ</h2>
@@ -337,9 +382,12 @@
               </p>
             </div>
             <div class="col-xs-6 col-sm-6">
-              <a href="resources/images/product/hd/product-8-hd.jpg" data-rel="lightbox" class="thumbnail">
-                <img width="615" height="315" src="resources/images/product/product-8.jpg" alt="katchup.vn" class="img-responsive img-rounded">
-              </a>
+              <div class="panel-body">
+                <a href="resources/images/product/hd/product-8-hd.jpg" data-rel="lightbox" class="thumbnail zoom">
+                  <img width="615" height="315" src="resources/images/product/product-8.jpg" alt="katchup.vn" class="img-responsive img-rounded">
+                  <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                </a>
+              </div>
             </div>
           </div>
 

@@ -196,6 +196,16 @@
     height:30px;
 }
 
+/*========================= ZOOM IMAGE =========================*/
+/* Except */
+.panel-body a.zoom span.overlay.except1 {
+    height: 81%;
+    margin-top: 20px;
+}
+.panel-body a.zoom:hover span.overlay.except1 i { 
+    top: 43%;
+}
+
 /* ======================== PUBLIC ========================= */
 #banner .container-fluid .row {
     background-color: #fff;
