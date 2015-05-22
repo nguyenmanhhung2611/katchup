@@ -165,12 +165,7 @@
                 <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
             
-           <!-- 
-              <ul>
-                <li ng-repeat="todo in filteredTodos">{{todo.text}}</li>
-              </ul>
-              <pagination ng-model="currentPage" total-items="todos.length" max-size="maxSize" boundary-links="true"></pagination>
-            -->
+            <a class="pagination-num-page" ng-repeat="page in arr_page" onclick="">{{page}}</a>
             
 
         </div>

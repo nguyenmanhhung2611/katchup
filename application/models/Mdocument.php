@@ -32,20 +32,21 @@
 					$str_select .= $column.',';
 				}
 				$str_select = trim($str_select, ",");
-
+				
 				$this->db->select($str_select);
 			}
 			
-			$this->db->select('*')->from(TB_TAI_LIEU)
+			$this->db->from(TB_TAI_LIEU)
 			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC);
 			$query = $this->db->get();
 			return $query->result_array();
 		}
 
-		function getLatestDocument($categoryID = -1) {
+		function getLatestDocument($categoryID = -1, $pageNum = 1, $recPerPage = DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE) {
 			$this->db->select('*')->from(TB_TAI_LIEU)
 			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC)
-			->order_by(TAI_LIEU_COL_NGAY_DANG, 'desc');
+			->order_by(TAI_LIEU_COL_NGAY_DANG, 'desc')
+			->limit($recPerPage, ($pageNum - 1) * $recPerPage);
 			if ($categoryID > 0) {
 				$this->db->where(TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC, $categoryID);
 			}
@@ -57,7 +58,8 @@
 		function getPopularDocument() {
 			$this->db->select('*')->from(TB_TAI_LIEU)
 			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC)
-			->order_by(TAI_LIEU_COL_LUOT_VIEW, 'desc');
+			->order_by(TAI_LIEU_COL_LUOT_VIEW, 'desc')
+			->limit(DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_MOST_VIEW);
 			
 			$query = $this->db->get();
 			return $query->result_array();
