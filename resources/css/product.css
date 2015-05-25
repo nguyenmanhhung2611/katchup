@@ -36,7 +36,7 @@
 .banner-tx-center .block {
     border: 1px solid #bee48c;
     text-align: center;
-    padding: 30px 20px 158px 20px;
+    padding: 80px 20px 108px 20px;
 }
 .banner-tx-center .block span {
     color: #fff;
@@ -77,6 +77,12 @@
 }
 
 /* ======================== PRODUCT ========================= */
+#content .product-item .price-old {
+    color: #a4a4a4;
+    font-family: "Patua One",cursive;
+    font-size: 20px;
+    text-decoration: line-through;
+}
 #content .product-item .price {
     color: #e8176a;
     float: left;
@@ -313,6 +319,12 @@
         font-size: 23px;
     }
 }
+/* 820px hoac nho hon */
+@media screen and (max-width: 820px) {
+    #content .product-item .caption .btn-info {
+        font-size: 12px;
+    }
+}
 /* 803px hoac nho hon */
 @media screen and (max-width: 803px) {
     .banner-tx-center .block .title {
@@ -321,8 +333,17 @@
 }
 /* 781px hoac nho hon */
 @media screen and (max-width: 781px) {
-    .banner-tx-center .block .title {
+    .banner-tx-center .block .description {
         font-size: 12px;
+    }
+}
+/* 768px hoac nho hon */
+@media screen and (max-width: 768px) {
+    .banner-tx-center .block {
+        padding-top: 88px;
+    }
+    .banner-tx-center .block .title {
+        font-size: 21px;
     }
 }
 /* 767px hoac nho hon */
@@ -341,6 +362,9 @@
     }
     #banner {
         margin-bottom: 30px;
+    }
+    #content .product-item .caption .btn-info {
+        font-size: 14px;
     }
 }
 /* 771px hoac nho hon */
@@ -383,5 +407,23 @@
 @media screen and (max-width: 435px) {  
     #content .product .infor .text {
         font-size: 7px;
+    }
+}
+/* 410px hoac nho hon */
+@media screen and (max-width: 410px) {  
+    #content .product-item .caption .btn-info {
+        font-size: 12px;
+    }
+}
+/* 384px hoac nho hon */
+@media screen and (max-width: 384px) {  
+    #content .product-item .caption .btn-info {
+        font-size: 10px;
+    }
+}
+/* 334px hoac nho hon */
+@media screen and (max-width: 334px) {  
+    #content .product-item .caption .btn-info {
+        font-size: 8px;
     }
 }

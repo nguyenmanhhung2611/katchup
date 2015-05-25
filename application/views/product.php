@@ -68,7 +68,7 @@
           <a href="#">
             <div class="banner-tx-center" >
               <div class="block">
-                  <span class="title">Tặng 100% phí khóa học</span>
+                  <span class="title">Tặng 100% phí khóa học</span></br>
                   <span class="description">Online và luyện thi tiếng Nhật</span>
               </div>
             </div>
@@ -114,7 +114,8 @@
                     <div class="caption">
                         <h3><a href="#">Kanji N5,4</a></h3>
                         <p>Thẻ học kanji N5,4 (300 chữ hán đơn - 1200 chữ hán ghép) giúp bạn học hán tự nhanh bằng hình ảnh được chăm chút, đặt vào ngữ cảnh
-                         và thể hiện sát nghĩa của từ kèm theo cách nhớ ...</p>
+                         và thể hiện sát nghĩa của từ kèm theo cách nhớ ...</p>                        
+                        <p class="price-old">120.000đ</p>
                         <span class="price">108.000đ</span>
                         <p align="right">                          
                           <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
@@ -135,6 +136,7 @@
                         <h3><a href="#">Kanji N3</a></h3>
                         <p>Thẻ học kanji N3 (360 chữ hán đơn - 1500 chữ hán ghép) giúp bạn học hán tự nhanh bằng hình ảnh được chăm chút, đặt vào ngữ cảnh
                          và thể hiện sát nghĩa của từ kèm theo cách nhớ ...</p>
+                        <p class="price-old">150.000đ</p>
                         <span class="price">144.000đ</span>
                         <p align="right">                          
                           <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
@@ -155,6 +157,7 @@
                         <h3><a href="#">Kanji N2</a></h3>
                         <p>Thẻ học kanji N2 gồm 4 cuốn (360 chữ hán đơn - 1500 chữ hán ghép) giúp bạn học hán tự nhanh bằng hình ảnh được chăm chút, đặt vào ngữ cảnh
                          và thể hiện sát nghĩa của từ kèm theo cách nhớ ...</p>
+                         <p class="price-old">150.000đ</p>
                         <span class="price">144.000đ</span>
                         <p align="right">                          
                           <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
@@ -174,6 +177,7 @@
                         <h3><a href="#">Bảng chữ cái</a></h3>
                         <p>Thẻ học Hiragana và Katakana gồm 2 cuốn (kèm theo 100 từ vựng bằng hình ảnh) có thứ tự cách viết và sử dụng những hình ảnh kèm theo từ vựng
                           phổ biến để bạn bắt đầu học tiếng Nhật dễ dàng và thú vị hơn ...</p>
+                        <p class="price-old">82.000đ</p>
                         <span class="price">72.000đ</span>
                         <p align="right">                          
                           <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
@@ -193,6 +197,7 @@
                         <h3><a href="#">Ngữ pháp sơ cấp N5,4 </a></h3>
                         <p>Thẻ học Ngữ pháp sơ cấp N5,4 giúp bạn học ngữ pháp nhanh bằng những mẫu câu ví dụ, ý nghĩa và những lưu ý
                         của mẫu câu đó giúp bạn nắm chắc ngữ pháp ...</p>
+                        <p class="price-old">120.000đ</p>
                         <span class="price">108.000đ/c</span>
                         <p align="right">                          
                           <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
@@ -213,6 +218,7 @@
                         <h3><a href="#">Ngữ pháp trung cấp N3,2</a></h3>
                         <p>Thẻ học Ngữ pháp trung cấp N3 - N2 giúp bạn học ngữ pháp nhanh bằng những mẫu câu ví dụ, ý nghĩa và những lưu ý
                         của mẫu câu đó giúp bạn nắm chắc ngữ pháp ...</p>
+                        <p class="price-old">42.000đ</p>
                         <span class="price">36.000đ</span>
                         <p align="right">                          
                           <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
@@ -232,6 +238,7 @@
                         <h3><a href="#">Từ vựng Minna</a></h3>
                         <p>Thẻ học Từ vựng Minna (gồm 3000 từ vựng và mẫu câu) giúp bạn học hán tự nhanh từ vựng mỗi ngày bằng 
                           phương pháp học bằng cách hỏi - trả lời rất là dễ nhớ và khó quên</p>
+                        <p class="price-old">120.000đ</p>
                         <span class="price">108.000đ</span>
                         <p align="right">                          
                           <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
@@ -252,6 +259,7 @@
                         <h3><a href="#">Mẫu câu giao tiếp</a></h3>
                         <p>Thẻ học Mẫu câu giao tiếp giúp bạn học  tiếng Nhật với nhưng mẫu câu giao tiếp thường sử dụng và sẽ dễ dàng hơn trong
                           việc giao tiếp tiếng Nhật...</p>
+                        <p class="price-old">00.000đ</p>
                         <span class="price">00.000đ</span>
                         <p align="right">                          
                           <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
