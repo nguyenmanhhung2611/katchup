@@ -23,7 +23,7 @@ blue 	31a4d9
     background-color: #31a4d9;
 }
 
-#header  .katchup-header-title {
+#header .katchup-header-title {
     font-size: 33px;
 	font-family: font-UVNBayBuom;
 	color: #fff;
@@ -201,7 +201,7 @@ blue 	31a4d9
 .katchup-study {
     margin-top: 30px;
 }
-.katchup-study  img {
+.katchup-study img {
     width: 481px;
 	height: 391px;
 }
@@ -1059,6 +1059,23 @@ opacity: 0.6;
     }
 }
 
+/* 768px hoac nho hon */
+@media screen and (max-width: 768px) {
+    #header .katchup-header-title {
+        font-size: 32px;
+    }
+    .katchup-login {
+        margin-right: 34px !important;
+    }
+    .footer-top {
+        margin-left: 0px !important;
+        margin-right: -33px !important;
+    }
+    .footer-tablet {
+        height: 60px;
+    }
+}
+
 /* 767px hoac nho hon */
 @media screen and (max-width: 767px) {
     .navbar-brand img {
@@ -1071,6 +1088,9 @@ opacity: 0.6;
     .katchup-menu-container {
         margin-bottom: 0px; 
         margin-top: 0px;
+    }
+    .footer-tablet {
+        height: 0px;
     }
 }
 
@@ -1120,6 +1140,23 @@ opacity: 0.6;
     }
     #banner .text-container {
         margin: -20px 0 0 0px;
+    }
+}
+
+/* 320px hoac nho hon */
+@media screen and (max-width: 320px) {
+    #header .katchup-header-title {
+        font-size: 20px;
+    }
+    .katchup-login {
+        margin-right: -25px !important;
+    }
+    .katchup-menu li a {
+        font-size: 11px;
+    }
+    .katchup-study img {
+        height: auto;
+        width: auto;
     }
 }
 

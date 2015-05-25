@@ -31,6 +31,7 @@
                     
                 </div>
                 
+                <div class="footer-tablet">&nbsp;</div>
                 <div class="footer-customer">                    
                     <div class="row">
                         <div class="col-sm-6 col-xs-6 footer-quote text-center katchup-text">
