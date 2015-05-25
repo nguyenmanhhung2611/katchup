@@ -337,7 +337,7 @@
                     Kanji được miêu tả bằng hình ảnh và có chỉ cách nhớ đầy đủ nên thật là dễ nhớ
                 </div>
                 <div class="author">
-                    <img src="resources/images/p3.png" alt="">
+                    <img src="resources/images/p7.png" alt="">
                     <span class="name">Phan Thị Hồng Thắm</span><br/>
                     JPLT N4
                 </div>
@@ -347,7 +347,7 @@
                     Thẻ học Tiếng Nhật ép bằng plastic nên bền chắc, chống thấm, chống nước nên mình rất thích.
                 </div>
                 <div class="author">
-                    <img src="resources/images/p7.png" alt="">
+                    <img src="resources/images/p8.png" alt="">
                     <span class="name">Nguyễn Văn Hoàn</span><br/>
                     JPLT N4
                 </div>
