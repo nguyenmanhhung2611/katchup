@@ -24,7 +24,9 @@
 
     <!-- script -->
     <script type="text/javascript">
-      var categoryID = <?php echo $categoryID; ?>;
+      var categoryID = <?php echo json_encode($categoryID); ?>;
+      var pageNum = <?php echo json_encode($pageNum); ?>;
+      var recPerPage = <?php echo json_encode(DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE); ?>;
 
     </script>
     <script src="resources/js/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -36,7 +38,6 @@
     <!-- Boostrap -->
     <link href="resources/css/bootstrap.css" rel="stylesheet">    
     <link href="resources/css/responsive.css" rel="stylesheet">
-    <script data-require="ui-bootstrap@*" data-semver="0.12.1" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
     <script src="resources/js/bootstrap.js"></script>
     
 
@@ -134,7 +135,7 @@
             <h3>Tài liệu phổ biến</h3><hr>
             <div id="popular-document" class="popular-document" ng-controller="ctrl-popular-document" >
                 <div class="item" ng-repeat="e in arr">
-                    <a class="link" href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><h4>{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</h4></a>
+                    <a class="link" href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><h4>{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</h4></a>
                     <p class="text">{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT; ?>}}</p>
                 </div>
             </div>
@@ -146,18 +147,18 @@
         <div class="new-articles" >
             <div class="row item" ng-repeat="e in arr">
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><img src="{{e.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><img src="{{e.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
                 <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="home/document/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}" target="_blank">{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}}</a>
-                  <a class="title" href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><h3>{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</h3></a>
+                  <a class="label label-primary" href="home/chia-se-tai-lieu-tieng-nhat/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}" target="_blank">{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}}</a>
+                  <a class="title" href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><h3>{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</h3></a>
                   <p class="title-japan">{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT; ?>}}</p>
                   <p class="description">{{e.<?php echo TAI_LIEU_COL_MO_TA; ?>}}.
                   </p>
                   <dl>
                     <dd><time class="item_published" datetime="2014-10-20 10:04">{{e.<?php echo TAI_LIEU_COL_NGAY_DANG; ?>}}</time>
                         <span class="kmt-comment">
-                          <a href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}">0</a>
+                          <a href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}">0</a>
                         </span>
                     </dd>
                   </dl>
@@ -165,7 +166,7 @@
                 <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
             
-            <a class="pagination-num-page" ng-repeat="page in arr_page" onclick="">{{page}}</a>
+            <h1 align="center"><a class="pagination-num-page" ng-repeat="page in arr_page" href="{{page.href}}">_{{page.pageNum}}_</a></h1>
             
 
         </div>
@@ -181,7 +182,7 @@
           <h3>Danh mục</h3><hr>
           <div class="popular-document category" ng-controller="ctrl-category">
               <div class="item" ng-repeat="e in arr">
-                  <a class="link" href="home/document/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}" ><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}} | </h4></a>
+                  <a class="link" href="home/chia-se-tai-lieu-tieng-nhat/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}" ><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}} | </h4></a>
                   <p class="text"><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT; ?>}}</h4></p>
               </div>
           </div>

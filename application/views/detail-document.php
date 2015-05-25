@@ -69,16 +69,16 @@
              <div class="new-articles" ng-controller="ctrl-popular-document">
                 <div class="row item" ng-repeat="e in arr">
                     <div class="col-xs-12 col-sm-5 img">
-                        <a href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><img src="{{e.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" alt="katchup.vn" class="img-responsive"/></a>                       
+                        <a href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><img src="{{e.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" alt="katchup.vn" class="img-responsive"/></a>                       
                     </div>
                     <div class="col-xs-12 col-sm-7">
-                      <a class="label label-primary" href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}" target="_blank">{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</a>            
+                      <a class="label label-primary" href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}" target="_blank">{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</a>            
                       <p class="description">{{e.<?php echo TAI_LIEU_COL_MO_TA; ?>}}
                       </p>
                       <dl>
                         <dd><time class="item_published" datetime="2014-10-20 10:04">{{e.<?php echo TAI_LIEU_COL_NGAY_DANG; ?>}}</time>
                             <span class="kmt-comment">
-                              <a href="home/detailDocument/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}">0</a>
+                              <a href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}">0</a>
                             </span>
                         </dd>
                       </dl>
@@ -177,7 +177,7 @@
 
             <div class="row facebook-comment">
               <div class="col-xs-12 col-sm-12">
-                <div class="fb-comments" data-href="http://localhost/katchup/home/detailDocument/1" data-numposts="10" data-colorscheme="light"></div>
+                <div class="fb-comments" data-href="http://localhost/katchup/home/tai-lieu-tieng-nhat/1" data-numposts="10" data-colorscheme="light"></div>
               </div>
             </div>
 
@@ -200,7 +200,7 @@
             <h3>Danh mục</h3><hr>
             <div class="popular-document category" ng-controller="ctrl-category">
                 <div class="item" ng-repeat="e in arr">
-                    <a class="link" href="home/document/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}"><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}} | </h4></a>
+                    <a class="link" href="home/chia-se-tai-lieu-tieng-nhat/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}"><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}} | </h4></a>
                     <p class="text"><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT; ?>}}</h4></p>
                 </div>
           </div>

@@ -124,8 +124,8 @@ define("DANH_MUC_COL_GHI_CHU", "ghi_chu_danh_muc");
 
 
 // misc
-define("DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE", 20);
+define("DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE", 5);
 define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_MOST_VIEW', 5);
 define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_LAST_UPDATE', 5);
 define('DOCUMENT_PAGE_DEFAULT_IMAGE', 'resources/images/new-articles/new-articles-1.jpg');
-
+define("DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING", "tai-lieu-tieng-nhat-moi-nhat");

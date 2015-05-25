@@ -2,31 +2,46 @@
 var myDocument = angular.module("myDocument", []);
 
 getPopularDocument();
-getLatestDocument(categoryID);
+getLatestDocument(categoryID, pageNum, recPerPage);
 
 getCategories();
 //getListPaging();
 
-function getLatestDocument(categoryID) {
+function getLatestDocument(categoryID, pageNum, recPerPage) {
+
 	var param = "";
-	if (categoryID > 0) {
-		param = "/" + categoryID;
-	}
+
+
+	param += "/" + categoryID;
+
+	param += "/" + pageNum;
 	myDocument.controller('ctrl-new-articles', function($scope, $http) {
+
 		$http.get("home/changeDocumentList" + param).success(function(response) {
 			$scope.arr = response.documentList;
 			$scope.categoryName = response.categoryName;
 			if (!response.categoryName) {
 				$scope.categoryName = "Bài đăng mới nhất";
 			}
+
+			// paging
+			var countPage = Math.ceil(response.countAllDoc/recPerPage);
+			var pages = new Array();
+			for (var i = 0; i < countPage; i++) {
+				pages[i] = {href:"home/chia-se-tai-lieu-tieng-nhat/"+categoryID+"/"+(i+1), pageNum:i+1 };
+			}
+
+			$scope.arr_page = pages;
+			console.log("PG: " + pages);
+
+
 		});
 
 
+		
 
-		// paging
-		var pages = [1,2,3,4,5];
-		//$scope.arr_page = 
-		console.log(pages);
+		
+
 	});
 }
 

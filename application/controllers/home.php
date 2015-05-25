@@ -8,8 +8,9 @@ class Home extends CI_Controller {
 		$this->load->view('index');
 	}
 	
-	public function document($categoryID = -1) {
+	public function document($categoryID = DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING, $pageNum = 1) {
 		$data['categoryID'] = $categoryID;
+		$data['pageNum'] = $pageNum;
 		$this->load->view('document', $data);
 		
 	}
@@ -30,13 +31,14 @@ class Home extends CI_Controller {
 		}
 	}
 
-	public function changeDocumentList($categoryID = -1, $pageNum = 1, $recPerPage = DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE) {
+	public function changeDocumentList($categoryID = DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING, $pageNum = 1, $recPerPage = DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE) {
 		$this->load->model('Mdocument');
 		
 		$data['documentList'] = $this->Mdocument->getLatestDocument($categoryID, $pageNum, $recPerPage);
 		$data['countDoc'] = count($data['documentList']);
+		$data['countAllDoc'] = $this->Mdocument->countAllDocument($categoryID);
 		$data['categoryName'] = "";
-		if ($categoryID > 0) {
+		if ($categoryID !== DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING) {
 			$data['categoryName'] = $this->Mdocument->getCategoryByID($categoryID, array(DANH_MUC_COL_TEN_DANH_MUC))[DANH_MUC_COL_TEN_DANH_MUC];
 		}
 
@@ -65,28 +67,18 @@ class Home extends CI_Controller {
 		echo json_encode($data);
 	}
 
-	public function getDocumentListPagination($categoryID = -1, $pageNum = 1, $recPerPage = DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE) {
-		$this->load->model('Mdocument');
-		$data['categoryName'] = "";
-		$data['documentList'] = $this->Mdocument->getLatestDocument($categoryID);
-		if ($categoryID > 0) {
-			$data['categoryName'] = $this->Mdocument->getCategoryByID($categoryID, array(DANH_MUC_COL_TEN_DANH_MUC))[DANH_MUC_COL_TEN_DANH_MUC];
-		}
+
+	
+/**
+	Redirect... friendly with SEO
+*/
+	public function chia_se_tai_lieu_tieng_nhat($categoryID = DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING, $pageNum = 1) {
+		$this->document($categoryID, $pageNum);
 	}
 
-	public function pagination($pageNum, $recPerPage, $countDoc) {
-		$this->load->library('Ajax_pagination');
-		$config['first_link'] = '<<';
-		$config['last_link'] = '>>';
-		$config['div'] = 'content'; //Div tag id
-		$config['base_url'] = "home/changeDocumentList/".$pageNum."/".$recPerPage;
-		$config['total_rows'] = $countDoc;
-		$config['per_page'] = $recPerPage;
-		$config['postVar'] = 'page';
-
-		$this->ajax_pagination->initialize($config);
-		echo $this->ajax_pagination->create_links();
-
+	public function tai_lieu_tieng_nhat($documentID) {
+		$this->detailDocument($documentID);
+		
 	}
 }
 ?>
