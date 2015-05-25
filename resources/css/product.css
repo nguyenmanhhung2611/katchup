@@ -80,8 +80,9 @@
 #content .product-item .price-old {
     color: #a4a4a4;
     font-family: "Patua One",cursive;
-    font-size: 20px;
+    font-size: 14px;
     text-decoration: line-through;
+    margin-bottom: -5px;
 }
 #content .product-item .price {
     color: #e8176a;
@@ -92,6 +93,7 @@
 }
 #content .product-item .caption .btn-info {
     font-weight: bold;
+    margin-top: -12px;
 }
 #content .product-item .caption h3 a {
     color: #747474;
