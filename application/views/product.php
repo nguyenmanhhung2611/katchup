@@ -272,7 +272,7 @@
               Hình ảnh minh họa giúp học nhanh hơn và nhớ lâu hơn</br>
               Học mọi lúc, mọi nơi</br>
               Tặng hệ thống học online miễn phí</br>
-              Tự tin làm chủ từ vựng cho kì thi JLPT, NAT TEST, BJT
+              Tự tin làm chủ Kanji, từ vựng, ngữ pháp cho kì thi JLPT, NAT TEST, BJT, TOP J
             </p>
           </div>
           <div class="col-xs-6 col-sm-6">
