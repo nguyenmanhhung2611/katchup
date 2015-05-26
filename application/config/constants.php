@@ -129,3 +129,7 @@ define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_MOST_VIEW', 5);
 define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_LAST_UPDATE', 5);
 define('DOCUMENT_PAGE_DEFAULT_IMAGE', 'resources/images/new-articles/new-articles-1.jpg');
 define("DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING", "tai-lieu-tieng-nhat-moi-nhat");
+
+
+define("ADMIN_PAGE_DEFAULT_USERNAME", "admin12");
+define("ADMIN_PAGE_DEFAULT_PASSWORD", "1357986420");

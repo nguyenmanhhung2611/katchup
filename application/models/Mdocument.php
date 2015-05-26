@@ -36,15 +36,31 @@
 				$this->db->select($str_select);
 			}
 			
+			$this->db->from(TB_TAI_LIEU);
+			$query = $this->db->get();
+			return $query->result_array();
+		}
+
+		function getAllDocumentWithCategory($arr_column = array()) {
+			if (count($arr_column)>0) {
+				$str_select = '';
+				foreach ($arr_column as $column) {
+					$str_select .= $column.',';
+				}
+				$str_select = trim($str_select, ",");
+				
+				$this->db->select($str_select);
+			}
+			
 			$this->db->from(TB_TAI_LIEU)
-			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC);
+			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC, "left");
 			$query = $this->db->get();
 			return $query->result_array();
 		}
 
 		function getLatestDocument($categoryID = DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING, $pageNum = 1, $recPerPage = DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE) {
 			$this->db->select('*')->from(TB_TAI_LIEU)
-			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC)
+			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC, "left")
 			->order_by(TAI_LIEU_COL_NGAY_DANG, 'desc')
 			->limit($recPerPage, ($pageNum - 1) * $recPerPage);
 			if ($categoryID !== DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING) {
@@ -107,6 +123,11 @@
 				
 			}
 			return $this->db->count_all_results();
+		}
+
+		/// INSERT DATA
+		function insertDocument($data) {
+			return $this->db->insert(TB_TAI_LIEU, $data);
 		}
 
 	}

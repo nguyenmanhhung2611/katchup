@@ -153,8 +153,10 @@
                   <a class="label label-primary" href="home/chia-se-tai-lieu-tieng-nhat/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}" target="_blank">{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}}</a>
                   <a class="title" href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><h3>{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</h3></a>
                   <p class="title-japan">{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT; ?>}}</p>
-                  <p class="description">{{e.<?php echo TAI_LIEU_COL_MO_TA; ?>}}.
+                  <p class="description">{{e.<?php echo TAI_LIEU_COL_MO_TA; ?>}}
                   </p>
+                  <?php echo "<div>HELLO: {{e.".TAI_LIEU_COL_MO_TA."}}</div>"; ?>
+                  
                   <dl>
                     <dd><time class="item_published" datetime="2014-10-20 10:04">{{e.<?php echo TAI_LIEU_COL_NGAY_DANG; ?>}}</time>
                         <span class="kmt-comment">
