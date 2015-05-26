@@ -127,8 +127,8 @@
                 <div class="thumbnail product-item">
                     <span class="sticker_sale"> sale</span>
                     <div class="panel-body">
-                      <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail zoom">
-                        <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                      <a href="resources/images/product/items/hd/item-products-hd-2.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-2.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
                         <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
                       </a>
                     </div>
@@ -148,8 +148,8 @@
                 <div class="thumbnail product-item">
                     <span class="sticker_sale"> sale</span>
                     <div class="panel-body">
-                      <a href="resources/images/product/items/hd/item-products-hd-2.jpg" data-rel="lightbox" class="thumbnail zoom">
-                        <img width="320" height="200" src="resources/images/product/items/item-products-2.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                      <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
                         <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
                       </a>
                     </div>
@@ -168,8 +168,8 @@
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
                     <div class="panel-body">
-                      <a href="resources/images/product/items/hd/item-products-hd-1.jpg" data-rel="lightbox" class="thumbnail zoom">
-                        <img width="320" height="200" src="resources/images/product/items/item-products-1.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                      <a href="resources/images/product/items/hd/item-products-hd-4.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-4.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
                         <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
                       </a>
                     </div>
@@ -188,8 +188,8 @@
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
                     <div class="panel-body">
-                      <a href="resources/images/product/items/hd/item-products-hd-1.jpg" data-rel="lightbox" class="thumbnail zoom">
-                        <img width="320" height="200" src="resources/images/product/items/item-products-1.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                      <a href="resources/images/product/items/hd/item-products-hd-5.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-5.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
                         <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
                       </a>
                     </div>
@@ -209,8 +209,8 @@
                 <div class="thumbnail product-item">
                     <span class="sticker_sale"> sale</span>
                     <div class="panel-body">
-                      <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail zoom">
-                        <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                      <a href="resources/images/product/items/hd/item-products-hd-6.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-6.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
                         <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
                       </a>
                     </div>
@@ -229,8 +229,8 @@
             <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item">
                     <div class="panel-body">
-                      <a href="resources/images/product/items/hd/item-products-hd-2.jpg" data-rel="lightbox" class="thumbnail zoom">
-                        <img width="320" height="200" src="resources/images/product/items/item-products-2.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                      <a href="resources/images/product/items/hd/item-products-hd-7.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-7.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
                         <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
                       </a>
                     </div>
@@ -250,8 +250,8 @@
                 <div class="thumbnail product-item">
                     <span class="sticker_new"> new</span>
                     <div class="panel-body">
-                      <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail zoom">
-                        <img width="320" height="200" src="resources/images/product/items/item-products-3.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
+                      <a href="resources/images/product/items/hd/item-products-hd-8.jpg" data-rel="lightbox" class="thumbnail zoom">
+                        <img width="320" height="200" src="resources/images/product/items/item-products-8.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
                         <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
                       </a>
                     </div>
