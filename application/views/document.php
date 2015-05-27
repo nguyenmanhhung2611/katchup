@@ -179,9 +179,11 @@
           <?php
             /// loop show pagination
             foreach ($pageList as $p => $href) {
+              if ($p == $currentPage) { echo $p; } else {
               ?>
-              <a class="pagination-num-page" href="<?php echo $href; ?>"><?php echo $p; ?></a>
+                <a class="pagination-num-page" href="<?php echo $href; ?>"><?php echo $p; ?></a>
               <?php
+              }
             }
             /// end loop show pagination
           ?>

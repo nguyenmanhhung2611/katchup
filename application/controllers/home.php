@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 	
 	public function document($categoryID = DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING, $pageNum = 1, $recPerPage = DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE) {
 		$data['categoryID'] = $categoryID;
-		$data['pageNum'] = $pageNum;
+		$data['currentPage'] = $pageNum;
 		
 		$this->load->model('Mdocument');
 		

@@ -69,7 +69,6 @@
              <div class="new-articles" >
                 <?php
 
-                echo count($popularDocumentList);
                 // loop popular document
                 foreach ($popularDocumentList as $popDoc) {
                   ?>
