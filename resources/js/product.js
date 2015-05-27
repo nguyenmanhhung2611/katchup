@@ -1,9 +1,45 @@
 // Angularjs
 var myProduct = angular.module("myProduct", []);
+myProduct.controller("itemProductCtrl", function($scope){
+    $scope.products = null;
+    $scope.deleteItemProduct = function(id) {    	
+        $("#collapseCheckout #" + id).remove();
+		calcTotalCheckout();
+    };
+});
+myProduct.controller("ProductCtrl", function($scope){
+    $scope.itemProduct = function(id) {
+        var productElement = $(".product-item#" + id);
+
+		if(!checkExistsproduct(id)) {
+			var product = {
+			  id : id,
+			  img : productElement.find("img").attr("src"),
+			  title : productElement.find(".caption h3 a").text(),
+			  desc : productElement.find(".caption p").text(),
+			  amount : 1,
+			  price : productElement.find(".price").text()
+			}
+			$PRODUCTS.push(product);
+			// localStorage.setItem("products", $PRODUCTS);
+		}
+
+		var scope = angular.element($("#collapseCheckout")).scope();
+		setTimeout(function () {
+	        scope.$apply(function() {
+				scope.products = $PRODUCTS;
+			});
+			calcTotalCheckout();
+	    }, 1000);
+    };
+});
+
+var $PRODUCTS = [];
 
 // Document is ready
 $(function() {	
 	menuActiveDocument();
+	checkout();	
 });
 
 function menuActiveDocument() {
@@ -15,3 +51,41 @@ function menuActiveDocument() {
 	$(".katchup-menu li:nth-child(4)").addClass("active");	
 }
 
+function checkout() {
+	/*if(localStorage.getItem("products") != null) {
+		$PRODUCTS = localStorage.getItem("products");
+	}*/
+	$('#collapseCheckout').on('show.bs.collapse', function () {
+		calcTotalCheckout();
+	});
+}
+
+function calcTotalCheckout() {
+	var total = 0;
+	$(".checkout-item .price b").each(function(){
+	  //console.log($(this).text());
+	  total += parseInt(removeCommas($(this).text())) * parseInt($(".checkout-item input").val());
+	});
+	$(".checkout-total #total").text(commas(total.toString()) + "đ");
+}
+
+// Add commas in price
+function commas(str) {
+    return str.replace(/.(?=(?:.{3})+$)/g, '$&.');
+}
+
+// Remove commas in price
+function removeCommas(str) {
+	str.replace("đ", "");
+    return str.replace(/\./g, "");
+}
+
+function checkExistsproduct(id) {
+	for (i = 0; i < $PRODUCTS.length; i++) {
+        if($PRODUCTS[i].id == id) {
+        	$PRODUCTS[i].amount = $PRODUCTS[i].amount + 1;
+        	return true;        	
+        }
+    }
+    return false;
+}

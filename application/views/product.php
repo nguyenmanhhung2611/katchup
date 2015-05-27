@@ -101,9 +101,9 @@
   <div class="container-fluid">    
     <div class="row product">
         <!-- Product -->
-        <ul class="thumbnails">
+        <ul class="thumbnails" ng-controller="ProductCtrl">
             <div class="col-xs-6 col-sm-3">
-                <div class="thumbnail product-item">
+                <div class="thumbnail product-item" id="product_1">
                     <span class="sticker_top"> top</span>
                     <div class="panel-body">
                       <a href="resources/images/product/items/hd/item-products-hd-1.jpg" data-rel="lightbox" class="thumbnail zoom">
@@ -118,13 +118,13 @@
                         <p class="price-old">120.000đ</p>
                         <span class="price">108.000đ</span>
                         <p align="right">                          
-                          <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
+                          <a href="javascript:void(0);" ng-click="itemProduct('product_1')" class="btn btn-info"> Thêm vào giỏ hàng</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3">
-                <div class="thumbnail product-item">
+                <div class="thumbnail product-item" id="product_2">
                     <span class="sticker_sale"> sale</span>
                     <div class="panel-body">
                       <a href="resources/images/product/items/hd/item-products-hd-2.jpg" data-rel="lightbox" class="thumbnail zoom">
@@ -139,13 +139,13 @@
                         <p class="price-old">150.000đ</p>
                         <span class="price">144.000đ</span>
                         <p align="right">                          
-                          <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
+                          <a href="javascript:void(0);" ng-click="itemProduct('product_2')" class="btn btn-info"> Thêm vào giỏ hàng</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3">
-                <div class="thumbnail product-item">
+                <div class="thumbnail product-item" id="product_3">
                     <span class="sticker_sale"> sale</span>
                     <div class="panel-body">
                       <a href="resources/images/product/items/hd/item-products-hd-3.jpg" data-rel="lightbox" class="thumbnail zoom">
@@ -160,13 +160,13 @@
                          <p class="price-old">150.000đ</p>
                         <span class="price">144.000đ</span>
                         <p align="right">                          
-                          <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
+                          <a href="javascript:void(0);" ng-click="itemProduct('product_3')" class="btn btn-info"> Thêm vào giỏ hàng</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3">
-                <div class="thumbnail product-item">
+                <div class="thumbnail product-item" id="product_4">
                     <div class="panel-body">
                       <a href="resources/images/product/items/hd/item-products-hd-4.jpg" data-rel="lightbox" class="thumbnail zoom">
                         <img width="320" height="200" src="resources/images/product/items/item-products-4.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
@@ -180,13 +180,13 @@
                         <p class="price-old">82.000đ</p>
                         <span class="price">72.000đ</span>
                         <p align="right">                          
-                          <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
+                          <a href="javascript:void(0);" ng-click="itemProduct('product_4')" class="btn btn-info"> Thêm vào giỏ hàng</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3">
-                <div class="thumbnail product-item">
+                <div class="thumbnail product-item" id="product_5">
                     <div class="panel-body">
                       <a href="resources/images/product/items/hd/item-products-hd-5.jpg" data-rel="lightbox" class="thumbnail zoom">
                         <img width="320" height="200" src="resources/images/product/items/item-products-5.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
@@ -198,15 +198,15 @@
                         <p>Thẻ học Ngữ pháp sơ cấp N5,4 giúp bạn học ngữ pháp nhanh bằng những mẫu câu ví dụ, ý nghĩa và những lưu ý
                         của mẫu câu đó giúp bạn nắm chắc ngữ pháp ...</p>
                         <p class="price-old">120.000đ</p>
-                        <span class="price">108.000đ/c</span>
+                        <span class="price">108.000đ</span>
                         <p align="right">                          
-                          <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
+                          <a href="javascript:void(0);" ng-click="itemProduct('product_5')" class="btn btn-info"> Thêm vào giỏ hàng</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3">
-                <div class="thumbnail product-item">
+                <div class="thumbnail product-item" id="product_6">
                     <span class="sticker_sale"> sale</span>
                     <div class="panel-body">
                       <a href="resources/images/product/items/hd/item-products-hd-6.jpg" data-rel="lightbox" class="thumbnail zoom">
@@ -221,13 +221,13 @@
                         <p class="price-old">42.000đ</p>
                         <span class="price">36.000đ</span>
                         <p align="right">                          
-                          <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
+                          <a href="javascript:void(0);" ng-click="itemProduct('product_6')" class="btn btn-info"> Thêm vào giỏ hàng</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3">
-                <div class="thumbnail product-item">
+                <div class="thumbnail product-item" id="product_7">
                     <div class="panel-body">
                       <a href="resources/images/product/items/hd/item-products-hd-7.jpg" data-rel="lightbox" class="thumbnail zoom">
                         <img width="320" height="200" src="resources/images/product/items/item-products-7.jpg" alt="katchup.vn" class="img-responsive img-rounded" />
@@ -240,14 +240,14 @@
                           phương pháp học bằng cách hỏi - trả lời rất là dễ nhớ và khó quên</p>
                         <p class="price-old">120.000đ</p>
                         <span class="price">108.000đ</span>
-                        <p align="right">                          
-                          <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
+                        <p align="right">
+                          <a href="javascript:void(0);" ng-click="itemProduct('product_7')" class="btn btn-info"> Thêm vào giỏ hàng</a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-3">
-                <div class="thumbnail product-item">
+                <div class="thumbnail product-item" id="product_8">
                     <span class="sticker_new"> new</span>
                     <div class="panel-body">
                       <a href="resources/images/product/items/hd/item-products-hd-8.jpg" data-rel="lightbox" class="thumbnail zoom">
@@ -261,15 +261,61 @@
                           việc giao tiếp tiếng Nhật...</p>
                         <p class="price-old">00.000đ</p>
                         <span class="price">00.000đ</span>
-                        <p align="right">                          
-                          <a href="#" class="btn btn-info"> Thêm vào giỏ hàng</a>
+                        <p align="right">
+                          <a href="javascript:void(0);" ng-click="itemProduct('product_8')" class="btn btn-info"> Thêm vào giỏ hàng</a>
                         </p>
                     </div>
                 </div>
             </div>
 
         </ul> <!-- End product -->
-        <a class="container more-views" href="#"><h4>(Xem thêm nhiều sản phẩm khác ở dạng e-flashcard)</h4></a>
+        <div class="clearfix"></div>
+        <div class="container">
+          <a data-toggle="collapse" href="#collapseCheckout" aria-expanded="false" aria-controls="collapseCheckout">
+            <img title="Tiến hành thanh toán" src="resources/images/checkout.png" alt="katchup.vn" class="img-responsive checkout-left">
+          </a>          
+          <h4 class="more-views"><a href="#">(Xem thêm nhiều sản phẩm khác ở dạng e-flashcard)</a></h4>
+          <a data-toggle="collapse" href="#collapseCheckout" aria-expanded="false" aria-controls="collapseCheckout">
+            <img title="Tiến hành thanh toán" src="resources/images/checkout.png" alt="katchup.vn" class="img-responsive checkout-right">
+          </a> 
+        </div>
+
+        <div class="collapse" id="collapseCheckout" ng-controller="itemProductCtrl">
+          <div class="container-fluid">
+            <div ng-repeat="item in products" id="{{item.id}}" class="checkout-item">
+              <p class="col-xs-6 col-sm-2">
+                <img width="320" height="200" src="{{item.img}}" alt="katchup.vn" class="img-responsive img-rounded" />
+              </p>
+              <p class="col-xs-6 col-sm-4">
+                <i class="title">{{item.title}}</i></br>
+                <i class="description">{{item.desc}}</i>
+              </p>
+              <p class="col-xs-6 col-sm-3 price">
+                <b title="giá">{{item.price}}</b>
+              </p>
+              <p class="col-xs-6 col-sm-2">
+                <input title="Số lượng" type="text" class="form-control" value="{{item.amount}}">
+              </p>
+              <p class="col-xs-6 col-sm-1">
+                <span title="Xóa" class="glyphicon glyphicon-trash" ng-click="deleteItemProduct(item.id)"></span>
+              </p>
+            </div>
+
+            <!-- Total -->
+            <hr>
+            <div class="checkout-total">
+              <p class="col-xs-6 col-sm-offset-6 col-sm-3">
+                <b>Tổng cộng</b>
+              </p>
+              <p class="col-xs-6 col-sm-3">
+                <b id="total">336.000</b>
+              </p>
+            </div>
+
+            
+
+          </div>
+        </div>
 
         <div class="container-fluid infor">
           <div class="col-xs-6 col-sm-6">
