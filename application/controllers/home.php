@@ -37,6 +37,7 @@ class Home extends CI_Controller {
 		$data['documentList'] = $this->Mdocument->getLatestDocument($categoryID, $pageNum, $recPerPage);
 		$data['countDoc'] = count($data['documentList']);
 		$data['countAllDoc'] = $this->Mdocument->countAllDocument($categoryID);
+
 		$data['categoryName'] = "";
 		if ($categoryID !== DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING) {
 			$data['categoryName'] = $this->Mdocument->getCategoryByID($categoryID, array(DANH_MUC_COL_TEN_DANH_MUC))[DANH_MUC_COL_TEN_DANH_MUC];
@@ -44,6 +45,11 @@ class Home extends CI_Controller {
 
 		echo json_encode($data);
 		
+	}
+
+	public function getDescribeInHTML($documentID) {
+		$this->load->model('Mdocument');
+		return $this->Mdocument->getDocumentByID($documentID, array(TAI_LIEU_COL_MO_TA))[TAI_LIEU_COL_MO_TA];
 	}
 
 	public function showPopularDocument() {

@@ -19,15 +19,16 @@
 </head>
 <body ng-app="myAdminAddDoc" >
 	<h1>Thêm Tài Liệu Mới</h1>
-	<form method="post" action="admin/executeAddNewDocument">
+	<!--<form method="post" action="admin/executeAddNewDocument">-->
+	<?php echo form_open_multipart('admin/executeAddNewDocument');?>
 		Mã Tài Liệu<input type="text" placeholder="Mã Tài Liệu" name="maTaiLieu" readonly><br/>
 		Tên Tài Liệu<input type="text" placeholder="Tên Tài Liệu" name="tenTaiLieu"><br/>
 		Tên Tài Liệu Tiếng Nhật<input type="text" placeholder="Tên Tài Liệu Tiếng Nhật" name="tenTaiLieuTiengNhat"><br/>
-		Hình Ảnh<input type="file" name="duongDanHinhAnh"><br/>
+		Hình Ảnh<input name="duongDanHinhAnh" type="file" id="duongDanHinhAnh" size="50" /><br/>
 		Mô Tả<textarea rows="10" cols="50" type="text" placeholder="Mô Tả" name="moTaTaiLieu"></textarea><br/>
 		Danh Mục
 		<select name="danhMuc" ng-controller="ctrl-choose-category">
-			<option ng-repeat="category in arr_category" value="volvo">{{category.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}}</option>
+			<option ng-repeat="category in arr_category" value="{{category.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}">{{category.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}}</option>
 			
 		</select><br/>
 		Chi Tiết Tài Liệu<textarea rows="20" cols="150" type="text" placeholder="Chi Tiết Tài Liệu" name="chiTiet" id="ta-chiTiet"></textarea><br/>

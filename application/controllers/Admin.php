@@ -24,6 +24,7 @@ class Admin extends CI_Controller {
 
 	/// Document Manager
 	public function addDocument() {
+		$this->load->helper('form');
 		$this->load->view('admin/addDocument');
 	}
 
@@ -46,36 +47,48 @@ class Admin extends CI_Controller {
 	}
 
 	public function executeAddNewDocument() {
-		$data[TAI_LIEU_COL_TEN_TAI_LIEU] = $_POST['tenTaiLieu'];
-		$data[TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT] = $_POST['tenTaiLieuTiengNhat'];
-		$data[TAI_LIEU_COL_HINH_ANH] = "resources/images/new-articles/".$_FILES['duongDanHinhAnh']['name'];
-		$data[TAI_LIEU_COL_MO_TA] = $_POST['moTaTaiLieu'];
-		$data[TAI_LIEU_COL_MA_DANH_MUC] = $_POST['danhMuc'];
-		$data[TAI_LIEU_COL_CHI_TIET_BAI_VIET] = $_POST['chiTiet'];
-		$data[TAI_LIEU_COL_NGAY_DANG] = $_POST['ngayDang'];
-		$data[TAI_LIEU_COL_GHI_CHU] = $_POST['ghiChu'];
-		$data[TAI_LIEU_COL_DUONG_DAN] = $this->utf8_to_ascii_url($data[TAI_LIEU_COL_TEN_TAI_LIEU].'-'.$data[TAI_LIEU_COL_NGAY_DANG]);
 
+		$config['upload_path']          = 'resources/images/new-articles/';
+		$config['allowed_types']        = 'gif|jpg|png';
+	//	$config['max_size']             = 100;
+	//	$config['max_width']            = 1024;
+	//	$config['max_height']           = 768;
 
-		$this->load->model('Mdocument');
-		$kq = $this->Mdocument->insertDocument($data);
+        $this->load->library('upload', $config);
 
-		if ($kq)
-		{
-			$link=$link.basename($_FILES['duongDanHinhAnh']['name']);
-			if (move_uploaded_file($_FILES['duongDanHinhAnh']['tmp_name'],$link))
-			{
+        if ( ! $this->upload->do_upload()) {
+        	echo "Thêm ảnh thất bại";
+        	$error = array('error' => $this->upload->display_errors());
+        	echo "<pre>";
+        	print_r($error);
+        	echo "</pre>";
+        } else {
+            $data[TAI_LIEU_COL_HINH_ANH] = $this->upload->data('file_name');
+            $data[TAI_LIEU_COL_TEN_TAI_LIEU] = $_POST['tenTaiLieu'];
+			$data[TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT] = $_POST['tenTaiLieuTiengNhat'];
+			
+			$data[TAI_LIEU_COL_MO_TA] = $_POST['moTaTaiLieu'];
+			$data[TAI_LIEU_COL_MA_DANH_MUC] = $_POST['danhMuc'];
+			$data[TAI_LIEU_COL_CHI_TIET_BAI_VIET] = $_POST['chiTiet'];
+			$data[TAI_LIEU_COL_NGAY_DANG] = $_POST['ngayDang'];
+			$data[TAI_LIEU_COL_GHI_CHU] = $_POST['ghiChu'];
+			$data[TAI_LIEU_COL_DUONG_DAN] = $this->utf8_to_ascii_url($data[TAI_LIEU_COL_TEN_TAI_LIEU].'-'.$data[TAI_LIEU_COL_NGAY_DANG]);
+	
+			$this->load->model('Mdocument');
+			$kq = $this->Mdocument->insertDocument($data);
+
+			if ($kq) {
 				echo '<script>alert("Thêm dữ liệu thành công.");</script>';
 				header('home/documentList');
+			} else {
+				echo "Thêm dữ liệu thất bại";
+				echo '<h1><a href="admin/documentList">Về trang danh sách tài liệu</a></h1>';
 			}
-			else 
-				echo "Thêm ảnh thất bại";
-		}
-		else {
-			echo "Thêm dữ liệu thất bại";
-			echo '<h1><a href="admin/documentList">Về trang danh sách tài liệu</a></h1>';
-		}
-			
+        }
+	}
+
+	public function do_upload() {
+		
 	}
 
 	private function utf8_to_ascii_url($temp) {
