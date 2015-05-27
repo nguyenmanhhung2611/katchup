@@ -8,15 +8,38 @@ class Home extends CI_Controller {
 		$this->load->view('index');
 	}
 	
-	public function document($categoryID = DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING, $pageNum = 1) {
+	public function document($categoryID = DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING, $pageNum = 1, $recPerPage = DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE) {
 		$data['categoryID'] = $categoryID;
 		$data['pageNum'] = $pageNum;
+		
+		$this->load->model('Mdocument');
+		
+		$data['documentList'] = $this->Mdocument->getLatestDocument($categoryID, $pageNum, $recPerPage);
+		$data['countDoc'] = count($data['documentList']);
+		$data['countAllDoc'] = $this->Mdocument->countAllDocument($categoryID);
+		$data['pageCount'] = ceil($data['countAllDoc']/$recPerPage);
+		$data['pageList'] = array();
+
+		// init pageList
+		for ($i=1; $i <= $data['pageCount']; $i++) { 
+			$data['pageList'][$i] = "home/".DEFAULT_PREFIX_CATEGORY_URL."/".$categoryID."/".$i;
+		}
+
+		$data['categoryName'] = "";
+		if ($categoryID !== DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING) {
+			$data['categoryName'] = $this->Mdocument->getCategoryByID($categoryID, array(DANH_MUC_COL_TEN_DANH_MUC))[DANH_MUC_COL_TEN_DANH_MUC];
+		}
+
 		$this->load->view('document', $data);
 		
 	}
 
-	public function detailDocument($id) {
-		$data['documentID'] = $id;
+	public function detailDocument($documentID) {
+		$data['documentID'] = $documentID;
+		$this->load->model('Mdocument');
+		$data['documentSummary'] = $this->Mdocument->getDocumentByID($documentID);
+		$data['popularDocumentList'] = $this->Mdocument->getPopularDocument();
+		$data['categoryList'] = $this->Mdocument->getAllCategory(array(DANH_MUC_COL_MA_DANH_MUC, DANH_MUC_COL_TEN_DANH_MUC, DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT));
 		$this->load->view('detail-document', $data);
 	}
 	
@@ -49,7 +72,7 @@ class Home extends CI_Controller {
 
 	public function getDescribeInHTML($documentID) {
 		$this->load->model('Mdocument');
-		return $this->Mdocument->getDocumentByID($documentID, array(TAI_LIEU_COL_MO_TA))[TAI_LIEU_COL_MO_TA];
+		echo $this->Mdocument->getDocumentByID($documentID, array(TAI_LIEU_COL_MO_TA))[TAI_LIEU_COL_MO_TA];
 	}
 
 	public function showPopularDocument() {

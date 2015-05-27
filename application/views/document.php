@@ -142,34 +142,50 @@
         </div>
       </div>
         
-      <div class="col-xs-12 col-sm-7" ng-controller="ctrl-new-articles">
-        <h3>{{categoryName}}</h3><hr>
+      <div class="col-xs-12 col-sm-7" >
+        <h3><?php echo $categoryName; ?></h3><hr>
         <div class="new-articles" >
-            <div class="row item" ng-repeat="e in arr">
+          <?php
+          /// loop show document list
+            foreach ($documentList as $doc) {
+              ?>
+              <div class="row item" >
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><img src="{{e.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><img src="<?php echo $doc[TAI_LIEU_COL_HINH_ANH]; ?>" alt="katchup.vn" class="img-responsive"/></a>                       
                 </div>
                 <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="home/chia-se-tai-lieu-tieng-nhat/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}" target="_blank">{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}}</a>
-                  <a class="title" href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><h3>{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</h3></a>
-                  <p class="title-japan">{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT; ?>}}</p>
-                  <p class="description">{{e.<?php echo TAI_LIEU_COL_MO_TA; ?>}}
+                  <a class="label label-primary" href="home/<?php echo DEFAULT_PREFIX_CATEGORY_URL; ?>/<?php echo $doc[DANH_MUC_COL_MA_DANH_MUC]; ?>" target="_blank"><?php echo $doc[DANH_MUC_COL_TEN_DANH_MUC]; ?></a>
+                  <a class="title" href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><h3><?php echo $doc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></h3></a>
+                  <p class="title-japan"><?php echo $doc[TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT]; ?></p>
+                  <p class="description"><?php echo $doc[TAI_LIEU_COL_MO_TA]; ?>
                   </p>
-                  <?php echo "<div>HELLO: {{e.".TAI_LIEU_COL_MO_TA."}}</div>"; ?>
                   
                   <dl>
-                    <dd><time class="item_published" datetime="2014-10-20 10:04">{{e.<?php echo TAI_LIEU_COL_NGAY_DANG; ?>}}</time>
+                    <dd><time class="item_published" datetime="2014-10-20 10:04"><?php echo $doc[TAI_LIEU_COL_NGAY_DANG]; ?></time>
                         <span class="kmt-comment">
-                          <a href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}">0</a>
+                          <a href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">0</a>
                         </span>
                     </dd>
                   </dl>
                 </div>
                 <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
-            
-            <h1 align="center"><a class="pagination-num-page" ng-repeat="page in arr_page" href="{{page.href}}">_{{page.pageNum}}_</a></h1>
-            
+              <?php
+            }
+            /// end loop show document list
+          ?>
+
+          <h3 align="center">
+          <?php
+            /// loop show pagination
+            foreach ($pageList as $p => $href) {
+              ?>
+              <a class="pagination-num-page" href="<?php echo $href; ?>"><?php echo $p; ?></a>
+              <?php
+            }
+            /// end loop show pagination
+          ?>
+          </h3>
 
         </div>
         <a href="#" class="see-all">See all</a>

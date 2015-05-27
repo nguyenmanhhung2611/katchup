@@ -74,7 +74,7 @@
 
 		function getPopularDocument() {
 			$this->db->select('*')->from(TB_TAI_LIEU)
-			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC)
+			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC, "left")
 			->order_by(TAI_LIEU_COL_LUOT_VIEW, 'desc')
 			->limit(DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_MOST_VIEW);
 			

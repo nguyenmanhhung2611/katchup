@@ -66,47 +66,64 @@
         </div>
         <div class="row">
             <h3>Tài liệu phổ biến</h3><hr>
-             <div class="new-articles" ng-controller="ctrl-popular-document">
-                <div class="row item" ng-repeat="e in arr">
-                    <div class="col-xs-12 col-sm-5 img">
-                        <a href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><img src="{{e.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" alt="katchup.vn" class="img-responsive"/></a>                       
+             <div class="new-articles" >
+                <?php
+
+                echo count($popularDocumentList);
+                // loop popular document
+                foreach ($popularDocumentList as $popDoc) {
+                  ?>
+                    <div class="row item">
+                        <div class="col-xs-12 col-sm-5 img">
+                            <a href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><img src="<?php echo $popDoc[TAI_LIEU_COL_HINH_ANH]; ?>" alt="katchup.vn" class="img-responsive"/></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-7">
+                          <a class="label label-primary" href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" target="_blank"><?php echo $popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></a>            
+                          <p class="description"><?php echo $popDoc[TAI_LIEU_COL_MO_TA]; ?>
+                          </p>
+                          <dl>
+                            <dd><time class="item_published" datetime="2014-10-20 10:04"><?php echo $popDoc[TAI_LIEU_COL_NGAY_DANG]; ?></time>
+                                <span class="kmt-comment">
+                                  <a href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">0</a>
+                                </span>
+                            </dd>
+                          </dl>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
                     </div>
-                    <div class="col-xs-12 col-sm-7">
-                      <a class="label label-primary" href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}" target="_blank">{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</a>            
-                      <p class="description">{{e.<?php echo TAI_LIEU_COL_MO_TA; ?>}}
-                      </p>
-                      <dl>
-                        <dd><time class="item_published" datetime="2014-10-20 10:04">{{e.<?php echo TAI_LIEU_COL_NGAY_DANG; ?>}}</time>
-                            <span class="kmt-comment">
-                              <a href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}">0</a>
-                            </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-                </div>
+                  <?php
+                }
+                // END loop popular document
+                ?>
+
             </div>
 
         </div>
       </div>
-        
-      <div class="col-xs-12 col-sm-6" ng-controller="ctrl-document-summary">
-          <h3>{{sumDoc.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</h3><hr>
+      
+
+      <div class="col-xs-12 col-sm-6" >
+
+          <!-- ---------------------------------- detail article -->
+          <h3><?php echo $documentSummary[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></h3><hr>
           <div class="sum-document">
             <div class="row">
               <div class="detail">
                 <div class="col-xs-4 col-sm-3">
-                  <a target="_blank" href="{{sumDoc.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" class="advertisement"><img src="{{sumDoc.<?php echo TAI_LIEU_COL_HINH_ANH; ?>}}" alt="katchup.vn" class="img-responsive"></a>
+                  <a target="_blank" href="<?php echo $documentSummary[TAI_LIEU_COL_HINH_ANH]; ?>" class="advertisement"><img src="<?php echo $documentSummary[TAI_LIEU_COL_HINH_ANH]; ?>" alt="katchup.vn" class="img-responsive"></a>
                 </div>
                 <div class="col-xs-8 col-sm-9">
-                  {{sumDoc.<?php echo TAI_LIEU_COL_MO_TA; ?>}}
+                  <?php echo $documentSummary[TAI_LIEU_COL_MO_TA]; ?>
+                </div>
+                <div class="detail-article">
+                  <?php echo $documentSummary[TAI_LIEU_COL_CHI_TIET_BAI_VIET]; ?>
                 </div>
                 <div class="col-xs-12 col-sm-12">
                   <div class="fb-like" data-href="http://katchup.vn" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                 </div>
               </div>              
             </div>
-
+<!--
             <div class="row view-online">
               <div class="col-xs-12 col-sm-12">
                 <div class="title">
@@ -174,15 +191,18 @@
                 <span class="row">Chân thành cảm ơn các bạn đã đóng góp chia sẻ để dữ liệu trên website chúng ta ngày càng phong phú !</span>
               </div>
             </div>
-
+-->
+            <div class="col-xs-12 col-sm-12">
+                <span class="row">Chân thành cảm ơn các bạn đã đóng góp chia sẻ để dữ liệu trên website chúng ta ngày càng phong phú !</span>
+            </div>
             <div class="row facebook-comment">
               <div class="col-xs-12 col-sm-12">
-                <div class="fb-comments" data-href="http://localhost/katchup/home/tai-lieu-tieng-nhat/1" data-numposts="10" data-colorscheme="light"></div>
+                <div class="fb-comments" data-href="home/tai-lieu-tieng-nhat/1" data-numposts="10" data-colorscheme="light"></div>
               </div>
             </div>
 
           </div>
-
+          <!-- -------------------- END detail article -->
       </div>
 
       <div class="col-xs-12 col-sm-3">

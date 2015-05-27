@@ -1,8 +1,8 @@
 // Angularjs
 var myDetailDocument = angular.module("myDetailDocument", []);
-getPopularDocument();
+//getPopularDocument();
 getCategories();
-getDocumentSummary(documentID);
+//getDocumentSummary(documentID);
 
 function getCategories() {
 	myDetailDocument.controller('ctrl-category', function($scope, $http) {
@@ -18,7 +18,7 @@ function getPopularDocument() {
 		
 		$http.get("home/showPopularDocument").success(function(response) {
 			$scope.arr = response;
-			
+
 		});
 	});
 }

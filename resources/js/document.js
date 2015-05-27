@@ -2,7 +2,7 @@
 var myDocument = angular.module("myDocument", []);
 
 getPopularDocument();
-getLatestDocument(categoryID, pageNum, recPerPage);
+//getLatestDocument(categoryID, pageNum, recPerPage);
 
 getCategories();
 //getListPaging();
@@ -23,8 +23,7 @@ function getLatestDocument(categoryID, pageNum, recPerPage) {
 			if (!response.categoryName) {
 				$scope.categoryName = "Bài đăng mới nhất";
 			}
-			// get HTML of mo_ta
-			//$describe = response.
+			
 
 			// paging
 			var countPage = Math.ceil(response.countAllDoc/recPerPage);

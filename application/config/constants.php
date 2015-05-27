@@ -129,6 +129,8 @@ define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_MOST_VIEW', 5);
 define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_LAST_UPDATE', 5);
 define('DOCUMENT_PAGE_DEFAULT_IMAGE', 'resources/images/new-articles/new-articles-1.jpg');
 define("DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING", "tai-lieu-tieng-nhat-moi-nhat");
+define("DEFAULT_PREFIX_CATEGORY_URL", "chia-se-tai-lieu-tieng-nhat");
+define("DEFAULT_PREFIX_DOCUMENT_URL", "tai-lieu-tieng-nhat");
 
 
 define("ADMIN_PAGE_DEFAULT_USERNAME", "admin12");
