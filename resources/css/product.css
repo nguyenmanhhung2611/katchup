@@ -159,13 +159,10 @@
     font-weight: bold;
     margin-right: 15px;
 }
-#content .product a.more-views h4 {
-    margin: -20px 0;
-}
-#content .product a.more-views {
+#content .product .more-views {
     text-align: center;
 }
-#content .product a.more-views:hover {
+#content .product .more-views a:hover {
     text-decoration: none;
 }
 #content .product .infor .text {
@@ -214,6 +211,43 @@
     top: 43%;
 }
 
+/* ======================== CHECKOUT ========================= */
+.checkout-left {
+    float: left;
+    margin-top: -15px;
+}
+.checkout-right {
+    float: right;
+    margin-top: -55px;
+}
+
+.checkout-item {
+    height: 135px;
+}
+.checkout-item .glyphicon-trash {
+    color: #31a4da;
+    line-height: 2;
+    cursor: pointer;
+}
+.checkout-item .glyphicon-trash:hover {
+    color: #aa3939;
+}
+.checkout-item .title {
+    font-size: 14px;
+    font-weight: bold;
+}
+.checkout-item .description {
+    font-size: 12px;
+    color: #a4a4a4;
+}
+.checkout-item .price {
+    text-align: center;
+}
+
+.checkout-total p:first-child {
+    text-align: center;
+}
+
 /* ======================== PUBLIC ========================= */
 #banner .container-fluid .row {
     background-color: #fff;
@@ -250,6 +284,9 @@
 @media screen and (max-width: 1223px) {  
     .banner-tx-left .block .title {
         font-size: 29px;
+    }
+    #content .product-item .caption .btn-info {
+        margin-top: 0px;
     }
 }
 /* 1216px hoac nho hon */
@@ -368,6 +405,12 @@
     #content .product-item .caption .btn-info {
         font-size: 14px;
     }
+    #content .product-item .caption .btn-info {
+        margin-top: -12px;
+    }
+    .checkout-item {
+        height: 235px;
+    }
 }
 /* 771px hoac nho hon */
 @media screen and (max-width: 771px) {  
@@ -380,17 +423,17 @@
     #content .product .infor .text {
         font-size: 11px;
     }
-}
-/* 697px hoac nho hon */
-@media screen and (max-width: 697px) {  
-    #content .product .infor .text {
-        font-size: 11px;
+    .checkout-right {
+        display: none !important;
     }
 }
 /* 609px hoac nho hon */
 @media screen and (max-width: 609px) {  
     #content .product .infor .text {
         font-size: 9px;
+    }
+    #content .product-item .caption .btn-info {
+        margin-top: 0px;
     }
 }
 /* 541px hoac nho hon */
@@ -405,6 +448,12 @@
         font-size: 10px;
     }
 }
+/* 443px hoac nho hon */
+@media screen and (max-width: 443px) {
+    .checkout-item {
+        height: 255px;
+    }
+}
 /* 435px hoac nho hon */
 @media screen and (max-width: 435px) {  
     #content .product .infor .text {
@@ -417,10 +466,22 @@
         font-size: 12px;
     }
 }
+/* 415px hoac nho hon */
+@media screen and (max-width: 415px) {
+    .checkout-item {
+        height: 295px;
+    }
+}
 /* 384px hoac nho hon */
 @media screen and (max-width: 384px) {  
     #content .product-item .caption .btn-info {
         font-size: 10px;
+    }
+}
+/* 341px hoac nho hon */
+@media screen and (max-width: 341px) {  
+    .checkout-item {
+        height: 335px;
     }
 }
 /* 334px hoac nho hon */
