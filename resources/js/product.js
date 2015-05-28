@@ -4,6 +4,12 @@ myProduct.controller("itemProductCtrl", function($scope){
     $scope.products = null;
     $scope.deleteItemProduct = function(id) {    	
         $("#collapseCheckout #" + id).remove();
+
+        // Delete element in array
+        for(var i = 0; i < $PRODUCTS.length; i++) {
+			if($PRODUCTS[i].id == id)
+				$PRODUCTS.splice(i, 1); 
+		}		
 		calcTotalCheckout();
     };
 });
