@@ -24,7 +24,7 @@
 		Mã Tài Liệu<input type="text" placeholder="Mã Tài Liệu" name="maTaiLieu" readonly><br/>
 		Tên Tài Liệu<input type="text" placeholder="Tên Tài Liệu" name="tenTaiLieu"><br/>
 		Tên Tài Liệu Tiếng Nhật<input type="text" placeholder="Tên Tài Liệu Tiếng Nhật" name="tenTaiLieuTiengNhat"><br/>
-		Hình Ảnh<input name="duongDanHinhAnh" type="file" id="duongDanHinhAnh" size="50" /><br/>
+		Hình Ảnh<input name="userfile" type="file" id="duongDanHinhAnh" size="50" /><br/>
 		Mô Tả<textarea rows="10" cols="50" type="text" placeholder="Mô Tả" name="moTaTaiLieu"></textarea><br/>
 		Danh Mục
 		<select name="danhMuc" ng-controller="ctrl-choose-category">
@@ -32,7 +32,7 @@
 			
 		</select><br/>
 		Chi Tiết Tài Liệu<textarea rows="20" cols="150" type="text" placeholder="Chi Tiết Tài Liệu" name="chiTiet" id="ta-chiTiet"></textarea><br/>
-		Ngày Đăng<input type="datetime" placeholder="Ngày Đăng" name="ngayDang" value="<?php echo date("Y-m-d:m:s",time ()) ?>"><br/>
+		Ngày Đăng<input type="datetime" placeholder="Ngày Đăng" name="ngayDang" value="<?php echo date("Y-m-d",time ()) ?>"><br/>
 		Ghi Chú<textarea rows="10" cols="50" type="text" placeholder="Ghi Chú" name="ghiChu"></textarea><br/>
 		<input type="submit" value="Thêm"><br/>
 	</form>

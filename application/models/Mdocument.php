@@ -25,6 +25,24 @@
 			return $query->result_array()[0];
 		}
 
+		function getDocumentByIDWithCategory($id, $arr_column = array()) {
+			if (count($arr_column)>0) {
+				$str_select = '';
+				foreach ($arr_column as $column) {
+					$str_select .= $column.',';
+				}
+				$str_select = trim($str_select, ",");
+
+				$this->db->select($str_select);
+			}
+			
+			$this->db->from(TB_TAI_LIEU)
+			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC, "left");
+			$this->db->where(TAI_LIEU_COL_MA_TAI_LIEU, $id);
+			$query = $this->db->get();
+			return $query->result_array()[0];
+		}
+
 		function getAllDocument($arr_column = array()) {
 			if (count($arr_column)>0) {
 				$str_select = '';
@@ -128,6 +146,11 @@
 		/// INSERT DATA
 		function insertDocument($data) {
 			return $this->db->insert(TB_TAI_LIEU, $data);
+		}
+
+		function updateDocument($documentID, $data) {
+			
+			return $this->db->update(TB_TAI_LIEU, $data, array(TAI_LIEU_COL_MA_TAI_LIEU => $documentID));
 		}
 
 	}

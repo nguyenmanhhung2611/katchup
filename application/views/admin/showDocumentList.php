@@ -38,9 +38,11 @@
 				echo "<td>$value</td>";
 			}
 			
-			echo '<td><a href="">Sửa</a></td>';
-			echo '<td><a href="">Xóa</a></td>';
-			echo "</tr>";
+			?>
+			<td><a href="admin/editDocument/<?php echo $record[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">Sửa</a></td>
+			<td><a href="">Xóa</a></td>
+			</tr>
+			<?php
 		}
 		
 	?>
