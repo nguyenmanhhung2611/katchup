@@ -291,10 +291,10 @@
                 <i class="description">{{item.desc}}</i>
               </p>
               <p class="col-xs-6 col-sm-3 price">
-                <b title="giá">{{item.price}}</b>
+                <b title="Giá">{{item.price}}</b>
               </p>
               <p class="col-xs-6 col-sm-2">
-                <input title="Số lượng" type="text" class="form-control" value="{{item.amount}}">
+                <input title="Số lượng" type="text" ng-model="item.amount" class="form-control" ng-blur="changeAmountProduct(item.id)">
               </p>
               <p class="col-xs-6 col-sm-1">
                 <span title="Xóa" class="glyphicon glyphicon-trash" ng-click="deleteItemProduct(item.id)"></span>
@@ -308,7 +308,7 @@
                 <b>Tổng cộng</b>
               </p>
               <p class="col-xs-6 col-sm-3">
-                <b id="total">336.000</b>
+                <b id="total">0</b>
               </p>
             </div>
 
