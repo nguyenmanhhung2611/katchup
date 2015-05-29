@@ -95,6 +95,10 @@
     font-weight: bold;
     margin-top: -12px;
 }
+#content .product-item .caption .btn-info:active, .btn-info.active {
+    background-color: #008080;
+    box-shadow: none;
+}
 #content .product-item .caption h3 a {
     color: #747474;
 }

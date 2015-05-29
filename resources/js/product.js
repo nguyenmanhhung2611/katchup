@@ -2,15 +2,31 @@
 var myProduct = angular.module("myProduct", []);
 myProduct.controller("itemProductCtrl", function($scope){
     $scope.products = null;
-    $scope.deleteItemProduct = function(id) {    	
+    $scope.deleteItemProduct = function(id) {
         $("#collapseCheckout #" + id).remove();
 
         // Delete element in array
         for(var i = 0; i < $PRODUCTS.length; i++) {
 			if($PRODUCTS[i].id == id)
 				$PRODUCTS.splice(i, 1); 
-		}		
+		}
 		calcTotalCheckout();
+
+		// Exists item product
+		if(!$(".checkout-item").length) {
+			$('#collapseCheckout').collapse('hide');
+		}
+    };
+    $scope.changeAmountProduct = function(id) {
+        for (i = 0; i < $PRODUCTS.length; i++) {
+	        if($PRODUCTS[i].id == id) {	        	
+				if ($("#" + id + " input").val().trim() == "") {
+					$("#" + id + " input").val("1");
+				}
+	        	$PRODUCTS[i].amount = parseInt($("#" + id + " input").val());
+	        }
+	    }
+	    calcTotalCheckout();
     };
 });
 myProduct.controller("ProductCtrl", function($scope){
@@ -30,13 +46,21 @@ myProduct.controller("ProductCtrl", function($scope){
 			// localStorage.setItem("products", $PRODUCTS);
 		}
 
+		
+
 		var scope = angular.element($("#collapseCheckout")).scope();
 		setTimeout(function () {
 	        scope.$apply(function() {
 				scope.products = $PRODUCTS;
 			});
 			calcTotalCheckout();
-	    }, 1000);
+
+			// Exists item product
+			if($(".checkout-item").length) {
+				$('#collapseCheckout').collapse('show');
+			}
+	    }, 500);
+
     };
 });
 
@@ -62,15 +86,26 @@ function checkout() {
 		$PRODUCTS = localStorage.getItem("products");
 	}*/
 	$('#collapseCheckout').on('show.bs.collapse', function () {
-		calcTotalCheckout();
+		// Exists item product
+		if(!$(".checkout-item").length) {
+			
+		} else {
+			calcTotalCheckout();
+		}
+	});
+
+	$('#collapseCheckout').on('shown.bs.collapse', function () {
+		// Exists item product
+		if(!$(".checkout-item").length) {
+			$(this).collapse('hide');
+		}
 	});
 }
 
 function calcTotalCheckout() {
 	var total = 0;
-	$(".checkout-item .price b").each(function(){
-	  //console.log($(this).text());
-	  total += parseInt(removeCommas($(this).text())) * parseInt($(".checkout-item input").val());
+	$(".checkout-item").each(function() {
+		total += parseInt(removeCommas($(this).find(".price b").text())) * parseInt($(this).find("input").val());
 	});
 	$(".checkout-total #total").text(commas(total.toString()) + "đ");
 }
@@ -90,7 +125,7 @@ function checkExistsproduct(id) {
 	for (i = 0; i < $PRODUCTS.length; i++) {
         if($PRODUCTS[i].id == id) {
         	$PRODUCTS[i].amount = $PRODUCTS[i].amount + 1;
-        	return true;        	
+        	return true;
         }
     }
     return false;
