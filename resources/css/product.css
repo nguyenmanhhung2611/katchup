@@ -262,7 +262,11 @@
 #collapseTtk .ttk-detail b {
     line-height: 2;
 }
-
+#collapseCheckoutItem .checkout-contact {
+    color: #31A4DA;
+    font-family: font-UVNBayBuom;
+    font-size: 33px;
+}
 
 /* ======================== PUBLIC ========================= */
 #banner .container-fluid .row {

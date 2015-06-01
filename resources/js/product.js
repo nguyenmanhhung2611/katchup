@@ -72,21 +72,28 @@ $(function() {
 	checkout();
 
 	if($( "#tphcmCity" ).is(":checked")) {
+		chooseCity(true);
+	} else {
+		chooseCity(false);
+	}
+	$( "#tphcmCity" ).click(function() {
+		chooseCity(true);
+	});
+	$( "#ttkCity" ).click(function() {
+		chooseCity(false);
+	});
+});
+
+function chooseCity(isTphcm) {
+	if(isTphcm) {
 		$("#collapseTphcm").collapse('show');
 		$("#collapseTtk").collapse('hide');	
+
 	} else {
 		$("#collapseTtk").collapse('show');
 		$("#collapseTphcm").collapse('hide');
 	}
-	$( "#tphcmCity" ).click(function() {
-		$("#collapseTphcm").collapse('show');
-		$("#collapseTtk").collapse('hide');
-	});
-	$( "#ttkCity" ).click(function() {
-		$("#collapseTtk").collapse('show');
-		$("#collapseTphcm").collapse('hide');
-	});
-});
+}
 
 function menuActiveDocument() {
 	$(".katchup-menu li").each(function(index) {
