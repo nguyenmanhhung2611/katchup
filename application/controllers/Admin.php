@@ -7,10 +7,15 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
+		$this->load->library('Util');
 	}
 
 	// Index controller
 	public function index() {
+		$this->load->view('admin/index-fake');
+	}
+
+	public function index31() {
 		$this->load->view('admin/index');
 	}
 
@@ -31,7 +36,9 @@ class Admin extends CI_Controller {
 	/// Document Manager
 	public function addDocument() {
 		$this->load->helper('form');
-		$this->load->view('admin/addDocument');
+		$this->load->Model('Mdocument');
+		$data['categoryList'] = $this->Mdocument->getAllCategory(array(DANH_MUC_COL_MA_DANH_MUC, DANH_MUC_COL_TEN_DANH_MUC));
+		$this->load->view('admin/addDocument', $data);
 	}
 
 	public function editDocument($documentID) {
@@ -39,6 +46,7 @@ class Admin extends CI_Controller {
 		$this->load->Model('Mdocument');
 
 		$data['document'] = $this->Mdocument->getDocumentByIDWithCategory($documentID);
+		$data['categoryList'] = $this->Mdocument->getAllCategory(array(DANH_MUC_COL_MA_DANH_MUC, DANH_MUC_COL_TEN_DANH_MUC));
 		$this->load->view('admin/editDocument', $data);
 	}
 
@@ -76,7 +84,7 @@ class Admin extends CI_Controller {
         	echo "</pre>";
         	echo '<h1><a href="admin/documentList">Về trang danh sách tài liệu</a></h1>';
         } else {
-            $data[TAI_LIEU_COL_HINH_ANH] = DOCUMENT_PAGE_RESOURCE_IMAGE_PATH.$this->upload->data('file_name');
+            $data[TAI_LIEU_COL_HINH_ANH] = $this->upload->data('file_name');
             $data[TAI_LIEU_COL_TEN_TAI_LIEU] = $_POST['tenTaiLieu'];
 			$data[TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT] = $_POST['tenTaiLieuTiengNhat'];
 			
@@ -85,17 +93,16 @@ class Admin extends CI_Controller {
 			$data[TAI_LIEU_COL_CHI_TIET_BAI_VIET] = $_POST['chiTiet'];
 			$data[TAI_LIEU_COL_NGAY_DANG] = $_POST['ngayDang'];
 			$data[TAI_LIEU_COL_GHI_CHU] = $_POST['ghiChu'];
-			$data[TAI_LIEU_COL_DUONG_DAN] = $this->utf8_to_ascii_url($data[TAI_LIEU_COL_TEN_TAI_LIEU].'-'.$data[TAI_LIEU_COL_NGAY_DANG]);
 	
 			$this->load->model('Mdocument');
 			$kq = $this->Mdocument->insertDocument($data);
 
 			if ($kq) {
 				echo "Thêm dữ liệu thành công";
-				echo '<h1><a href="admin/documentList">Về trang danh sách tài liệu</a></h1>';
+				?><h1><a href="admin/documentList">Về trang danh sách tài liệu</a></h1><?php
 			} else {
 				echo "Thêm dữ liệu thất bại";
-				echo '<h1><a href="admin/documentList">Về trang danh sách tài liệu</a></h1>';
+				?><h1><a href="admin/documentList">Về trang danh sách tài liệu</a></h1><?php
 			}
         }
 	}
@@ -122,7 +129,7 @@ class Admin extends CI_Controller {
         	echo "</pre>";
         	echo '<h1><a href="admin/documentList">Về trang danh sách tài liệu</a></h1>';
         } else {
-            if ($changeImage) $data[TAI_LIEU_COL_HINH_ANH] = DOCUMENT_PAGE_RESOURCE_IMAGE_PATH.$this->upload->data('file_name');
+            if ($changeImage) $data[TAI_LIEU_COL_HINH_ANH] = $this->upload->data('file_name');
             $data[TAI_LIEU_COL_TEN_TAI_LIEU] = $_POST['tenTaiLieu'];
 			$data[TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT] = $_POST['tenTaiLieuTiengNhat'];
 			
@@ -131,7 +138,6 @@ class Admin extends CI_Controller {
 			$data[TAI_LIEU_COL_CHI_TIET_BAI_VIET] = $_POST['chiTiet'];
 			$data[TAI_LIEU_COL_NGAY_DANG] = $_POST['ngayDang'];
 			$data[TAI_LIEU_COL_GHI_CHU] = $_POST['ghiChu'];
-			$data[TAI_LIEU_COL_DUONG_DAN] = $this->utf8_to_ascii_url($data[TAI_LIEU_COL_TEN_TAI_LIEU].'-'.$data[TAI_LIEU_COL_NGAY_DANG]);
 	
 			//print_r($data);
 			$this->load->model('Mdocument');
@@ -147,30 +153,50 @@ class Admin extends CI_Controller {
         }
 	}
 
-	private function utf8_to_ascii_url($temp) {
-		$str = $temp;
-		if(!$str) return false;
-		$utf8 = array(
-	            'a'=>'á|à|ả|ã|ạ|ă|ắ|ặ|ằ|ẳ|ẵ|â|ấ|ầ|ẩ|ẫ|ậ|Á|À|Ả|Ã|Ạ|Ă|Ắ|Ặ|Ằ|Ẳ|Ẵ|Â|Ấ|Ầ|Ẩ|Ẫ|Ậ',
-	            'd'=>'đ|Đ',
-	            'e'=>'é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ|É|È|Ẻ|Ẽ|Ẹ|Ê|Ế|Ề|Ể|Ễ|Ệ',
-	            'i'=>'í|ì|ỉ|ĩ|ị|Í|Ì|Ỉ|Ĩ|Ị',
-	            'o'=>'ó|ò|ỏ|õ|ọ|ô|ố|ồ|ổ|ỗ|ộ|ơ|ớ|ờ|ở|ỡ|ợ|Ó|Ò|Ỏ|Õ|Ọ|Ô|Ố|Ồ|Ổ|Ỗ|Ộ|Ơ|Ớ|Ờ|Ở|Ỡ|Ợ',
-	            'u'=>'ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự|Ú|Ù|Ủ|Ũ|Ụ|Ư|Ứ|Ừ|Ử|Ữ|Ự',
-	            'y'=>'ý|ỳ|ỷ|ỹ|ỵ|Ý|Ỳ|Ỷ|Ỹ|Ỵ',
-	            'ss' => 'ß',
-	            '' => '%',
-	            '-' => '--|---|----',
 
-				);
-		foreach($utf8 as $ascii=>$uni) {
-			$str = preg_replace("/($uni)/i",$ascii,$str);
-		}
+	/// Category Manager
+	public function addCategory() {
+		$this->load->helper('form');
+		$this->load->view('admin/addCategory');
+	}
 
-		$str = strtolower($str);
-		$str = preg_replace("/[^_a-zA-Z0-9 -]/", "",$str);
-		$str = str_replace(array('%20', ' '), '-', $str);
-		return $str;
+	public function editCategory($categoryID) {
+		$this->load->helper('form');
+		$this->load->Model('Mdocument');
+
+		$data['category'] = $this->Mdocument->getCategoryByID($categoryID);
+		$this->load->view('admin/editCategory', $data);
+	}
+
+	public function categoryList() {
+		$this->load->Model('Mdocument');
+
+		$arr_column_to_get = array(
+			);
+		$data['list_category'] = $this->Mdocument->getAllCategory($arr_column_to_get);
+		$this->load->view('admin/showCategoryList', $data);
+	}
+
+	public function executeAddNewCategory() {
+			$data[DANH_MUC_COL_TEN_DANH_MUC] = $_POST['tenDanhMuc'];
+			$data[DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT] = $_POST['tenDanhMucTiengNhat'];
+			$data[DANH_MUC_COL_MO_TA] = $_POST['moTaDanhMuc'];
+			$data[DANH_MUC_COL_GHI_CHU] = $_POST['ghiChu'];
+
+			$this->load->model('Mdocument');
+			$kq = $this->Mdocument->insertCategory($data);
+
+			if ($kq) {
+				echo "Thêm dữ liệu thành công";
+				?><h1><a href="admin/categoryList">Về trang danh sách danh mục</a></h1><?php
+			} else {
+				echo "Thêm dữ liệu thất bại";
+				?><h1><a href="admin/categoryList">Về trang danh sách danh mục</a></h1><?php
+			}
+	}
+
+	public function executeUpdateCategory($categoryID) {
+
 	}
 }
 

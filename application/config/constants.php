@@ -110,6 +110,7 @@ define ("TAI_LIEU_COL_CHI_TIET_BAI_VIET", "chi_tiet_bai_viet");
 define ("TAI_LIEU_COL_GHI_CHU", "ghi_chu_tai_lieu");
 define ("TAI_LIEU_COL_LUOT_VIEW", "luot_view");
 define ("TAI_LIEU_COL_NGAY_DANG", "ngay_dang");
+define ("TAI_LIEU_COL_TEN_TAI_LIEU_ASCII", "ten_tai_lieu_ascii"); // this col currently not exist
 //
 
 //COL in TB_DANH_MUC_TAI_LIEU
@@ -119,20 +120,26 @@ define("DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT", "ten_danh_muc_tieng_nhat");
 define("DANH_MUC_COL_DUONG_DAN", "duong_dan_danh_muc");
 define("DANH_MUC_COL_MO_TA", "mo_ta_danh_muc");
 define("DANH_MUC_COL_GHI_CHU", "ghi_chu_danh_muc");
+define("DANH_MUC_COL_TEN_DANH_MUC_ASCII", "ten_danh_muc_ascii"); // this col currently not exist
 //
 
 
 
 // misc
-define("DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE", 5);
-define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_MOST_VIEW', 5);
-define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_LAST_UPDATE', 5);
-define('DOCUMENT_PAGE_DEFAULT_IMAGE', 'resources/images/new-articles/new-articles-1.jpg');
+define("DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE", 5);	// use for pagination
+define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_MOST_VIEW', 8);	// use for popular document
+//define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_LAST_UPDATE', 5);	// use for slide. temporarily not use
+const DOCUMENT_PAGE_ARTICLES_IN_SLIDE = array(1,2,3,4,5,6);	// contain articles' id. Use for slide
+
+define('DOCUMENT_PAGE_DEFAULT_IMAGE', 'new-articles-1.jpg');
 define('DOCUMENT_PAGE_RESOURCE_IMAGE_PATH', 'resources/images/new-articles/');
 define("DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING", "tai-lieu-tieng-nhat-moi-nhat");
+define("DOCUMENT_PAGE_DEFAULT_CATEGORY_NAME", "Bài đăng mới nhất");
 define("DEFAULT_PREFIX_CATEGORY_URL", "chia-se-tai-lieu-tieng-nhat");
+define("DEFAULT_PREFIX_PAGING", "page-");
 define("DEFAULT_PREFIX_DOCUMENT_URL", "tai-lieu-tieng-nhat");
+define("DEFAULT_HOME_URL", "trang-chu");
 
-
+// bullshit login
 define("ADMIN_PAGE_DEFAULT_USERNAME", "admin12");
 define("ADMIN_PAGE_DEFAULT_PASSWORD", "1357986420");

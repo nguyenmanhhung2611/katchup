@@ -6,36 +6,30 @@
 		function __construct() {
 			parent::__construct();
 			$this->load->database();
+			$this->load->library('util');
 		}
 
 		function getDocumentByID($id, $arr_column = array()) {
-			if (count($arr_column)>0) {
-				$str_select = '';
-				foreach ($arr_column as $column) {
-					$str_select .= $column.',';
-				}
-				$str_select = trim($str_select, ",");
-
-				$this->db->select($str_select);
-			}
-			
+			$this->db->select($this->util->convertArrayColumnToString($arr_column));
 			$this->db->from(TB_TAI_LIEU);
 			$this->db->where(TAI_LIEU_COL_MA_TAI_LIEU, $id);
 			$query = $this->db->get();
 			return $query->result_array()[0];
 		}
 
-		function getDocumentByIDWithCategory($id, $arr_column = array()) {
-			if (count($arr_column)>0) {
-				$str_select = '';
-				foreach ($arr_column as $column) {
-					$str_select .= $column.',';
-				}
-				$str_select = trim($str_select, ",");
-
-				$this->db->select($str_select);
+		function getDocumentListByID($arr_id, $arr_column = array()) {
+			$this->db->select($this->util->convertArrayColumnToString($arr_column));
+			$this->db->from(TB_TAI_LIEU);
+			foreach ($arr_id as $id) {
+				$this->db->or_where(TAI_LIEU_COL_MA_TAI_LIEU, $id);	
 			}
 			
+			$query = $this->db->get();
+			return $query->result_array();
+		}
+
+		function getDocumentByIDWithCategory($id, $arr_column = array()) {
+			$this->db->select($this->util->convertArrayColumnToString($arr_column));
 			$this->db->from(TB_TAI_LIEU)
 			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC, "left");
 			$this->db->where(TAI_LIEU_COL_MA_TAI_LIEU, $id);
@@ -44,32 +38,14 @@
 		}
 
 		function getAllDocument($arr_column = array()) {
-			if (count($arr_column)>0) {
-				$str_select = '';
-				foreach ($arr_column as $column) {
-					$str_select .= $column.',';
-				}
-				$str_select = trim($str_select, ",");
-				
-				$this->db->select($str_select);
-			}
-			
+			$this->db->select($this->util->convertArrayColumnToString($arr_column));
 			$this->db->from(TB_TAI_LIEU);
 			$query = $this->db->get();
 			return $query->result_array();
 		}
 
 		function getAllDocumentWithCategory($arr_column = array()) {
-			if (count($arr_column)>0) {
-				$str_select = '';
-				foreach ($arr_column as $column) {
-					$str_select .= $column.',';
-				}
-				$str_select = trim($str_select, ",");
-				
-				$this->db->select($str_select);
-			}
-			
+			$this->db->select($this->util->convertArrayColumnToString($arr_column));
 			$this->db->from(TB_TAI_LIEU)
 			->join(TB_DANH_MUC_TAI_LIEU, TB_TAI_LIEU.'.'.TAI_LIEU_COL_MA_DANH_MUC.'='.TB_DANH_MUC_TAI_LIEU.'.'.DANH_MUC_COL_MA_DANH_MUC, "left");
 			$query = $this->db->get();
@@ -102,32 +78,14 @@
 
 
 		function getAllCategory($arr_column = array()) {
-			if (count($arr_column)>0) {
-				$str_select = '';
-				foreach ($arr_column as $column) {
-					$str_select .= $column.',';
-				}
-				$str_select = trim($str_select, ",");
-
-				$this->db->select($str_select);
-			}
-			
+			$this->db->select($this->util->convertArrayColumnToString($arr_column));
 			$this->db->from(TB_DANH_MUC_TAI_LIEU);
 			$query = $this->db->get();
 			return $query->result_array();	
 		}
 
 		function getCategoryByID($id, $arr_column = array()) {
-			if (count($arr_column)>0) {
-				$str_select = '';
-				foreach ($arr_column as $column) {
-					$str_select .= $column.',';
-				}
-				$str_select = trim($str_select, ",");
-
-				$this->db->select($str_select);
-			}
-			
+			$this->db->select($this->util->convertArrayColumnToString($arr_column));
 			$this->db->from(TB_DANH_MUC_TAI_LIEU);
 			$this->db->where(DANH_MUC_COL_MA_DANH_MUC, $id);
 			$query = $this->db->get();
@@ -153,5 +111,24 @@
 			return $this->db->update(TB_TAI_LIEU, $data, array(TAI_LIEU_COL_MA_TAI_LIEU => $documentID));
 		}
 
+		function raiseDocumentView($documentID) {
+			$this->db->select(TAI_LIEU_COL_LUOT_VIEW)->
+										from(TB_TAI_LIEU)->
+										where(TAI_LIEU_COL_MA_TAI_LIEU, $documentID);
+			$query = $this->db->get();
+			$currentCount = $query->result_array()[0][TAI_LIEU_COL_LUOT_VIEW];
+
+			$this->updateDocument($documentID, array(TAI_LIEU_COL_LUOT_VIEW => ($currentCount+1)));
+
+		}
+
+		function insertCategory($data) {
+			return $this->db->insert(TB_DANH_MUC_TAI_LIEU, $data);
+		}
+
+		function updateCategory($categoryID, $data) {
+			
+			return $this->db->update(TB_DANH_MUC_TAI_LIEU, $data, array(DANH_MUC_COL_MA_DANH_MUC => $categoryID));
+		}
 	}
 ?>

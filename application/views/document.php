@@ -23,14 +23,7 @@
     <link href="resources/css/document.css" rel="stylesheet">
 
     <!-- script -->
-    <script type="text/javascript">
-      var categoryID = <?php echo json_encode($categoryID); ?>;
-      var pageNum = <?php echo json_encode($pageNum); ?>;
-      var recPerPage = <?php echo json_encode(DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE); ?>;
-
-    </script>
     <script src="resources/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/angular.js" type="text/javascript"></script>
     <script src="resources/js/script.js" type="text/javascript"></script>
     <script src="resources/js/document.js" type="text/javascript"></script>
     <!--<script>-->
@@ -42,7 +35,7 @@
     
 
 </head>
-<body ng-app="myDocument">
+<body >
 <?php include_once('include/header.php') ?>
 
 <div id="banner">
@@ -50,56 +43,32 @@
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">    
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
-
-            <div class="item active">
-              <img src="resources/images/bootstrap-carousel/document/document-1.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 1</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 1 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
-     
-             <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document-2.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 2</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 2 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
-            
-            <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document-3.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 3</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 3 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
-            
-            <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document-4.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 4</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 4 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
-
-            <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document-5.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 5</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 5 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
+            <?php
+            foreach ($articlesInSlide as $key => $article) {
+              ?>
+              <div class="item<?php if ($key == 0) echo " active"; ?>">
+                <img height="900" width="400" src="<?php echo $this->util->getImagePathOrDefault($article[TAI_LIEU_COL_HINH_ANH]); ?>" alt="katchup.vn" >
+                 <div class="carousel-caption">
+                  <h4><a href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $this->util->utf8_to_ascii_url($article[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $article[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><?php echo $article[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></a></h4>
+                  <p><?php echo $article[TAI_LIEU_COL_MO_TA]; ?><a class="label label-primary" href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $this->util->utf8_to_ascii_url($article[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $article[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" target="_blank">Chi tiết</a></p>
+                </div>
+              </div><!-- End Item -->
+              <?php
+            }
+            ?>
                     
           </div><!-- End Carousel Inner -->
 
 
         <ul class="list-group col-sm-4">
-          <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Tiêu đề tài liệu 1</h4></li>
-          <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Tiêu đề tài liệu 2</h4></li>
-          <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Tiêu đề tài liệu 3</h4></li>
-          <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>Tiêu đề tài liệu 4</h4></li>
-          <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>Tiêu đề tài liệu 5</h4></li>
+          <?php
+          foreach ($articlesInSlide as $key => $article) {
+            ?>
+            <li data-target="#myCarousel" data-slide-to="<?php echo $key; ?>" class="list-group-item<?php if ($key == 0) echo " active"; ?>"><h4><?php echo $article[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></h4></li>
+            <?php
+          }
+          ?>
+
         </ul>
 
           <!-- Controls -->
@@ -133,11 +102,17 @@
         </div>
         <div class="row">
             <h3>Tài liệu phổ biến</h3><hr>
-            <div id="popular-document" class="popular-document" ng-controller="ctrl-popular-document" >
-                <div class="item" ng-repeat="e in arr">
-                    <a class="link" href="home/tai-lieu-tieng-nhat/{{e.<?php echo TAI_LIEU_COL_MA_TAI_LIEU; ?>}}"><h4>{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU; ?>}}</h4></a>
-                    <p class="text">{{e.<?php echo TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT; ?>}}</p>
+            <div id="popular-document" class="popular-document" >
+              <?php
+              foreach ($popularDocumentList as $popDoc) {
+                ?>
+                <div class="item" >
+                    <a class="link" href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $this->util->utf8_to_ascii_url($popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><h4><?php echo $popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></h4></a>
+                    <p class="text"><?php echo $popDoc[TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT]; ?></p>
                 </div>
+                <?php
+              }
+              ?>
             </div>
         </div>
       </div>
@@ -146,24 +121,24 @@
         <h3><?php echo $categoryName; ?></h3><hr>
         <div class="new-articles" >
           <?php
-          /// loop show document list
+          /// -------------------------------------- loop show document list
             foreach ($documentList as $doc) {
               ?>
               <div class="row item" >
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><img src="<?php echo $doc[TAI_LIEU_COL_HINH_ANH]; ?>" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $this->util->utf8_to_ascii_url($doc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><img src="<?php echo $this->util->getImagePathOrDefault($doc[TAI_LIEU_COL_HINH_ANH]); ?>" alt="katchup.vn" class="img-responsive"/></a>
                 </div>
                 <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="home/<?php echo DEFAULT_PREFIX_CATEGORY_URL; ?>/<?php echo $doc[DANH_MUC_COL_MA_DANH_MUC]; ?>" target="_blank"><?php echo $doc[DANH_MUC_COL_TEN_DANH_MUC]; ?></a>
-                  <a class="title" href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><h3><?php echo $doc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></h3></a>
+                  <a class="label label-primary" href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_CATEGORY_URL; ?>/<?php echo $this->util->utf8_to_ascii_url($doc[DANH_MUC_COL_TEN_DANH_MUC]); ?>/<?php echo $doc[DANH_MUC_COL_MA_DANH_MUC]; ?>" target="_blank"><?php echo $doc[DANH_MUC_COL_TEN_DANH_MUC]; ?></a>
+                  <a class="title" href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $this->util->utf8_to_ascii_url($doc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><h3><?php echo $doc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></h3></a>
                   <p class="title-japan"><?php echo $doc[TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT]; ?></p>
                   <p class="description"><?php echo $doc[TAI_LIEU_COL_MO_TA]; ?>
                   </p>
                   
                   <dl>
-                    <dd><time class="item_published" datetime="2014-10-20 10:04"><?php echo $doc[TAI_LIEU_COL_NGAY_DANG]; ?></time>
+                    <dd><date class="item_published" datetime="2014-10-20"><?php echo $doc[TAI_LIEU_COL_NGAY_DANG]; ?></date>
                         <span class="kmt-comment">
-                          <a href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">0</a>
+                          <a href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $this->util->utf8_to_ascii_url($doc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">0</a>
                         </span>
                     </dd>
                   </dl>
@@ -175,9 +150,9 @@
             /// end loop show document list
           ?>
 
-          <h3 align="center">
+          <h4 align="center">
           <?php
-            /// loop show pagination
+            /// ----------------------------------- loop show pagination
             foreach ($pageList as $p => $href) {
               if ($p == $currentPage) { echo $p; } else {
               ?>
@@ -187,7 +162,7 @@
             }
             /// end loop show pagination
           ?>
-          </h3>
+          </h4>
 
         </div>
         <a href="#" class="see-all">See all</a>
@@ -200,12 +175,20 @@
       </div>
       <div class="row">
           <h3>Danh mục</h3><hr>
-          <div class="popular-document category" ng-controller="ctrl-category">
-              <div class="item" ng-repeat="e in arr">
-                  <a class="link" href="home/chia-se-tai-lieu-tieng-nhat/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}" ><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}} | </h4></a>
-                  <p class="text"><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT; ?>}}</h4></p>
+          <?php
+          /// ----------------------------------- loop category list
+          foreach ($categoryList as $cat) {
+            ?>
+          <div class="popular-document category" >
+              <div class="item" >
+                  <a class="link" href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_CATEGORY_URL; ?>/<?php echo $this->util->utf8_to_ascii_url($cat[DANH_MUC_COL_TEN_DANH_MUC]); ?>/<?php echo $cat[DANH_MUC_COL_MA_DANH_MUC]; ?>" ><h4><?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC]; ?> | </h4></a>
+                  <p class="text"><h4><?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT]; ?></h4></p>
               </div>
           </div>
+            <?php
+          }
+          /// end loop category list
+          ?>
       </div>
     </div>
 
@@ -218,6 +201,9 @@
 
 <?php include_once('include/live-vchat.php') ?>
 
+<?php
+  
+?>
 </body>
 
 

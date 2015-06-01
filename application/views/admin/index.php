@@ -21,9 +21,11 @@
 		$tabledata[1][0]['href'] = "admin/documentList";
 		$tabledata[1][0]['value'] = "Danh Sách Tài Liệu";
 		$tabledata[2][0]['href'] = "admin/addDocument";
-		$tabledata[2][0]['value'] = "Thêm Mới";
-		$tabledata[3][0]['href'] = "";
-		$tabledata[3][0]['value'] = "Danh Sách Danh Mục Tài Liệu 2";
+		$tabledata[2][0]['value'] = "Thêm Mới Tài Liệu";
+		$tabledata[3][0]['href'] = "admin/categoryList";
+		$tabledata[3][0]['value'] = "Danh Sách Danh Mục";
+		$tabledata[4][0]['href'] = "admin/addCategory";
+		$tabledata[4][0]['value'] = "Thêm Mới Danh Mục";
 
 		$tabledata[0][1] = "Quản Lý Bán Hàng";
 		$tabledata[1][1]['href'] = "";

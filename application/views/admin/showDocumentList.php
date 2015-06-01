@@ -14,7 +14,7 @@
 	
 </head>
 <body ng-app="myAdminShowDoc" >
-
+	<h1>Danh Sách Tài Liệu</h1>
 	<table id="document-list" align="center" border="1" style="width: 100%; word-wrap: break-word;" >
 	<?php
 	/*	echo "<pre>";
@@ -23,7 +23,7 @@
 	*/	
 		// metadata
 		foreach ($list_document[0] as $field => $value) {
-				echo "<td>$field</td>";
+			echo "<td>$field</td>";
 				
 		}
 		echo "<td>Sửa</td>";
@@ -34,7 +34,6 @@
 			echo "<tr>";
 			
 			foreach ($record as $field => $value) {
-		//		echo "<td>$field</td>";
 				echo "<td>$value</td>";
 			}
 			

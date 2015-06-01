@@ -41,7 +41,7 @@
 
 </head>
 
-<body ng-app="myDetailDocument">
+<body >
 <?php include_once('include/header.php') ?>
 
 <div id="banner">
@@ -74,16 +74,16 @@
                   ?>
                     <div class="row item">
                         <div class="col-xs-12 col-sm-5 img">
-                            <a href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><img src="<?php echo $popDoc[TAI_LIEU_COL_HINH_ANH]; ?>" alt="katchup.vn" class="img-responsive"/></a>
+                            <a href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><img src="<?php echo $this->util->getImagePathOrDefault($popDoc[TAI_LIEU_COL_HINH_ANH]); ?>" alt="katchup.vn" class="img-responsive"/></a>
                         </div>
                         <div class="col-xs-12 col-sm-7">
-                          <a class="label label-primary" href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" target="_blank"><?php echo $popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></a>            
+                          <a class="label label-primary" href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" target="_blank"><?php echo $popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></a>            
                           <p class="description"><?php echo $popDoc[TAI_LIEU_COL_MO_TA]; ?>
                           </p>
                           <dl>
                             <dd><time class="item_published" datetime="2014-10-20 10:04"><?php echo $popDoc[TAI_LIEU_COL_NGAY_DANG]; ?></time>
                                 <span class="kmt-comment">
-                                  <a href="home/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">0</a>
+                                  <a href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">0</a>
                                 </span>
                             </dd>
                           </dl>
@@ -109,7 +109,7 @@
             <div class="row">
               <div class="detail">
                 <div class="col-xs-4 col-sm-3">
-                  <a target="_blank" href="<?php echo $documentSummary[TAI_LIEU_COL_HINH_ANH]; ?>" class="advertisement"><img src="<?php echo $documentSummary[TAI_LIEU_COL_HINH_ANH]; ?>" alt="katchup.vn" class="img-responsive"></a>
+                  <a target="_blank" href="<?php echo $documentSummary[TAI_LIEU_COL_HINH_ANH]; ?>" class="advertisement"><img src="<?php echo $this->util->getImagePathOrDefault($documentSummary[TAI_LIEU_COL_HINH_ANH]); ?>" alt="katchup.vn" class="img-responsive"></a>
                 </div>
                 <div class="col-xs-8 col-sm-9">
                   <?php echo $documentSummary[TAI_LIEU_COL_MO_TA]; ?>
@@ -196,7 +196,7 @@
             </div>
             <div class="row facebook-comment">
               <div class="col-xs-12 col-sm-12">
-                <div class="fb-comments" data-href="home/tai-lieu-tieng-nhat/1" data-numposts="10" data-colorscheme="light"></div>
+                <div class="fb-comments" data-href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $documentSummary[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" data-numposts="10" data-colorscheme="light"></div>
               </div>
             </div>
 
@@ -217,11 +217,18 @@
         </div>
         <div class="row">
             <h3>Danh mục</h3><hr>
-            <div class="popular-document category" ng-controller="ctrl-category">
-                <div class="item" ng-repeat="e in arr">
-                    <a class="link" href="home/chia-se-tai-lieu-tieng-nhat/{{e.<?php echo DANH_MUC_COL_MA_DANH_MUC; ?>}}"><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC; ?>}} | </h4></a>
-                    <p class="text"><h4>{{e.<?php echo DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT; ?>}}</h4></p>
+            <div class="popular-document category" >
+              <?php
+              foreach ($categoryList as $cat) {
+                ?>
+                <div class="item" >
+                    <a class="link" href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_CATEGORY_URL; ?>/<?php echo $cat[DANH_MUC_COL_MA_DANH_MUC]; ?>"><h4><?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC]; ?> | </h4></a>
+                    <p class="text"><h4><?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT]; ?></h4></p>
                 </div>
+                <?php
+              }
+              ?>
+                
           </div>
         </div>
       </div>
