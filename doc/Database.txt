@@ -1,0 +1,9 @@
+/* ===== Table: SanPham ===== */
+MaSP (int) (auto_increment)
+TenSP (varChar _ 255)
+MoTa (Text)
+GiaCu (int)
+GiaMoi (int)
+TenHinh (varchar _ 255)
+
+Note: TenHinhHD = TenHinh + "-hd"   (Nho sua ten hinh trong thu muc product)
