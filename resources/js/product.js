@@ -69,7 +69,23 @@ var $PRODUCTS = [];
 // Document is ready
 $(function() {	
 	menuActiveDocument();
-	checkout();	
+	checkout();
+
+	if($( "#tphcmCity" ).is(":checked")) {
+		$("#collapseTphcm").collapse('show');
+		$("#collapseTtk").collapse('hide');	
+	} else {
+		$("#collapseTtk").collapse('show');
+		$("#collapseTphcm").collapse('hide');
+	}
+	$( "#tphcmCity" ).click(function() {
+		$("#collapseTphcm").collapse('show');
+		$("#collapseTtk").collapse('hide');
+	});
+	$( "#ttkCity" ).click(function() {
+		$("#collapseTtk").collapse('show');
+		$("#collapseTphcm").collapse('hide');
+	});
 });
 
 function menuActiveDocument() {

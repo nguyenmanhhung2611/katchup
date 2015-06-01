@@ -272,11 +272,11 @@
         <div class="clearfix"></div>
         <div class="container">
           <a data-toggle="collapse" href="#collapseCheckout" aria-expanded="false" aria-controls="collapseCheckout">
-            <img title="Tiến hành thanh toán" src="resources/images/checkout.png" alt="katchup.vn" class="img-responsive checkout-left">
-          </a>          
+            <img title="Giỏ hàng" src="resources/images/checkout.png" alt="katchup.vn" class="img-responsive checkout-left">
+          </a>
           <h4 class="more-views"><a href="#">(Xem thêm nhiều sản phẩm khác ở dạng e-flashcard)</a></h4>
           <a data-toggle="collapse" href="#collapseCheckout" aria-expanded="false" aria-controls="collapseCheckout">
-            <img title="Tiến hành thanh toán" src="resources/images/checkout.png" alt="katchup.vn" class="img-responsive checkout-right">
+            <img title="Giỏ hàng" src="resources/images/checkout.png" alt="katchup.vn" class="img-responsive checkout-right">
           </a> 
         </div>
 
@@ -303,12 +303,40 @@
 
             <!-- Total -->
             <hr>
-            <div class="checkout-total">
+            <div class="checkout-total">              
               <p class="col-xs-6 col-sm-offset-6 col-sm-3">
                 <b>Tổng cộng</b>
               </p>
               <p class="col-xs-6 col-sm-3">
                 <b id="total">0</b>
+              </p>
+              <p class="row col-xs-12 col-sm-12">
+                <a data-toggle="collapse" href="#collapseCheckoutItem" aria-expanded="false" aria-controls="collapseCheckoutItem">
+                  <img width="180" title="Tiến hành thanh toán" src="resources/images/btn-checkout.gif" alt="katchup.vn" class="img-responsive checkout-left">
+                </a>
+                <div class="collapse" id="collapseCheckoutItem">
+                  <div class="container-fluid">
+                    <div class="ChooseCity">
+                      <label class="radio-inline"><input id="tphcmCity" type="radio" name="optradioCity" checked>TP Hồ Chí Minh</label>
+                      <label class="radio-inline"><input id="ttkCity" type="radio" name="optradioCity">Tỉnh thành khác</label>
+                    </div>                    
+                    <div class="collapse" id="collapseTphcm">
+                      <div class="radio">
+                        <label><input type="radio" name="optradioCityPrice" checked>Giao trong ngày với chi phí 30000</label>
+                      </div>
+                      <div class="radio">
+                        <label><input type="radio" name="optradioCityPrice">Giao trong 2-3 ngày với chi phí 15000</label>
+                      </div>
+                      <b>Free ship với đơn hàng > 400k</b>
+                    </div>
+                    <div class="collapse" id="collapseTtk">
+                      <div class="ttk-detail">
+                        <span>Giao trong 3-5 ngày với chi phí 40000</span>
+                        </br><b>Free ship với đơn hàng > 600k</b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </p>
             </div>
 

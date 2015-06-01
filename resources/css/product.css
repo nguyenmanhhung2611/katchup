@@ -252,6 +252,18 @@
     text-align: center;
 }
 
+#collapseCheckoutItem .ChooseCity {
+    color: teal;
+    font-size: 16px;
+}
+#collapseTtk .ttk-detail {
+    margin-top: 10px;
+}
+#collapseTtk .ttk-detail b {
+    line-height: 2;
+}
+
+
 /* ======================== PUBLIC ========================= */
 #banner .container-fluid .row {
     background-color: #fff;
