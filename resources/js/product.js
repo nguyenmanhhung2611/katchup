@@ -20,7 +20,7 @@ myProduct.controller("itemProductCtrl", function($scope){
     $scope.changeAmountProduct = function(id) {
         for (i = 0; i < $PRODUCTS.length; i++) {
 	        if($PRODUCTS[i].id == id) {	        	
-				if ($("#" + id + " input").val().trim() == "") {
+				if (!checkJustNumberOnly($("#" + id + " input").val().trim())) {
 					$("#" + id + " input").val("1");
 				}
 	        	$PRODUCTS[i].amount = parseInt($("#" + id + " input").val());
@@ -119,6 +119,12 @@ function commas(str) {
 function removeCommas(str) {
 	str.replace("đ", "");
     return str.replace(/\./g, "");
+}
+
+function checkJustNumberOnly(str) {
+	if(str.match(/^[0-9]+$/) == null)
+		return false;
+	return true;
 }
 
 function checkExistsproduct(id) {
