@@ -253,8 +253,9 @@
 }
 
 #collapseCheckoutItem .ChooseCity {
-    color: teal;
+    color: #31A4DA;
     font-size: 16px;
+    padding-bottom: 10px;
 }
 #collapseTtk .ttk-detail {
     margin-top: 10px;
@@ -266,6 +267,9 @@
     color: #31A4DA;
     font-family: font-UVNBayBuom;
     font-size: 33px;
+}
+#checkout_form #btncheckout {
+    margin-bottom: 10px;
 }
 
 /* ======================== PUBLIC ========================= */

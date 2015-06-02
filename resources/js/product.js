@@ -69,22 +69,24 @@ var $PRODUCTS = [];
 // Document is ready
 $(function() {	
 	menuActiveDocument();
-	checkout();
-
-	if($( "#tphcmCity" ).is(":checked")) {
-		chooseCity(true);
-	} else {
-		chooseCity(false);
-	}
-	$( "#tphcmCity" ).click(function() {
-		chooseCity(true);
-	});
-	$( "#ttkCity" ).click(function() {
-		chooseCity(false);
-	});
+	checkout();	
 });
 
-function chooseCity(isTphcm) {
+function chooseCity() {
+	if($( "#tphcmCity" ).is(":checked")) {
+		processChooseCity(true);
+	} else {
+		processChooseCity(false);
+	}
+	$( "#tphcmCity" ).click(function() {
+		processChooseCity(true);
+	});
+	$( "#ttkCity" ).click(function() {
+		processChooseCity(false);
+	});
+}
+
+function processChooseCity(isTphcm) {
 	if(isTphcm) {
 		$("#collapseTphcm").collapse('show');
 		$("#collapseTtk").collapse('hide');	
@@ -107,7 +109,10 @@ function menuActiveDocument() {
 function checkout() {
 	/*if(localStorage.getItem("products") != null) {
 		$PRODUCTS = localStorage.getItem("products");
-	}*/
+	}*/	
+	chooseCity();
+	validateFormCheckout();
+
 	$('#collapseCheckout').on('show.bs.collapse', function () {
 		// Exists item product
 		if(!$(".checkout-item").length) {
@@ -122,6 +127,119 @@ function checkout() {
 		if(!$(".checkout-item").length) {
 			$(this).collapse('hide');
 		}
+	});
+}
+
+function validateFormCheckout() {
+	$("#name-checkout").blur(function() {
+		if($(this).val().trim() == "") {
+			cssCheckErrorClass($(this), true);
+		} else {
+			cssCheckErrorClass($(this), false);
+		}
+	});
+
+	$("#address-checkout").blur(function() {
+		if($(this).val().trim() == "") {
+			cssCheckErrorClass($(this), true);
+		} else {
+			cssCheckErrorClass($(this), false);
+		}
+	});
+
+	$("#phone-checkout").blur(function() {
+		if(!validatePhoneNumber($(this).val())) {
+			cssCheckErrorClass($(this), true);
+		} else {
+			cssCheckErrorClass($(this), false);
+		}
+	});
+
+	$("#checkout_form").submit(function(e){
+		var hasError = !validatePhoneNumber($("#phone-checkout").val()) || $("#name-checkout").val().trim() == "" || $("#address-checkout").val().trim() == "";		
+		if(hasError) {
+			// name-checkout
+			if($("#name-checkout").val().trim() == "") {
+				cssCheckErrorClass($("#name-checkout"), true);
+			} else {
+				cssCheckErrorClass($("#name-checkout"), false);
+			}
+
+			// address-checkout
+			if($("#address-checkout").val().trim() == "") {
+				cssCheckErrorClass($("#address-checkout"), true);
+			} else {
+				cssCheckErrorClass($("#address-checkout"), false);
+			}
+
+			// phone-checkout
+			if(!validatePhoneNumber($("#phone-checkout").val())) {
+				cssCheckErrorClass($("#phone-checkout"), true);
+			} else {
+				cssCheckErrorClass($("#phone-checkout"), false);
+			}
+			return false;
+
+		} else {
+			$('#modalAlert').modal('show');
+			$("#title-Modal-Alert").text("Thông tin");
+			$("#content-Modal-Alert").text("Cám ơn bạn đã mua sản phẩm của chúng tôi");
+			$('#btnClose-Modal-Alert').click(function() {
+				AjaxCheckout();
+			});
+			return false;
+		}		
+	});
+}
+
+function AjaxCheckout() {
+	var products = [];	
+	$(".checkout-item").each(function() {
+	    var product = {
+		  id : $(this).attr("id"),
+		  price : $(this).find(".price b").text(),
+		  amount : $(this).find("input").val()
+		}
+		products.push(product);
+	});
+
+	var city = "ttk";
+	var optionCity = $(".ttk-detail span").text();
+	if($( "#tphcmCity" ).is(":checked")) {
+		city = "tphcm";
+		$("#collapseTphcm .radio input").each(function() {
+		  if($(this).is(":checked")) {
+		    optionCity = $(this).parent().text();
+		  }
+		});
+	}	
+
+	var postData = {
+		'city' : city,
+		'optionCity' : optionCity,
+		'product' : products,
+		'total' : $("#total").text(),
+    	'name' : $("#name-checkout").val(),
+    	'address' : $("#address-checkout").val(),
+    	'phone' : $("#phone-checkout").val(),
+    	'email' : $("#email-checkout").val()
+    };
+
+	$.ajax ({
+		url : $PN + "SanPham/thanh_toan",
+		type : "post",
+		// dataType : "json",
+		cache: false,
+		// async: false,
+		data : postData,
+		timeout : $AJAX_TIMEOUT,
+		success : function(data) {
+			console.log(data);
+			location.reload();
+		},
+		error : function(x, t, m) {
+			alert($ERR_BUSY);
+		},		
 	});
 }
 

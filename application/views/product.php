@@ -322,18 +322,28 @@
                     </div>
                     <div class="panel panel-success">
                       <div class="panel-body">
-                        <div class="container-fluid collapse" id="collapseTphcm">
+                        <div class="container-fluid">
                           <div class="col-xs-12 col-sm-3">
-                            <div class="radio">
-                              <label><input type="radio" name="optradioCityPrice" checked>Giao trong ngày với chi phí 30000</label>
+                            <div class="collapse" id="collapseTphcm">
+                              <div class="radio">
+                                <label><input type="radio" name="optradioCityPrice" checked>Giao trong ngày với chi phí 30000</label>
+                              </div>
+                              <div class="radio">
+                                <label><input type="radio" name="optradioCityPrice">Giao trong 2-3 ngày với chi phí 15000</label>
+                              </div>
+                              <b>Free ship với đơn hàng > 400k</b>
                             </div>
-                            <div class="radio">
-                              <label><input type="radio" name="optradioCityPrice">Giao trong 2-3 ngày với chi phí 15000</label>
+
+                            <div class="collapse" id="collapseTtk">
+                              <div class="ttk-detail">
+                                <span>Giao trong 3-5 ngày với chi phí 40000</span>
+                                </br><b>Free ship với đơn hàng > 600k</b>
+                              </div>
                             </div>
-                            <b>Free ship với đơn hàng > 400k</b>
+
                           </div>
                           <div class="col-xs-12 col-sm-6">
-                            <h4>Nhập thông tin giao hàng</h4>
+                            <h4>NHẬP THÔNG TIN GIAO HÀNG</h4>
                             <form id="checkout_form" name="checkout_form" action="" method="post" class="ng-pristine ng-valid">
                                 <p class="input-group">
                                     <input type="text" placeholder="Họ tên" id="name-checkout" name="name-checkout" class="form-control">
@@ -356,41 +366,7 @@
                             Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất !!!
                           </div>
                         </div>
-                        <div class="container-fluid collapse" id="collapseTtk">
 
-                          <div class="col-xs-12 col-sm-3">
-                            <div class="ttk-detail">
-                              <span>Giao trong 3-5 ngày với chi phí 40000</span>
-                              </br><b>Free ship với đơn hàng > 600k</b>
-                            </div>
-                          </div>
-                          <div class="col-xs-12 col-sm-6">
-                            <h4>Nhập thông tin giao hàng</h4>
-                            <form id="checkout_form" name="checkout_form" action="" method="post" class="ng-pristine ng-valid">
-                                <p class="input-group">
-                                    <input type="text" placeholder="Họ tên" id="name-checkout" name="name-checkout" class="form-control">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                                </p>                                
-                                <p class="input-group">
-                                    <input type="text" placeholder="Địa chỉ" id="address-checkout" name="address-checkout" class="form-control">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                                </p>
-                                <p class="input-group">
-                                    <input type="text" placeholder="Số điện thoại" id="phone-checkout" name="phone-checkout" class="form-control">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                                </p>
-                                <p><input type="text" placeholder="Email" id="email-checkout" name="email-checkout" class="form-control"></p>
-
-                                <button id="btncheckout" class="btn btn-success" type="submit">Gửi đơn hàng</button>
-                            </form>
-                          </div>
-                          <div class="col-xs-12 col-sm-3 checkout-contact">
-                            Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất !!!
-                          </div>
-
-                          
-
-                        </div>
 
                       </div>
                     </div>                    
@@ -528,6 +504,29 @@
 
     </div>    
 
+  </div>
+</div>
+
+<!-- Modal Alert -->
+<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog" aria-labelledby="modalLabelAlert" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modalLabelAlert"><span class="glyphicon glyphicon-info-sign"></span> <span id="title-Modal-Alert">@title</span></h4>
+      </div>
+      <div class="row modal-body">
+        <div id="content-Modal-Alert" class="col-xs-12 col-sm-12">
+            @content
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button id="btnClose-Modal-Alert" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+
+    </div>
   </div>
 </div>
 
