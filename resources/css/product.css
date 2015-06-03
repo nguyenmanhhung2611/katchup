@@ -98,6 +98,7 @@
 #content .product-item .caption .btn-info:active, .btn-info.active {
     background-color: #008080;
     box-shadow: none;
+    padding: 5px;
 }
 #content .product-item .caption h3 a {
     color: #747474;
@@ -250,6 +251,26 @@
 
 .checkout-total p:first-child {
     text-align: center;
+}
+
+#collapseCheckoutItem .ChooseCity {
+    color: #31A4DA;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+#collapseTtk .ttk-detail {
+    margin-top: 10px;
+}
+#collapseTtk .ttk-detail b {
+    line-height: 2;
+}
+#collapseCheckoutItem .checkout-contact {
+    color: #31A4DA;
+    font-family: font-UVNBayBuom;
+    font-size: 33px;
+}
+#checkout_form #btncheckout {
+    margin-bottom: 10px;
 }
 
 /* ======================== PUBLIC ========================= */
