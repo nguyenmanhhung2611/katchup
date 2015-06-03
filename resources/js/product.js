@@ -10,6 +10,7 @@ myProduct.controller("itemProductCtrl", function($scope){
 			if($PRODUCTS[i].id == id)
 				$PRODUCTS.splice(i, 1); 
 		}
+		sessionStorage.setItem("products", JSON.stringify($PRODUCTS));
 		calcTotalCheckout();
 
 		// Exists item product
@@ -26,6 +27,7 @@ myProduct.controller("itemProductCtrl", function($scope){
 	        	$PRODUCTS[i].amount = parseInt($("#" + id + " input").val());
 	        }
 	    }
+	    sessionStorage.setItem("products", JSON.stringify($PRODUCTS));
 	    calcTotalCheckout();
     };
 });
@@ -43,10 +45,8 @@ myProduct.controller("ProductCtrl", function($scope){
 			  price : productElement.find(".price").text()
 			}
 			$PRODUCTS.push(product);
-			// localStorage.setItem("products", $PRODUCTS);
-		}
-
-		
+			sessionStorage.setItem("products", JSON.stringify($PRODUCTS));
+		}		
 
 		var scope = angular.element($("#collapseCheckout")).scope();
 		setTimeout(function () {
@@ -69,7 +69,8 @@ var $PRODUCTS = [];
 // Document is ready
 $(function() {	
 	menuActiveDocument();
-	checkout();	
+	checkout();
+	addCommasProducts();
 });
 
 function chooseCity() {
@@ -107,9 +108,23 @@ function menuActiveDocument() {
 }
 
 function checkout() {
-	/*if(localStorage.getItem("products") != null) {
-		$PRODUCTS = localStorage.getItem("products");
-	}*/	
+	if(sessionStorage.getItem("products") != null) {
+		$PRODUCTS = JSON.parse(sessionStorage.getItem('products'));
+
+		var scope = angular.element($("#collapseCheckout")).scope();
+		setTimeout(function () {
+	        scope.$apply(function() {
+				scope.products = $PRODUCTS;
+			});
+			calcTotalCheckout();
+
+			// Exists item product
+			if($(".checkout-item").length) {
+				$('#collapseCheckout').collapse('show');
+			}
+	    }, 500);
+	}
+
 	chooseCity();
 	validateFormCheckout();
 
@@ -183,7 +198,7 @@ function validateFormCheckout() {
 		} else {
 			$('#modalAlert').modal('show');
 			$("#title-Modal-Alert").text("Thông tin");
-			$("#content-Modal-Alert").text("Cám ơn bạn đã mua sản phẩm của chúng tôi");
+			$("#content-Modal-Alert").html("Cám ơn bạn đã mua sản phẩm của chúng tôi </br> Đơn hàng của bạn đã được gửi đi, chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất.");
 			$('#btnClose-Modal-Alert').click(function() {
 				AjaxCheckout();
 			});
@@ -197,7 +212,8 @@ function AjaxCheckout() {
 	$(".checkout-item").each(function() {
 	    var product = {
 		  id : $(this).attr("id"),
-		  price : $(this).find(".price b").text(),
+		  title : $(this).find(".title").text(),
+		  price : removeCommas($(this).find(".price b").text()),
 		  amount : $(this).find("input").val()
 		}
 		products.push(product);
@@ -218,11 +234,11 @@ function AjaxCheckout() {
 		'city' : city,
 		'optionCity' : optionCity,
 		'product' : products,
-		'total' : $("#total").text(),
-    	'name' : $("#name-checkout").val(),
+		'total' : removeCommas($("#total").text()),
+    	'name' : $("#name-checkout").val().trim(),
     	'address' : $("#address-checkout").val(),
-    	'phone' : $("#phone-checkout").val(),
-    	'email' : $("#email-checkout").val()
+    	'phone' : $("#phone-checkout").val().trim(),
+    	'email' : $("#email-checkout").val().trim()
     };
 
 	$.ajax ({
@@ -234,8 +250,11 @@ function AjaxCheckout() {
 		data : postData,
 		timeout : $AJAX_TIMEOUT,
 		success : function(data) {
-			console.log(data);
-			location.reload();
+			// console.log(data);
+			if(data != 'Error') {
+				sessionStorage.removeItem("products");
+				location.reload();
+			}			
 		},
 		error : function(x, t, m) {
 			alert($ERR_BUSY);
@@ -251,6 +270,24 @@ function calcTotalCheckout() {
 	$(".checkout-total #total").text(commas(total.toString()) + "đ");
 }
 
+function addCommasProducts() {
+	$(".product-item .caption").each(function() {
+		if($(this).find(".price-old").text() == "0đ") {
+			$(this).find(".price-old").text("00.000đ");
+			$(this).find(".price").text("00.000đ");
+		} else {
+			$(this).find(".price-old").text(commasItemProduct($(this).find(".price-old").text()));
+			$(this).find(".price").text(commasItemProduct($(this).find(".price").text()));
+		}		
+	});
+}
+
+// Add commas to item product
+function commasItemProduct(str) {
+	str = str.replace("đ", "");
+    return str.replace(/.(?=(?:.{3})+$)/g, '$&.') + "đ";
+}
+
 // Add commas in price
 function commas(str) {
     return str.replace(/.(?=(?:.{3})+$)/g, '$&.');
@@ -258,7 +295,7 @@ function commas(str) {
 
 // Remove commas in price
 function removeCommas(str) {
-	str.replace("đ", "");
+	str = str.replace("đ", "");
     return str.replace(/\./g, "");
 }
 
@@ -266,6 +303,7 @@ function checkExistsproduct(id) {
 	for (i = 0; i < $PRODUCTS.length; i++) {
         if($PRODUCTS[i].id == id) {
         	$PRODUCTS[i].amount = $PRODUCTS[i].amount + 1;
+        	sessionStorage.setItem("products", JSON.stringify($PRODUCTS));
         	return true;
         }
     }

@@ -98,6 +98,7 @@
 #content .product-item .caption .btn-info:active, .btn-info.active {
     background-color: #008080;
     box-shadow: none;
+    padding: 5px;
 }
 #content .product-item .caption h3 a {
     color: #747474;

@@ -26,11 +26,11 @@ class Email extends CI_Model {
 		$this->email->message($message_Email);
 
 		if (!$this->email->send()) {
-			// echo "Send mail error: " + $this->email->print_debugger();
-			return false;
+			echo "Send mail error: " + $this->email->print_debugger();
+			// return false;
 		}
-		// echo "Send mail success";
-		return true;
+		echo "Send mail success";
+		// return true;
 	}
 }
 

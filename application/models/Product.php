@@ -1,14 +1,14 @@
-
-<!-- 
-MaSP (int) (auto_increment)
-TenSP (varChar _ 255)
-MoTa (Text)
-GiaCu (int)
-GiaMoi (int)
-TenHinh (varchar _ 255) 
--->
-
 <?php
+/*
+	MaSP (int) (auto_increment)
+	TenSP (varChar _ 255)
+	MoTa (Text)
+	GiaCu (int)
+	GiaMoi (int)
+	TenHinh (varchar _ 255)
+    TenHinhHD (varchar _ 255) 
+    TrangThai (varchar _ 255)
+*/
 class Product extends CI_Model {
 	
     function __construct()
@@ -19,6 +19,10 @@ class Product extends CI_Model {
 	public function getList() {
 		return $this->db->select('*')->from('sanpham')->order_by('MaSP asc, TenSP asc')->get()->result_array();
 	}
+
+    public function getListById($id) {
+        return $this->db->select('*')->from('sanpham')->where(array('MaSP' => $id))->get()->row_array();
+    }
 
     public function add($name, $des, $oldPrice, $newPrice, $NameImg) {
         try {

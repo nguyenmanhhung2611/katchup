@@ -102,7 +102,43 @@
     <div class="row product">
         <!-- Product -->
         <ul class="thumbnails" ng-controller="ProductCtrl">
-            <div class="col-xs-6 col-sm-3">
+
+            <?php
+              if(isset($products) && count($products)) {
+                foreach ($products as $key => $val) { ?>
+              
+                  <div class="col-xs-6 col-sm-3">
+                    <div class="thumbnail product-item" id="product_<?php echo $val['MaSP']; ?>">
+                        <?php if(isset($val['TrangThai'])) { ?>
+                          <span class="sticker_<?php echo $val['TrangThai']; ?>"> <?php echo $val['TrangThai']; ?></span>
+                        <?php
+                        } ?>
+                        <div class="panel-body">
+                          <a href="resources/images/product/items/hd/<?php echo $val['TenHinhHD']; ?>" data-rel="lightbox" class="thumbnail zoom">
+                            <img width="320" height="200" src="resources/images/product/items/<?php echo $val['TenHinh']; ?>" alt="katchup.vn" class="img-responsive img-rounded" />
+                            <span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+                          </a>
+                        </div>
+                        <div class="caption">
+                            <h3><a href="#"><?php echo $val['TenSP']; ?></a></h3>
+                            <p><?php echo $val['MoTa']; ?></p>
+                            <p class="price-old"><?php echo $val['GiaCu']; ?>đ</p>
+                            <span class="price"><?php echo $val['GiaMoi']; ?>đ</span>
+                            <p align="right">                          
+                              <a href="javascript:void(0);" ng-click="itemProduct('product_<?php echo $val['MaSP']; ?>')" class="btn btn-info"> Thêm vào giỏ hàng</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>                  
+              
+              <?php
+                }
+              } else {
+                echo 'Không có dữ liệu <br />';
+              }
+            ?>
+
+            <!-- <div class="col-xs-6 col-sm-3">
                 <div class="thumbnail product-item" id="product_1">
                     <span class="sticker_top"> top</span>
                     <div class="panel-body">
@@ -266,7 +302,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </ul> <!-- End product -->
         <div class="clearfix"></div>
