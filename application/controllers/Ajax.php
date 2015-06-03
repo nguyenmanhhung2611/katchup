@@ -8,6 +8,11 @@ class Ajax extends CI_Controller {
 		$this->load->view('ajaxTest');
 	}
 	
+	public function testSendMail() {
+		$this->load->model('Email');
+		// $this->Email->sendMail($from_Email, $name_Email, $to_Email, $user_Email, $pass_Email, $title_Email, $message_Email); 
+	}
+
 	public function ajaxPostNoParam() {
 		// echo "{'a':'1', 'b':'2'}";
 		$arr = array ('a'=>1,'b'=>2,'c'=>3,'d'=>4,'e'=>5);
@@ -15,7 +20,7 @@ class Ajax extends CI_Controller {
 		echo json_encode($arr);
 	}
 
-	public function ajaxPostParam() {		
+	public function ajaxPostParam() {
 		//$arr = array ('a'=>1,'b'=>2,'c'=>3,'d'=>4,'e'=>5);
 		// $eid = $this->input->post('id');
 		// echo $eid;

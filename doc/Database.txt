@@ -1,0 +1,14 @@
+/* ===== Table: SanPham ===== */
+MaSP (int) (auto_increment)
+TenSP (varChar _ 255)
+MoTa (Text)
+GiaCu (int)
+GiaMoi (int)
+TenHinh (varchar _ 255)
+TenHinhHD (varchar _ 255)
+TrangThai (varchar _ 255)
+
+Note: Không có
+
+
+/* ===== Table: ??? ===== */
