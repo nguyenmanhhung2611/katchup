@@ -298,6 +298,14 @@ function validateConfirmPassword(element1, element2) {
 	return true;		
 }
 
+function validatePhoneNumber(str)
+{  
+  var phoneno = /^\d{11}$/;  
+  if(str.match(phoneno))
+      return true;
+  return false;
+}
+
 function cssCheckErrorClass(element, isError) {	
 	if(isError) {
 		element.addClass("error");

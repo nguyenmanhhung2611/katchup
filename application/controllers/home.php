@@ -19,14 +19,7 @@ class Home extends CI_Controller {
 	
 	public function news() {
 		$this->load->view('news');
-	}
-
-	public function product() {
-		$this->load->view('product');
-		
-		// http://stackoverflow.com/questions/2038755/how-to-put-a-dot-after-three-digits-of-a-number
-		// echo number_format(1254631 , 0, ',', '.');  // prints 1.254.631
-	}
+	}	
 
 	public function register() {
         $this->load->model('Captcha');
