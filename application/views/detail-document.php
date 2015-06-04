@@ -127,8 +127,8 @@
                 </div>
               </div>              
             </div>
-<!--
-            <div class="row view-online">
+
+<!--            <div class="row view-online">
               <div class="col-xs-12 col-sm-12">
                 <div class="title">
                   <a data-toggle="collapse" href="#collapseViewOnline" aria-expanded="false" aria-controls="collapseViewOnline">Xem online</a>
@@ -148,7 +148,7 @@
                   </ol>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <div class="row link-share">
               <div class="col-xs-12 col-sm-12">
@@ -195,14 +195,28 @@
                 <span class="row">Chân thành cảm ơn các bạn đã đóng góp chia sẻ để dữ liệu trên website chúng ta ngày càng phong phú !</span>
               </div>
             </div>
--->
-            <div class="col-xs-12 col-sm-12">
+
+   <!--         <div class="col-xs-12 col-sm-12">
                 <span class="row">Chân thành cảm ơn các bạn đã đóng góp chia sẻ để dữ liệu trên website chúng ta ngày càng phong phú !</span>
-            </div>
+            </div>	-->
+     <!--       <div class="row facebook-comment">
+              <div class="col-xs-12 col-sm-12">
+                <!-- FB comment --
+                <div class="fb-comments" data-href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $documentSummary[TAI_LIEU_COL_TEN_TAI_LIEU]; ?>/<?php echo $documentSummary[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" data-numposts="10" data-colorscheme="light"></div>
+              </div>
+            </div>-->
+
             <div class="row facebook-comment">
               <div class="col-xs-12 col-sm-12">
-                <!-- FB comment -->
-                <div class="fb-comments" data-href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $documentSummary[TAI_LIEU_COL_TEN_TAI_LIEU]; ?>/<?php echo $documentSummary[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" data-numposts="10" data-colorscheme="light"></div>
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.3";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-comments" data-href="http://localhost/katchup/home/detailDocument/1" data-numposts="10" data-colorscheme="light"></div>
               </div>
             </div>
 

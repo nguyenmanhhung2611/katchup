@@ -17,7 +17,7 @@ class Chia_se_tai_lieu_tieng_nhat extends CI_Controller {
 
 	function danh_muc($categoryASCIIName = DOCUMENT_PAGE_DEFAULT_CATEGORY_NAME_ASCII
 		, $categoryID = DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING
-		, $pageNum = DEFAULT_PREFIX_PAGING.'1'
+		, $pageNum = 1
 		, $recPerPage = DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE
 		) 
 	{
@@ -51,7 +51,7 @@ class Chia_se_tai_lieu_tieng_nhat extends CI_Controller {
 			$data['categoryList'] = $this->Mdocument->getAllCategory(array(DANH_MUC_COL_MA_DANH_MUC, DANH_MUC_COL_TEN_DANH_MUC, DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT));
 			$data['popularDocumentList'] = $this->Mdocument->getPopularDocument();
 			// get documentlist for slide
-			$data['articlesInSlide'] = $this->Mdocument->getDocumentListByID(DOCUMENT_PAGE_ARTICLES_IN_SLIDE);
+			$data['articlesInSlide'] = $this->Mdocument->getDocumentListByID(explode(',', DOCUMENT_PAGE_ARTICLES_IN_SLIDE));
 
 			// init pageList
 			for ($i=1; $i <= $data['pageCount']; $i++) { 

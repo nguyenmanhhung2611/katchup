@@ -129,10 +129,10 @@ define("DANH_MUC_COL_TEN_DANH_MUC_ASCII", "ten_danh_muc_ascii"); // this col cur
 define("DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_PER_PAGE", 5);	// use for pagination
 define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_MOST_VIEW', 8);	// use for popular document
 //define('DOCUMENT_PAGE_DEFAULT_NUMBER_ITEM_LAST_UPDATE', 5);	// use for slide. temporarily not use
-const DOCUMENT_PAGE_ARTICLES_IN_SLIDE = array(2,3,4,5,6);	// contain articles' id. Use for slide
+define('DOCUMENT_PAGE_ARTICLES_IN_SLIDE', '2,3,4,5,6');	// contain articles' id. Use for slide
 
 define('DOCUMENT_PAGE_DEFAULT_IMAGE', 'new-articles-1.jpg');
-define('DOCUMENT_PAGE_RESOURCE_IMAGE_PATH', 'resources/images/new-articles/');
+define('DOCUMENT_PAGE_RESOURCE_IMAGE_PATH', 'resources/images/document-new-articles/');
 define("DOCUMENT_PAGE_DEFAULT_CATEGORY_STRING", "latest-post");
 define("DOCUMENT_PAGE_DEFAULT_CATEGORY_NAME", "Bài đăng mới nhất");
 define("DOCUMENT_PAGE_DEFAULT_CATEGORY_NAME_ASCII", "bai-dang-moi-nhat");
