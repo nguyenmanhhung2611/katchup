@@ -50,11 +50,11 @@
           <ul class="katchup-nav katchup-menu pull-left">
             <li class="active"><a href="#">Trang chủ</a></li>
             <li><a href="#">Luyện Thi</a></li>
-            <li><a href="<?php echo ITQ_BASE_URL;?><?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_CATEGORY_URL; ?>">Tài liệu</a></li>
+            <li><a href="<?php echo ITQ_BASE_URL;?>chia-se-tai-lieu-tieng-nhat">Tài liệu</a></li>
             <li><a href="#">Sản phẩm</a></li>
-            <li><a href="<?php echo ITQ_BASE_URL;?><?php echo DEFAULT_HOME_URL; ?>/news">Tin tức</a></li>
+            <li><a href="<?php echo ITQ_BASE_URL;?>tin-tuc">Tin tức</a></li>
             <li><a href="#">Hỏi đáp</a></li>
-            <li><a href="<?php echo ITQ_BASE_URL;?>contact">Liên hệ</a></li>
+            <li><a href="<?php echo ITQ_BASE_URL;?>lien-he">Liên hệ</a></li>
           </ul>
         </div>
             </div>

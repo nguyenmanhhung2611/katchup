@@ -74,17 +74,22 @@
                   ?>
                     <div class="row item">
                         <div class="col-xs-12 col-sm-5 img">
-                            <a href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><img src="<?php echo $this->util->getImagePathOrDefault($popDoc[TAI_LIEU_COL_HINH_ANH]); ?>" alt="katchup.vn" class="img-responsive"/></a>
+                            <!-- image -->
+                            <a href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $this->util->utf8_to_ascii_url($popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><img src="<?php echo $this->util->getImagePathOrDefault($popDoc[TAI_LIEU_COL_HINH_ANH]); ?>" alt="katchup.vn" class="img-responsive"/></a>
                         </div>
                         <div class="col-xs-12 col-sm-7">
-                          <a class="label label-primary" href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" target="_blank"><?php echo $popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></a>            
+                          <!-- title -->
+                          <a class="label label-primary" href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $this->util->utf8_to_ascii_url($popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" target="_blank"><?php echo $popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></a>            
                           <p class="description"><?php echo $popDoc[TAI_LIEU_COL_MO_TA]; ?>
                           </p>
                           <dl>
-                            <dd><time class="item_published" datetime="2014-10-20 10:04"><?php echo $popDoc[TAI_LIEU_COL_NGAY_DANG]; ?></time>
-                                <span class="kmt-comment">
-                                  <a href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">0</a>
-                                </span>
+                            <dd>
+                              <!-- post time -->
+                              <time class="item_published" datetime="2014-10-20 10:04"><?php echo $popDoc[TAI_LIEU_COL_NGAY_DANG]; ?></time>
+                              <!-- view comment -->
+                              <span class="kmt-comment">
+                                <a href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $this->util->utf8_to_ascii_url($popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">0</a>
+                              </span>
                             </dd>
                           </dl>
                         </div>
@@ -196,7 +201,8 @@
             </div>
             <div class="row facebook-comment">
               <div class="col-xs-12 col-sm-12">
-                <div class="fb-comments" data-href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_DOCUMENT_URL; ?>/<?php echo $documentSummary[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" data-numposts="10" data-colorscheme="light"></div>
+                <!-- FB comment -->
+                <div class="fb-comments" data-href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $documentSummary[TAI_LIEU_COL_TEN_TAI_LIEU]; ?>/<?php echo $documentSummary[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" data-numposts="10" data-colorscheme="light"></div>
               </div>
             </div>
 
@@ -216,13 +222,14 @@
             <a href="#" class="advertisement"><img src="resources/images/adver/adver-9.jpg" alt="katchup.vn" class="img-responsive"></a>
         </div>
         <div class="row">
+          <!-- --------------------- Category List ---->
             <h3>Danh mục</h3><hr>
             <div class="popular-document category" >
               <?php
               foreach ($categoryList as $cat) {
                 ?>
                 <div class="item" >
-                    <a class="link" href="<?php echo DEFAULT_HOME_URL; ?>/<?php echo DEFAULT_PREFIX_CATEGORY_URL; ?>/<?php echo $cat[DANH_MUC_COL_MA_DANH_MUC]; ?>"><h4><?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC]; ?> | </h4></a>
+                    <a class="link" href="chia-se-tai-lieu-tieng-nhat/danh-muc/<?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC]; ?>/<?php echo $cat[DANH_MUC_COL_MA_DANH_MUC]; ?>"><h4><?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC]; ?> | </h4></a>
                     <p class="text"><h4><?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT]; ?></h4></p>
                 </div>
                 <?php

@@ -13,6 +13,9 @@ class Util
 	function utf8_to_ascii_url($temp) {
 		$str = $temp;
 		if(!$str) return false;
+		
+		$str = str_replace(array('%20', ' '), '-', $str);
+		
 		$utf8 = array(
 	            'a'=>'á|à|ả|ã|ạ|ă|ắ|ặ|ằ|ẳ|ẵ|â|ấ|ầ|ẩ|ẫ|ậ|Á|À|Ả|Ã|Ạ|Ă|Ắ|Ặ|Ằ|Ẳ|Ẵ|Â|Ấ|Ầ|Ẩ|Ẫ|Ậ',
 	            'd'=>'đ|Đ',
@@ -29,10 +32,8 @@ class Util
 		foreach($utf8 as $ascii=>$uni) {
 			$str = preg_replace("/($uni)/i",$ascii,$str);
 		}
-
 		$str = strtolower($str);
 		$str = preg_replace("/[^_a-zA-Z0-9 -]/", "",$str);
-		$str = str_replace(array('%20', ' '), '-', $str);
 		return $str;
 	}
 
@@ -61,12 +62,16 @@ class Util
 		return str_replace(DEFAULT_PREFIX_PAGING, "", $pageStr);
 	}
 	// get document image path if exist else get default image path
-  function getImagePathOrDefault($filename) {
-    if ((file_exists(DOCUMENT_PAGE_RESOURCE_IMAGE_PATH.$filename)) && ($filename)) {
-      return DOCUMENT_PAGE_RESOURCE_IMAGE_PATH.$filename;
-    }
-    return DOCUMENT_PAGE_RESOURCE_IMAGE_PATH.DOCUMENT_PAGE_DEFAULT_IMAGE;
-  }
+	function getImagePathOrDefault($filename) {
+		if ((file_exists(DOCUMENT_PAGE_RESOURCE_IMAGE_PATH.$filename)) && ($filename)) {
+			return DOCUMENT_PAGE_RESOURCE_IMAGE_PATH.$filename;
+		}
+		return DOCUMENT_PAGE_RESOURCE_IMAGE_PATH.DOCUMENT_PAGE_DEFAULT_IMAGE;
+	}
+
+	function consoleLog($string) {
+		echo "<script>console.log('".$string."');</script>";
+	}
 }
 	
 ?>
