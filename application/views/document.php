@@ -24,7 +24,6 @@
 
     <!-- script -->
     <script src="resources/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="resources/js/angular.js" type="text/javascript"></script>
     <script src="resources/js/script.js" type="text/javascript"></script>
     <script src="resources/js/document.js" type="text/javascript"></script>
     <!--<script>-->
@@ -33,10 +32,10 @@
     <link href="resources/css/bootstrap.css" rel="stylesheet">    
     <link href="resources/css/responsive.css" rel="stylesheet">
     <script src="resources/js/bootstrap.js"></script>
+    
 
 </head>
-
-<body ng-app="myDocument">
+<body >
 <?php include_once('include/header.php') ?>
 
 <div id="banner">
@@ -44,56 +43,32 @@
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">    
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
-          
-            <div class="item active">
-              <img src="resources/images/bootstrap-carousel/document/document-1.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 1</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 1 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
-     
-             <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document-2.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 2</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 2 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
-            
-            <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document-3.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 3</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 3 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
-            
-            <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document-4.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 4</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 4 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
-
-            <div class="item">
-              <img src="resources/images/bootstrap-carousel/document/document-5.png" alt="katchup.vn" >
-               <div class="carousel-caption">
-                <h4><a href="#">Tiêu đề tài liệu 5</a></h4>
-                <p>Giới thiệu tóm tắt tài liệu 5 <a class="label label-primary" href="#" target="_blank">Chi tiết</a></p>
-              </div>
-            </div><!-- End Item -->
+            <?php
+            foreach ($articlesInSlide as $key => $article) {
+              ?>
+              <div class="item<?php if ($key == 0) echo " active"; ?>">
+                <img height="900" width="400" src="<?php echo $this->util->getImagePathOrDefault($article[TAI_LIEU_COL_HINH_ANH]); ?>" alt="katchup.vn" >
+                 <div class="carousel-caption">
+                  <h4><a href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $this->util->utf8_to_ascii_url($article[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $article[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><?php echo $article[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></a></h4>
+                  <p><?php echo $article[TAI_LIEU_COL_MO_TA]; ?><a class="label label-primary" href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $this->util->utf8_to_ascii_url($article[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $article[TAI_LIEU_COL_MA_TAI_LIEU]; ?>" target="_blank">Chi tiết</a></p>
+                </div>
+              </div><!-- End Item -->
+              <?php
+            }
+            ?>
                     
           </div><!-- End Carousel Inner -->
 
 
         <ul class="list-group col-sm-4">
-          <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Tiêu đề tài liệu 1</h4></li>
-          <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Tiêu đề tài liệu 2</h4></li>
-          <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Tiêu đề tài liệu 3</h4></li>
-          <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>Tiêu đề tài liệu 4</h4></li>
-          <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>Tiêu đề tài liệu 5</h4></li>
+          <?php
+          foreach ($articlesInSlide as $key => $article) {
+            ?>
+            <li data-target="#myCarousel" data-slide-to="<?php echo $key; ?>" class="list-group-item<?php if ($key == 0) echo " active"; ?>"><h4><?php echo $article[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></h4></li>
+            <?php
+          }
+          ?>
+
         </ul>
 
           <!-- Controls -->
@@ -127,196 +102,67 @@
         </div>
         <div class="row">
             <h3>Tài liệu phổ biến</h3><hr>
-            <div id="popular-document" class="popular-document">
-                <div class="item">
-                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h4>Giáo trình Minna no nihongo</h4></a>
-                    <p class="text">みんなの日本語</p>
+            <div id="popular-document" class="popular-document" >
+              <?php
+              foreach ($popularDocumentList as $popDoc) {
+                ?>
+                <div class="item" >
+                    <a class="link" href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $this->util->utf8_to_ascii_url($popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $popDoc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><h4><?php echo $popDoc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></h4></a>
+                    <p class="text"><?php echo $popDoc[TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT]; ?></p>
                 </div>
-                <div class="item">
-                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/2"><h4>Giáo trình Minna no nihongo</h4></a>
-                    <p class="text">みんなの日本語</p>
-                </div>
-                <div class="item">
-                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/3"><h4>Giáo trình Minna no nihongo</h4></a>
-                    <p class="text">みんなの日本語</p>
-                </div>
-               <div class="item">
-                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h4>Giáo trình Minna no nihongo</h4></a>
-                    <p class="text">みんなの日本語</p>
-                </div>
-                <div class="item">
-                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h4>Giáo trình Minna no nihongo</h4></a>
-                    <p class="text">みんなの日本語</p>
-                </div>
-                <div class="item">
-                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h4>Giáo trình Minna no nihongo</h4></a>
-                    <p class="text">みんなの日本語</p>
-                </div>
-                <div class="item">
-                    <a class="link" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/2"><h4>Giáo trình Minna no nihongo</h4></a>
-                    <p class="text">みんなの日本語</p>
-                </div>
-          </div>
+                <?php
+              }
+              ?>
+            </div>
         </div>
       </div>
         
-      <div class="col-xs-12 col-sm-7">
-        <h3>Bài đăng mới nhất</h3><hr>
-        <div class="new-articles">
-            <div class="row item">
+      <div class="col-xs-12 col-sm-7" >
+        <h3><?php echo $categoryName; ?></h3><hr>
+        <div class="new-articles" >
+          <?php
+          /// -------------------------------------- loop show document list
+            foreach ($documentList as $doc) {
+              ?>
+              <div class="row item" >
                 <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/document-new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
+                    <a href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $this->util->utf8_to_ascii_url($doc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><img src="<?php echo $this->util->getImagePathOrDefault($doc[TAI_LIEU_COL_HINH_ANH]); ?>" alt="katchup.vn" class="img-responsive"/></a>
                 </div>
                 <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
-                  <p class="title-japan">みんなの日本語</p>
-                  <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                        uy tín và thông dụng nhất trong các trường dạy 
-                                        tiếng Nhật ở Việt Nam cũng như trên thế giới.
+                  <a class="label label-primary" href="chia-se-tai-lieu-tieng-nhat/danh-muc/<?php echo $this->util->utf8_to_ascii_url($doc[DANH_MUC_COL_TEN_DANH_MUC]); ?>/<?php echo $doc[DANH_MUC_COL_MA_DANH_MUC]; ?>" ><?php echo $doc[DANH_MUC_COL_TEN_DANH_MUC]; ?></a>
+                  <a class="title" href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $this->util->utf8_to_ascii_url($doc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>"><h3><?php echo $doc[TAI_LIEU_COL_TEN_TAI_LIEU]; ?></h3></a>
+                  <p class="title-japan"><?php echo $doc[TAI_LIEU_COL_TEN_TAI_LIEU_TIENG_NHAT]; ?></p>
+                  <p class="description"><?php echo $doc[TAI_LIEU_COL_MO_TA]; ?>
                   </p>
+                  
                   <dl>
-                    <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
+                    <dd><date class="item_published" datetime="2014-10-20"><?php echo $doc[TAI_LIEU_COL_NGAY_DANG]; ?></date>
                         <span class="kmt-comment">
-                          <a href="#">0</a>
+                          <a href="chia-se-tai-lieu-tieng-nhat/tai-lieu/<?php echo $this->util->utf8_to_ascii_url($doc[TAI_LIEU_COL_TEN_TAI_LIEU]); ?>/<?php echo $doc[TAI_LIEU_COL_MA_TAI_LIEU]; ?>">0</a>
                         </span>
                     </dd>
                   </dl>
                 </div>
                 <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
             </div>
-            <div class="row item">
-                <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/document-new-articles/new-articles-2.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                </div>
-                <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/2"><h3>Giáo trình Minna no nihongo</h3></a>
-                  <p class="title-japan">みんなの日本語</p>
-                  <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                        uy tín và thông dụng nhất trong các trường dạy 
-                                        tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                  </p>
-                  <dl>
-                    <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                        <span class="kmt-comment">
-                          <a href="#">0</a>
-                        </span>
-                    </dd>
-                  </dl>
-                </div>
-                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-            </div>
-            <div class="row item">
-                <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/document-new-articles/new-articles-3.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                </div>
-                <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/3"><h3>Giáo trình Minna no nihongo</h3></a>
-                  <p class="title-japan">みんなの日本語</p>
-                  <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                        uy tín và thông dụng nhất trong các trường dạy 
-                                        tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                  </p>
-                  <dl>
-                    <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                        <span class="kmt-comment">
-                          <a href="#">0</a>
-                        </span>
-                    </dd>
-                  </dl>
-                </div>
-                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-            </div>
-            <div class="row item">
-                <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/document-new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                </div>
-                <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
-                  <p class="title-japan">みんなの日本語</p>
-                  <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                        uy tín và thông dụng nhất trong các trường dạy 
-                                        tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                  </p>
-                  <dl>
-                    <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                        <span class="kmt-comment">
-                          <a href="#">0</a>
-                        </span>
-                    </dd>
-                  </dl>
-                </div>
-                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-            </div>
-            <div class="row item">
-                <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/document-new-articles/new-articles-2.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                </div>
-                <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
-                  <p class="title-japan">みんなの日本語</p>
-                  <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                        uy tín và thông dụng nhất trong các trường dạy 
-                                        tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                  </p>
-                  <dl>
-                    <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                        <span class="kmt-comment">
-                          <a href="#">0</a>
-                        </span>
-                    </dd>
-                  </dl>
-                </div>
-                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-            </div>
-            <div class="row item">
-                <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/document-new-articles/new-articles-3.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                </div>
-                <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
-                  <p class="title-japan">みんなの日本語</p>
-                  <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                        uy tín và thông dụng nhất trong các trường dạy 
-                                        tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                  </p>
-                  <dl>
-                    <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                        <span class="kmt-comment">
-                          <a href="#">0</a>
-                        </span>
-                    </dd>
-                  </dl>
-                </div>
-                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-            </div>
-            <div class="row item">
-                <div class="col-xs-12 col-sm-3 img">
-                    <a href="#"><img src="resources/images/document-new-articles/new-articles-1.jpg" alt="katchup.vn" class="img-responsive"/></a>                       
-                </div>
-                <div class="col-xs-12 col-sm-9">
-                  <a class="label label-primary" href="#" target="_blank">Tài liệu</a>
-                  <a class="title" href="<?php echo ITQ_BASE_URL;?>home/detailDocument/1"><h3>Giáo trình Minna no nihongo</h3></a>
-                  <p class="title-japan">みんなの日本語</p>
-                  <p class="description">Giáo trình Minna no Nihongo là bộ sách giáo trình 
-                                        uy tín và thông dụng nhất trong các trường dạy 
-                                        tiếng Nhật ở Việt Nam cũng như trên thế giới.
-                  </p>
-                  <dl>
-                    <dd><time class="item_published" datetime="2014-10-20 10:04">20 Oct 2014 </time>
-                        <span class="kmt-comment">
-                          <a href="#">0</a>
-                        </span>
-                    </dd>
-                  </dl>
-                </div>
-                <div class="col-xs-12 col-sm-12 bottom-new-article"><hr></div>
-            </div>
+              <?php
+            }
+            /// end loop show document list
+          ?>
+
+          <h4 align="center">
+          <?php
+            /// ----------------------------------- loop show pagination
+            foreach ($pageList as $p => $href) {
+              if ($p == $currentPage) { echo $p; } else {
+              ?>
+                <a class="pagination-num-page" href="<?php echo $href; ?>"><?php echo $p; ?></a>
+              <?php
+              }
+            }
+            /// end loop show pagination
+          ?>
+          </h4>
 
         </div>
         <a href="#" class="see-all">See all</a>
@@ -329,80 +175,20 @@
       </div>
       <div class="row">
           <h3>Danh mục</h3><hr>
-          <div class="popular-document category">
-              <div class="item">
-                  <a class="link" href=""><h4>MINNA NO NIHONGO | </h4></a>
-                  <p class="text"><h4>みんなの日本語</h4></p>
+          <?php
+          /// ----------------------------------- loop category list
+          foreach ($categoryList as $cat) {
+            ?>
+          <div class="popular-document category" >
+              <div class="item" >
+                  <a class="link" href="chia-se-tai-lieu-tieng-nhat/danh-muc/<?php echo $this->util->utf8_to_ascii_url($cat[DANH_MUC_COL_TEN_DANH_MUC]); ?>/<?php echo $cat[DANH_MUC_COL_MA_DANH_MUC]; ?>" ><h4><?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC]; ?> | </h4></a>
+                  <p class="text"><h4><?php echo $cat[DANH_MUC_COL_TEN_DANH_MUC_TIENG_NHAT]; ?></h4></p>
               </div>
-              <div class="item">
-                  <a class="link" href=""><h4>SHIN NIHONGO KISO | </h4></a>
-                  <p class="text"><h4>新日本語の基礎</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>NGHE ONLINE |</h4></a>
-                  <p class="text"><h4>オンライン聞く</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>NGỮ PHÁP |</h4></a>
-                  <p class="text"><h4>文法</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>ĐỌC HIỂU |</h4></a>
-                  <p class="text"><h4>読解</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>KANJI |</h4></a>
-                  <p class="text"><h4>漢字</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>TỪ VỰNG |</h4></a>
-                  <p class="text"><h4>語彙</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>TỰ HỌC |</h4></a>
-                  <p class="text"><h4>自学</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>JLPT |</h4></a>
-                  <p class="text"><h4>能力試験</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>GIÁO TRÌNH ĐIỆN TỬ |</h4></a>
-                  <p class="text"><h4>E-教材</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>GIÁO TRÌNH VIDEO |</h4></a>
-                  <p class="text"><h4>ビデオ</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>GIÁO TRÌNH NGHE |</h4></a>
-                  <p class="text"><h4>聴解</h4></p>
-              </div>
-              <!-- <div class="item">
-                  <a class="link" href=""><h4>PHẦN MỀM HỌC |</h4></a>
-                  <p class="text"><h4>学習ソフト</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>FILMS |</h4></a>
-                  <p class="text"><h4>映画</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>TỪ ĐIỂN |</h4></a>
-                  <p class="text"><h4>事典</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>THỦ THUẬT PC |</h4></a>
-                  <p class="text"><h4>ソフト</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4>VĂN HÓA |</h4></a>
-                  <p class="text"><h4>文化</h4></p>
-              </div>
-              <div class="item">
-                  <a class="link" href=""><h4> LỊCH SỬ |</h4></a>
-                  <p class="text"><h4>歴史</h4></p>
-              </div> -->
-        </div>
+          </div>
+            <?php
+          }
+          /// end loop category list
+          ?>
       </div>
     </div>
 
@@ -415,5 +201,10 @@
 
 <?php include_once('include/live-vchat.php') ?>
 
+<?php
+  
+?>
 </body>
+
+
 </html>
