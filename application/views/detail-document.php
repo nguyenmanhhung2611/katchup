@@ -119,7 +119,7 @@
                 <div class="col-xs-8 col-sm-9">
                   <?php echo $documentSummary[TAI_LIEU_COL_MO_TA]; ?>
                 </div>
-                <div class="detail-article">
+                <div class="col-xs-8 col-sm-9">
                   <?php echo $documentSummary[TAI_LIEU_COL_CHI_TIET_BAI_VIET]; ?>
                 </div>
                 <div class="col-xs-12 col-sm-12">
