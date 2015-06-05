@@ -150,22 +150,30 @@
             /// end loop show document list
           ?>
 
-          <h4 align="center">
-          <?php
-            /// ----------------------------------- loop show pagination
-            foreach ($pageList as $p => $href) {
-              if ($p == $currentPage) { echo $p; } else {
-              ?>
-                <a class="pagination-num-page" href="<?php echo $href; ?>"><?php echo $p; ?></a>
+          <nav align="center">
+            <ul class="pagination">
+              <li <?php if (1 == $currentPage) echo 'class="disabled"'; ?> >
+                <a href="<?php echo $pageList[max($currentPage-1, 1)]; ?>" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
               <?php
+              foreach ($pageList as $p => $href) {
+                //if ($p == $currentPage)
+                ?>
+                <li <?php if ($p == $currentPage) echo 'class="active"'; ?> ><a href="<?php echo $href; ?>"><?php echo $p; ?></a></li>
+                <?php
               }
-            }
-            /// end loop show pagination
-          ?>
-          </h4>
-
+              ?>
+              <li <?php if ($pageCount == $currentPage) echo 'class="disabled"'; ?> >
+                <a href="<?php echo $pageList[min($currentPage+1, $pageCount)]; ?>" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          
         </div>
-        <a href="#" class="see-all">See all</a>
     </div>
 
     <div class="col-xs-12 col-sm-3">

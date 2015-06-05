@@ -57,6 +57,7 @@ class Chia_se_tai_lieu_tieng_nhat extends CI_Controller {
 			for ($i=1; $i <= $data['pageCount']; $i++) { 
 				$data['pageList'][$i] = 'chia-se-tai-lieu-tieng-nhat/danh-muc/'.$asciiName."/".$categoryID."/".DEFAULT_PREFIX_PAGING.$i;
 			}
+			
 			$this->load->view('document', $data);
 		}
 
